@@ -1,0 +1,5812 @@
+{
+ "atualizado": "2026-11-06",
+ "dono": "Gabriel",
+ "versao": "2026-11-06c",
+ "camisolas": [
+  {
+   "id": "messi",
+   "jogador": "Lionel Messi",
+   "camisola": "MESSI",
+   "numero": 19,
+   "equipa": "Argentina",
+   "pais": "Argentina",
+   "epoca": "Mundial 2006",
+   "equipamento": "Alternativo",
+   "marca": "adidas",
+   "patrocinios": [],
+   "tipo": "reedicao",
+   "assinada": false,
+   "tamanho": "M",
+   "cor": "#2a3a6e",
+   "comprada": null,
+   "adicionada": "2026-11-05",
+   "resumo": "O equipamento azul-escuro da Argentina no Mundial 2006, com o 19 que Messi usou na sua estreia em Mundiais, a oito dias de fazer 19 anos.",
+   "nota": "A etiqueta impressa na gola (M, Made in Thailand) aponta para a reedição que a adidas lançou em 2026, e não para uma camisola original de 2006. Falta o Gabriel confirmar.",
+   "jogo": {
+    "casa": "Argentina",
+    "fora": "Sérvia e Montenegro",
+    "gc": 6,
+    "gf": 0,
+    "prova": "Mundial 2006, Grupo C",
+    "data": "16 jun 2006",
+    "estadio": "Arena AufSchalke, Gelsenkirchen",
+    "papel": "Entrou aos 74' com 3-0, assistiu Crespo aos 78' e marcou aos 88'",
+    "golos": "Maxi Rodríguez (2), Cambiasso, Crespo, Tévez e Messi",
+    "marco": true
+   },
+   "pessoa": {
+    "completo": "Lionel Andrés Messi",
+    "nascimento": "24 jun 1987, Rosário (Argentina)",
+    "posicao": "Avançado",
+    "agora": "Inter Miami (MLS), contrato até 2028",
+    "percurso": "Barcelona 2004–21 · Paris Saint-Germain 2021–23 · Inter Miami desde 2023",
+    "selecao": "Argentina: 208 jogos, 126 golos. Último jogo a 6 out 2026",
+    "destaques": [
+     "Campeão do Mundo em 2022, Copa América em 2021 e 2024",
+     "Maior marcador da história dos Mundiais, com 21 golos, 8 deles em 2026",
+     "Com 18 anos e 357 dias, foi o mais novo argentino a marcar num Mundial"
+    ],
+    "numeros": [
+     {
+      "epoca": "Mundial 2006",
+      "equipa": "Argentina",
+      "jogos": 3,
+      "golos": 1
+     },
+     {
+      "epoca": "Mundiais, total",
+      "equipa": "Argentina",
+      "jogos": 34,
+      "golos": 21
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "José Pékerman",
+    "linhas": [
+     [
+      "Mundial 2006",
+      "Quartos de final",
+      ""
+     ],
+     [
+      "Grupo C",
+      "1.º: 2-1 Costa do Marfim, 6-0 Sérvia e Montenegro, 0-0 Países Baixos",
+      ""
+     ],
+     [
+      "Oitavos de final",
+      "2-1 ao México, após prolongamento",
+      ""
+     ],
+     [
+      "Quartos de final",
+      "1-1 com a Alemanha, 2-4 nos penáltis",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Goal, equipamentos da Argentina nos Mundiais",
+     "https://www.goal.com/en-gb/lists/argentina-world-cup-kits/blt3b4c23666f6ddc67"
+    ],
+    [
+     "Football Fashion, reedição de 2026",
+     "https://footballfashion.org/wordpress/2026/01/14/reissue-argentina-world-cup-2006-jersey/"
+    ],
+    [
+     "Classic Football Shirts, reedição Messi 19",
+     "https://www.classicfootballshirts.co.uk/2006-argentina-adidas-reissue-away-shirt-messi-19jn3709.html"
+    ],
+    [
+     "DH, 16 de junho de 2006",
+     "https://www.dhnet.be/sports/football/coupe-du-monde/2026/06/16/le-16-juin-2006-lionel-messi-lancait-son-histoire-en-mondial-contre-la-serbie-RC5TX4EBZRDZ3FBBAL7RHQKWXE/"
+    ],
+    [
+     "FC Barcelona, a estreia de Messi",
+     "https://www.fcbarcelona.com/en/news/698788/barca-at-the-world-cup-part-2-the-unforgettable-debut-of-leo-messi"
+    ],
+    [
+     "Wikipedia, Argentina nos Mundiais",
+     "https://en.wikipedia.org/wiki/Argentina_at_the_FIFA_World_Cup"
+    ],
+    [
+     "NBC Miami, números de Messi em Mundiais",
+     "https://www.nbcmiami.com/world-cup/lionel-messi-world-cup-stats-argentina/3802881/"
+    ],
+    [
+     "Al Jazeera, Messi deixa a seleção",
+     "https://www.aljazeera.com/sports/2026/8/31/argentina-legend-lionel-messi-retires-from-international-football"
+    ],
+    [
+     "ESPN, Messi em 2026",
+     "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    ]
+   ],
+   "video": {
+    "dur": 5.042,
+    "costas": 2.692,
+    "meia": false,
+    "curva": [
+     0.0,
+     0.0191,
+     0.0527,
+     0.0989,
+     0.1601,
+     0.2196,
+     0.259,
+     0.298,
+     0.3517,
+     0.4071,
+     0.4526,
+     0.4841,
+     0.4999,
+     0.5031,
+     0.5037,
+     0.5043,
+     0.5049,
+     0.51,
+     0.512,
+     0.5157,
+     0.5244,
+     0.542,
+     0.5703,
+     0.6095,
+     0.6609,
+     0.7148,
+     0.7501,
+     0.7939,
+     0.8554,
+     0.9127,
+     0.9601,
+     0.9899,
+     1.0
+    ],
+    "sentido": 1
+   },
+   "fundo": "#4f8ad0",
+   "emblema": "emblemas/argentina.webp"
+  },
+  {
+   "id": "zidane",
+   "jogador": "Zinedine Zidane",
+   "camisola": "ZIDANE",
+   "numero": 5,
+   "equipa": "Real Madrid",
+   "pais": "Espanha",
+   "epoca": "2001/02",
+   "equipamento": "Principal",
+   "marca": "adidas",
+   "patrocinios": [
+    "Realmadrid.com (peito)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#b3b0a9",
+   "comprada": null,
+   "adicionada": "2026-11-05",
+   "resumo": "A camisola da primeira época de Zidane em Madrid, o ano do centenário do clube, que acabou com o volley de Hampden e a nona Taça dos Campeões.",
+   "nota": "Segundo o Real Madrid, na Liga dos Campeões a equipa usou uma versão branca sem patrocinador, feita para o centenário. Esta é a versão com Realmadrid.com.",
+   "jogo": {
+    "casa": "Leverkusen",
+    "fora": "Real Madrid",
+    "gc": 1,
+    "gf": 2,
+    "prova": "Liga dos Campeões, final",
+    "data": "15 mai 2002",
+    "estadio": "Hampden Park, Glasgow",
+    "papel": "Golo da vitória, de volley, e melhor em campo",
+    "golos": "Raúl 8', Lúcio 14', Zidane no fim da 1.ª parte",
+    "marco": true
+   },
+   "pessoa": {
+    "completo": "Zinedine Yazid Zidane",
+    "nascimento": "23 jun 1972, Marselha (França)",
+    "posicao": "Médio ofensivo, 1,85 m",
+    "agora": "Selecionador de França desde julho de 2026",
+    "percurso": "Cannes 1989–92 · Bordéus 1992–96 · Juventus 1996–2001 · Real Madrid 2001–06",
+    "selecao": "França: 108 jogos, 31 golos",
+    "destaques": [
+     "Campeão do Mundo em 1998, com dois golos na final, e da Europa em 2000",
+     "Bola de Ouro em 1998",
+     "Como treinador do Real Madrid, ganhou três Ligas dos Campeões seguidas"
+    ],
+    "numeros": [
+     {
+      "epoca": "2001/02",
+      "equipa": "Real Madrid",
+      "jogos": 47,
+      "golos": 12
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Vicente del Bosque",
+    "linhas": [
+     [
+      "Liga dos Campeões",
+      "Vencedor, 2-1 ao Bayer Leverkusen",
+      "win"
+     ],
+     [
+      "Supertaça de Espanha",
+      "Vencedor",
+      "win"
+     ],
+     [
+      "La Liga",
+      "3.º, 66 pontos (campeão: Valência, 75)",
+      ""
+     ],
+     [
+      "Taça do Rei",
+      "Finalista, perdeu com o Deportivo no Bernabéu",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Kit Archive, Real Madrid 2001/02",
+     "https://www.footballkitarchive.com/real-madrid-2001-02-home-kit/660/"
+    ],
+    [
+     "Real Madrid, camisola do centenário",
+     "https://static.realmadrid.com/StaticFiles/RealMadridResponsive/especiales/en/shirts-and-kits/centenary-shirt-without-sponsorship.html"
+    ],
+    [
+     "Wikipedia, época 2001/02 do Real Madrid",
+     "https://en.wikipedia.org/wiki/2001–02_Real_Madrid_CF_season"
+    ],
+    [
+     "Wikipedia, final da Champions de 2002",
+     "https://en.wikipedia.org/wiki/2002_UEFA_Champions_League_final"
+    ],
+    [
+     "Wikipedia, Zinedine Zidane",
+     "https://en.wikipedia.org/wiki/Zinedine_Zidane"
+    ],
+    [
+     "Al Jazeera, Zidane selecionador de França",
+     "https://www.aljazeera.com/sports/2026/7/28/zidane-named-new-france-head-coach-after-fifa-world-cup-2026"
+    ]
+   ],
+   "video": {
+    "dur": 5.042,
+    "costas": 2.35,
+    "meia": false,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0048,
+     0.0188,
+     0.0465,
+     0.0881,
+     0.1362,
+     0.1857,
+     0.2296,
+     0.2781,
+     0.3311,
+     0.3872,
+     0.435,
+     0.4688,
+     0.4887,
+     0.504,
+     0.5233,
+     0.5505,
+     0.5862,
+     0.6295,
+     0.6778,
+     0.7267,
+     0.7678,
+     0.8167,
+     0.8747,
+     0.9307,
+     0.9704,
+     0.9906,
+     0.9971,
+     0.9982,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#2a1c60",
+   "emblema": "emblemas/realmadrid.webp"
+  },
+  {
+   "id": "saopaulo",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "São Paulo FC",
+   "pais": "Brasil",
+   "epoca": "2026",
+   "equipamento": "Principal",
+   "marca": "New Balance",
+   "patrocinios": [
+    "Superbet (peito e costas)",
+    "Ademicon (peito)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": "M",
+   "cor": "#b8242b",
+   "comprada": null,
+   "adicionada": "2026-11-05",
+   "resumo": "A principal de 2026, lançada nos 96 anos do clube. Nas costas, por baixo da gola, tem bordado a ouro o lema «Dentre os grandes, és o primeiro». Não tem nome nem número.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Hernán Crespo, Roger Machado e, desde maio, Dorival Júnior",
+    "emCurso": true,
+    "linhas": [
+     [
+      "Brasileirão",
+      "39 pontos em 30 jogos, a 10 de outubro",
+      ""
+     ],
+     [
+      "Paulistão",
+      "Meias-finais",
+      ""
+     ],
+     [
+      "Copa do Brasil",
+      "5.ª eliminatória",
+      ""
+     ],
+     [
+      "Copa Sul-Americana",
+      "Quartos de final",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Footy Headlines, principal de 2026",
+     "https://www.footyheadlines.com/2026/02/new-sao-paulo-2026-home-kit.html"
+    ],
+    [
+     "Wikipedia, época 2026 do São Paulo",
+     "https://en.wikipedia.org/wiki/2026_São_Paulo_FC_season"
+    ]
+   ],
+   "fundo": "#5a0d12",
+   "ghost": "1930",
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0083,
+     0.0255,
+     0.0545,
+     0.1002,
+     0.158,
+     0.2191,
+     0.2798,
+     0.3396,
+     0.4008,
+     0.455,
+     0.5011,
+     0.5536,
+     0.6118,
+     0.6703,
+     0.7303,
+     0.7877,
+     0.8405,
+     0.887,
+     0.9235,
+     0.948,
+     0.9641,
+     0.9749,
+     0.9825,
+     0.988,
+     0.9911,
+     0.9917,
+     0.9923,
+     0.9933,
+     0.996,
+     0.9986,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "emblema": "emblemas/saopaulo.webp"
+  },
+  {
+   "id": "ajax",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "AFC Ajax",
+   "pais": "Países Baixos",
+   "epoca": "2024/25",
+   "equipamento": "Alternativo",
+   "marca": "adidas",
+   "patrocinios": [
+    "Ziggo (peito)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": "M",
+   "cor": "#3b4a6b",
+   "comprada": null,
+   "adicionada": "2026-11-05",
+   "resumo": "A alternativa de 2024/25, inspirada em Amsterdão, com as três cruzes de Santo André nas costas da gola. Foi a época em que o Ajax perdeu o título por um ponto, depois de ter nove de avanço a sete jogos do fim. Não tem nome nem número.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Francesco Farioli",
+    "linhas": [
+     [
+      "Eredivisie",
+      "2.º, 78 pontos (campeão: PSV, 79)",
+      ""
+     ],
+     [
+      "Taça dos Países Baixos",
+      "Oitavos de final (AZ, 0-2)",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Oitavos de final (Eintracht Frankfurt, 2-6 no total)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Ajax, alternativa de 2024/25",
+     "https://english.ajax.nl/articles/new-ajax-away-kit-for-the-20242025-season/"
+    ],
+    [
+     "Goal, alternativa do Ajax 2024/25",
+     "https://www.goal.com/en/lists/ajax-unveil-2024-25-away-kit-adidas-artsy-amsterdam-inspired-design/bltb617e6da23568a40"
+    ],
+    [
+     "Wikipedia, época 2024/25 do Ajax",
+     "https://en.wikipedia.org/wiki/2024–25_AFC_Ajax_season"
+    ],
+    [
+     "Ajax Daily, balanço da época",
+     "https://www.ajaxdaily.com/2025/ajax-2024-2025-season-review/"
+    ],
+    [
+     "DutchNews, eliminação em Frankfurt",
+     "https://www.dutchnews.nl/2025/03/ajax-and-az-bow-out-of-europa-league-with-away-defeats"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0018,
+     0.0038,
+     0.0062,
+     0.0098,
+     0.0175,
+     0.0324,
+     0.0548,
+     0.0847,
+     0.122,
+     0.1677,
+     0.2241,
+     0.2887,
+     0.3601,
+     0.4318,
+     0.5009,
+     0.5612,
+     0.6113,
+     0.6607,
+     0.7133,
+     0.7662,
+     0.8172,
+     0.8635,
+     0.9039,
+     0.9368,
+     0.9601,
+     0.9765,
+     0.9868,
+     0.9919,
+     0.9946,
+     0.9964,
+     0.998,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#1c8d90",
+   "ghost": "1900",
+   "emblema": "emblemas/ajax.webp"
+  },
+  {
+   "id": "neymar",
+   "jogador": "Neymar Jr",
+   "camisola": "NEYMAR JR",
+   "numero": 10,
+   "equipa": "Santos FC",
+   "pais": "Brasil",
+   "epoca": "2025",
+   "equipamento": "Principal",
+   "marca": "Umbro",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": "M",
+   "cor": "#a6a49f",
+   "comprada": null,
+   "adicionada": "2026-11-05",
+   "resumo": "A principal de 2025, a primeira do Santos depois do regresso de Neymar. A gola em ziguezague e o desenho da camisola vêm das escadarias de Santos, e o número traz uma coroa dentro do zero.",
+   "jogo": {
+    "casa": "Juventude",
+    "fora": "Santos FC",
+    "gc": 0,
+    "gf": 3,
+    "prova": "Brasileirão 2025, penúltima jornada",
+    "data": "3 dez 2025",
+    "estadio": "Alfredo Jaconi, Caxias do Sul",
+    "papel": "Hat-trick, os três golos do jogo",
+    "golos": "Neymar (3), o último de penálti. O Santos afastou-se da zona de descida",
+    "marco": true
+   },
+   "pessoa": {
+    "completo": "Neymar da Silva Santos Júnior",
+    "nascimento": "5 fev 1992, Mogi das Cruzes (Brasil)",
+    "posicao": "Avançado, 1,75 m",
+    "agora": "Santos, n.º 10 e capitão",
+    "percurso": "Santos 2009–13 · Barcelona 2013–17 · Paris Saint-Germain 2017–23 · Al-Hilal 2023–25 · Santos desde 2025",
+    "selecao": "Brasil: 130 jogos, 80 golos, recorde do país",
+    "destaques": [
+     "Copa Libertadores de 2011 pelo Santos, melhor jogador da prova",
+     "Ouro olímpico em 2016, no Rio de Janeiro",
+     "Voltou ao Santos em janeiro de 2025, 12 anos depois"
+    ],
+    "numeros": [
+     {
+      "epoca": "2025",
+      "equipa": "Santos",
+      "jogos": 28,
+      "golos": 11
+     },
+     {
+      "epoca": "2026, até 4 nov",
+      "equipa": "Santos",
+      "jogos": 27,
+      "golos": 10
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Pedro Caixinha, Cleber Xavier e Juan Pablo Vojvoda",
+    "linhas": [
+     [
+      "Brasileirão",
+      "12.º, 47 pontos",
+      ""
+     ],
+     [
+      "Paulistão",
+      "Meias-finais",
+      ""
+     ],
+     [
+      "Copa do Brasil",
+      "3.ª eliminatória",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Footy Headlines, principal de 2025",
+     "https://www.footyheadlines.com/pt/lancada-a-camisa-titular-do-santos-2025-a-primeira-desde-o-regresso-de-neymar.html"
+    ],
+    [
+     "Football Fashion, Santos 2025",
+     "https://footballfashion.org/wordpress/2025/03/07/camisa-santos-fc-2025/"
+    ],
+    [
+     "Wikipedia, época 2025 do Santos",
+     "https://en.wikipedia.org/wiki/2025_Santos_FC_season"
+    ],
+    [
+     "Wikipedia, Neymar",
+     "https://en.wikipedia.org/wiki/Neymar"
+    ],
+    [
+     "Soccerway, hat-trick ao Juventude",
+     "https://br.soccerway.com/noticias/futebol-brasileirao-betano-com-hat-trick-de-neymar-santos-vence-juventude-e-se-afasta-do-z4/6D3YXBXA"
+    ],
+    [
+     "Imirante, Neymar em 2026",
+     "https://imirante.com/esporte/brasil/2026/11/04/santos-aproveitamento-menor-neymar-campo"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0005,
+     0.001,
+     0.0028,
+     0.0061,
+     0.0109,
+     0.0186,
+     0.0318,
+     0.0529,
+     0.0832,
+     0.1253,
+     0.1805,
+     0.2463,
+     0.3167,
+     0.3843,
+     0.4446,
+     0.495,
+     0.547,
+     0.612,
+     0.6848,
+     0.7575,
+     0.8248,
+     0.8824,
+     0.9253,
+     0.9547,
+     0.9728,
+     0.9838,
+     0.9912,
+     0.9967,
+     0.9985,
+     0.999,
+     0.9995,
+     1.0
+    ],
+    "sentido": 1
+   },
+   "fundo": "#26262c",
+   "emblema": "emblemas/santos.webp"
+  },
+  {
+   "id": "robben",
+   "jogador": "Arjen Robben",
+   "camisola": "ROBBEN",
+   "numero": 16,
+   "equipa": "Chelsea FC",
+   "pais": "Inglaterra",
+   "epoca": "2006/07",
+   "equipamento": "Principal",
+   "marca": "adidas",
+   "patrocinios": [
+    "Samsung Mobile"
+   ],
+   "tipo": "preparada",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#2a38b0",
+   "comprada": "2026-10-28",
+   "resumo": "Camisola oficial do Chelsea preparada para Arjen Robben, com o 16 que usou desde que chegou do PSV em 2004. Vem da coleção de Jimmy Smith, médio da formação do clube, e é da última época de Robben em Londres.",
+   "jogo": null,
+   "pessoa": {
+    "completo": "Arjen Robben",
+    "nascimento": "23 jan 1984, Bedum (Países Baixos)",
+    "posicao": "Extremo direito",
+    "agora": "Retirado desde 2021",
+    "percurso": "Groningen 2000–02 · PSV 2002–04 · Chelsea 2004–07 · Real Madrid 2007–09 · Bayern 2009–19 · Groningen 2020–21",
+    "selecao": "Países Baixos: 96 jogos, 37 golos",
+    "destaques": [
+     "Marcou aos 89' o golo que deu a Champions de 2013 ao Bayern, frente ao Dortmund",
+     "Vice-campeão do mundo em 2010 e 3.º em 2014",
+     "No Chelsea: 2 Premier League, 1 FA Cup, 2 Taças da Liga e 1 Supertaça"
+    ],
+    "numeros": [
+     {
+      "epoca": "2006/07",
+      "equipa": "Chelsea",
+      "jogos": 36,
+      "golos": 3
+     },
+     {
+      "epoca": "2004–07 (liga)",
+      "equipa": "Chelsea",
+      "jogos": 67,
+      "golos": 15
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "José Mourinho",
+    "linhas": [
+     [
+      "Premier League",
+      "2.º, 83 pontos (campeão: Manchester United)",
+      ""
+     ],
+     [
+      "FA Cup",
+      "Vencedor",
+      "win"
+     ],
+     [
+      "Taça da Liga",
+      "Vencedor",
+      "win"
+     ],
+     [
+      "Liga dos Campeões",
+      "Meia-final (Liverpool, nos penáltis)",
+      ""
+     ],
+     [
+      "Supertaça inglesa",
+      "Finalista vencido (Liverpool)",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "The Jimmy Smith Collection | Chelsea",
+    "url": "https://mws.com/pt/product/4-arjen-robben-wEntPicC8EyNkqenX7-z-g",
+    "autenticacao": "Fabricks: chip NFC e certificado digital"
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/4-arjen-robben-wEntPicC8EyNkqenX7-z-g"
+    ],
+    [
+     "Wikipedia, Arjen Robben",
+     "https://en.wikipedia.org/wiki/Arjen_Robben"
+    ],
+    [
+     "Wikipedia, época 2006/07 do Chelsea",
+     "https://en.wikipedia.org/wiki/2006–07_Chelsea_F.C._season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.001,
+     0.0019,
+     0.0046,
+     0.0085,
+     0.017,
+     0.0315,
+     0.0513,
+     0.0776,
+     0.1107,
+     0.1482,
+     0.1935,
+     0.2462,
+     0.3059,
+     0.3715,
+     0.4387,
+     0.5029,
+     0.5763,
+     0.6526,
+     0.7269,
+     0.7944,
+     0.8538,
+     0.9024,
+     0.9398,
+     0.9653,
+     0.9824,
+     0.9921,
+     0.9964,
+     0.9975,
+     0.9982,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#0d1a5c",
+   "emblema": "emblemas/chelsea.webp"
+  },
+  {
+   "id": "pavlidis",
+   "jogador": "Vangelis Pavlidis",
+   "camisola": "PAVLIDIS",
+   "numero": 14,
+   "equipa": "SL Benfica",
+   "pais": "Portugal",
+   "epoca": "2026/27",
+   "equipamento": "Principal",
+   "marca": "adidas",
+   "patrocinios": [
+    "Emirates (peito)",
+    "Sagres (costas)"
+   ],
+   "tipo": "usada",
+   "assinada": true,
+   "tamanho": "L",
+   "cor": "#d81f22",
+   "comprada": "2026-10-21",
+   "resumo": "Usada por Pavlidis na vitória por 2-0 sobre o Vitória SC, na Luz. Foi titular, saiu aos 82' e fez a assistência para o primeiro golo.",
+   "jogo": {
+    "casa": "SL Benfica",
+    "fora": "Vitória SC",
+    "gc": 2,
+    "gf": 0,
+    "prova": "Liga Portugal",
+    "data": "11 out 2026",
+    "estadio": "Estádio da Luz",
+    "papel": "Titular, saiu aos 82'",
+    "golos": "Dahl 24' (assistência de Pavlidis), Sudakov 75'"
+   },
+   "pessoa": {
+    "completo": "Vangelis Pavlidis",
+    "nascimento": "21 nov 1998, Salónica (Grécia)",
+    "posicao": "Ponta de lança, 1,86 m",
+    "agora": "SL Benfica, n.º 14",
+    "percurso": "Bochum 2016–19 · Dortmund II (empréstimo) 2018–19 · Willem II 2019–21 · AZ Alkmaar 2021–24 · Benfica desde 2024",
+    "selecao": "Grécia: 57 jogos, 10 golos",
+    "destaques": [
+     "Hat-trick ao Barcelona na Liga dos Campeões, em janeiro de 2025",
+     "Primeiro jogador do Benfica a marcar um hat-trick no Dragão",
+     "Melhor marcador da Eredivisie em 2023/24"
+    ],
+    "numeros": [
+     {
+      "epoca": "2024/25",
+      "equipa": "Benfica",
+      "jogos": 57,
+      "golos": 30
+     },
+     {
+      "epoca": "2025/26",
+      "equipa": "Benfica",
+      "jogos": 53,
+      "golos": 30
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Marco Silva",
+    "emCurso": true,
+    "linhas": [
+     [
+      "Primeira Liga",
+      "2.º após 8 jornadas, 19 pontos",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Fase de liga",
+      ""
+     ],
+     [
+      "Taça da Liga",
+      "Quartos de final",
+      ""
+     ],
+     [
+      "Taça de Portugal",
+      "4.ª eliminatória",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "SL Benfica - Vitória SC",
+    "url": "https://mws.com/pt/product/vangelis-pavlidis-AUTja6tDskGOUJ-ZHnSkfw",
+    "autenticacao": "Fabricks: chip NFC e certificado digital. Veio diretamente do clube."
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/vangelis-pavlidis-AUTja6tDskGOUJ-ZHnSkfw"
+    ],
+    [
+     "Soccernews, ficha do jogo",
+     "https://www.soccernews.com/matches/sport-lisboa-e-benfica-vs-vitoria-sc-primeira-liga-2026-27-567320/"
+    ],
+    [
+     "Wikipedia, Vangelis Pavlidis",
+     "https://en.wikipedia.org/wiki/Vangelis_Pavlidis"
+    ],
+    [
+     "Wikipedia, época 2026/27 do Benfica",
+     "https://en.wikipedia.org/wiki/2026–27_S.L._Benfica_season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0052,
+     0.0148,
+     0.0306,
+     0.0526,
+     0.0835,
+     0.124,
+     0.1721,
+     0.2269,
+     0.2869,
+     0.3501,
+     0.413,
+     0.4748,
+     0.5287,
+     0.5754,
+     0.6235,
+     0.6755,
+     0.7304,
+     0.7852,
+     0.8352,
+     0.8792,
+     0.9164,
+     0.9453,
+     0.9672,
+     0.9819,
+     0.9909,
+     0.9955,
+     0.9971,
+     0.9978,
+     0.9983,
+     0.9989,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#5a0a0e",
+   "emblema": "emblemas/benfica.webp"
+  },
+  {
+   "id": "sainz",
+   "jogador": "Borja Sainz",
+   "camisola": "BORJA SAINZ",
+   "numero": 17,
+   "equipa": "FC Porto",
+   "pais": "Portugal",
+   "epoca": "2025/26",
+   "equipamento": "Principal",
+   "marca": "New Balance",
+   "patrocinios": [
+    "Betano (peito)",
+    "Super Bock (manga)"
+   ],
+   "tipo": "usada",
+   "assinada": true,
+   "tamanho": "S",
+   "cor": "#2740b0",
+   "comprada": "2026-03-31",
+   "resumo": "Usada por Borja Sainz como titular na vitória por 2-0 sobre o Estugarda, na 2.ª mão dos oitavos da Liga Europa. É uma camisola da época em que o FC Porto foi campeão nacional.",
+   "jogo": {
+    "casa": "FC Porto",
+    "fora": "VfB Stuttgart",
+    "gc": 2,
+    "gf": 0,
+    "prova": "Liga Europa, oitavos, 2.ª mão",
+    "data": "19 mar 2026",
+    "estadio": "Estádio do Dragão",
+    "papel": "Titular",
+    "golos": "William Gomes 21', Froholdt 72'. Eliminatória: 4-1 para o FC Porto."
+   },
+   "pessoa": {
+    "completo": "Borja Sainz Eguskiza",
+    "nascimento": "21 fev 2001, Leioa (Espanha)",
+    "posicao": "Extremo esquerdo",
+    "agora": "FC Porto, n.º 17",
+    "percurso": "Alavés 2019–22 · Real Zaragoza (empréstimo) 2021–22 · Giresunspor 2022–23 · Norwich 2023–25 · FC Porto desde 2025",
+    "selecao": "Espanha sub-19: 5 jogos, 3 golos",
+    "destaques": [
+     "Equipa do ano do Championship em 2024/25, no Norwich",
+     "Assinou pelo FC Porto em julho de 2025, por cinco épocas",
+     "Golo do mês da Liga em dezembro de 2025"
+    ],
+    "numeros": [
+     {
+      "epoca": "2025/26",
+      "equipa": "FC Porto",
+      "jogos": 47,
+      "golos": 7
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Francesco Farioli",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "Campeão, 88 pontos",
+      "win"
+     ],
+     [
+      "Taça de Portugal",
+      "Meia-final",
+      ""
+     ],
+     [
+      "Taça da Liga",
+      "Quartos de final (Vitória SC, 1-3)",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Quartos de final (Nottingham Forest)",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "FC Porto - VfB Stuttgart",
+    "url": "https://mws.com/pt/product/borja-sainz-ywSvZFQGKkaAH9J40bsphw",
+    "autenticacao": "Fabricks: chip NFC e certificado digital. Veio diretamente do clube."
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/borja-sainz-ywSvZFQGKkaAH9J40bsphw"
+    ],
+    [
+     "Wikipedia, eliminatórias da Liga Europa 2025/26",
+     "https://en.wikipedia.org/wiki/2025–26_UEFA_Europa_League_knockout_phase"
+    ],
+    [
+     "Wikipedia, Borja Sainz",
+     "https://en.wikipedia.org/wiki/Borja_Sainz"
+    ],
+    [
+     "Wikipedia, época 2025/26 do FC Porto",
+     "https://en.wikipedia.org/wiki/2025–26_FC_Porto_season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0013,
+     0.0042,
+     0.0104,
+     0.0205,
+     0.0352,
+     0.0565,
+     0.0861,
+     0.1253,
+     0.1755,
+     0.2336,
+     0.3,
+     0.3721,
+     0.4461,
+     0.518,
+     0.5838,
+     0.6349,
+     0.6844,
+     0.7383,
+     0.7913,
+     0.8414,
+     0.8865,
+     0.9246,
+     0.954,
+     0.9747,
+     0.9873,
+     0.9939,
+     0.997,
+     0.9977,
+     0.9983,
+     0.9989,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#0e2468",
+   "emblema": "emblemas/porto.webp"
+  },
+  {
+   "id": "darocha",
+   "jogador": "Yanis da Rocha",
+   "camisola": "DA ROCHA",
+   "numero": 41,
+   "equipa": "SC Braga",
+   "pais": "Portugal",
+   "epoca": "2025/26",
+   "equipamento": "Alternativo (roxo)",
+   "marca": "Puma",
+   "patrocinios": [
+    "Solverde.pt (peito)",
+    "amco (costas)",
+    "Soleo Piscinas (costas)"
+   ],
+   "tipo": "preparada",
+   "assinada": true,
+   "tamanho": "M",
+   "cor": "#6a4fa0",
+   "comprada": "2026-03-24",
+   "resumo": "Preparada para Yanis da Rocha no Sporting 1-1 SC Braga, em Alvalade. Ficou no banco sem entrar, num jogo que o Braga empatou com um penálti aos 90+7'.",
+   "jogo": {
+    "casa": "Sporting CP",
+    "fora": "SC Braga",
+    "gc": 1,
+    "gf": 1,
+    "prova": "Liga Portugal",
+    "data": "5 out 2025",
+    "estadio": "Estádio José Alvalade",
+    "papel": "No banco, não entrou",
+    "golos": "Luis Suárez 19', Zalazar 90+7' (penálti)"
+   },
+   "pessoa": {
+    "completo": "Yanis Franklin da Rocha",
+    "nascimento": "Luso-francês, 22 anos em junho de 2026",
+    "posicao": "Polivalente: central, lateral ou médio",
+    "agora": "SC Braga, n.º 41",
+    "percurso": "Troyes · SC Braga desde 2023/24 (equipa B e sub-23) · equipa principal em 2025/26",
+    "selecao": "Internacional jovem por Portugal",
+    "destaques": [
+     "Nove jogos pela equipa principal na época de estreia",
+     "Titular contra o Lincoln Red Imps, o Celtic e o Santa Clara",
+     "Contrato com o Braga até 2030"
+    ],
+    "numeros": [
+     {
+      "epoca": "2025/26",
+      "equipa": "SC Braga",
+      "jogos": 9,
+      "golos": null
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Carlos Vicens",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "4.º, 59 pontos",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Meia-final",
+      ""
+     ],
+     [
+      "Taça da Liga",
+      "Finalista vencido",
+      ""
+     ],
+     [
+      "Taça de Portugal",
+      "Quartos de final",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "Sprint Auctions | Day 3 | App Exclusive",
+    "url": "https://mws.com/pt/product/yanis-franklin-da-rocha-sc-braga-_SaY-HafX0GXiDnBXknJuw",
+    "autenticacao": "Fabricks: chip NFC e certificado digital"
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/yanis-franklin-da-rocha-sc-braga-_SaY-HafX0GXiDnBXknJuw"
+    ],
+    [
+     "ESPN, ficha do jogo",
+     "https://www.espn.co.uk/football/match/_/gameId/750316/braga-sporting-cp"
+    ],
+    [
+     "A Bola, perfil do jogador",
+     "https://www.abola.pt/noticias/sc-braga-e-polivalente-emergiu-na-elite-minhota-e-esta-pronto-para-mais-2026061319320090404"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Braga",
+     "https://en.wikipedia.org/wiki/2025–26_S.C._Braga_season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0005,
+     0.0011,
+     0.0017,
+     0.0022,
+     0.0027,
+     0.0041,
+     0.0055,
+     0.0069,
+     0.0079,
+     0.0091,
+     0.0145,
+     0.0256,
+     0.0451,
+     0.0691,
+     0.0999,
+     0.1392,
+     0.1843,
+     0.2414,
+     0.3072,
+     0.3861,
+     0.4558,
+     0.522,
+     0.6123,
+     0.7181,
+     0.817,
+     0.9019,
+     0.9484,
+     0.9733,
+     0.9841,
+     0.9909,
+     0.9967,
+     1.0
+    ],
+    "sentido": 1
+   },
+   "fundo": "#2c1a5a",
+   "emblema": "emblemas/braga.webp"
+  },
+  {
+   "id": "diop",
+   "jogador": "Moctar Diop",
+   "camisola": "M. DIOP",
+   "numero": 19,
+   "equipa": "KAA Gent",
+   "pais": "Bélgica",
+   "epoca": "2025/26",
+   "equipamento": "Principal",
+   "marca": "Craft",
+   "patrocinios": [
+    "baloise (peito e costas)",
+    "KAA Gent Foundation (peito)",
+    "Circus Daily (costas)"
+   ],
+   "tipo": "preparada",
+   "assinada": true,
+   "tamanho": "XL",
+   "cor": "#2438a8",
+   "comprada": "2026-03-24",
+   "resumo": "Preparada para Moctar Diop na receção ao OH Leuven, 15 dias depois de o avançado senegalês chegar ao Gent. Na nuca traz o emblema dos 125 anos do clube.",
+   "jogo": {
+    "casa": "KAA Gent",
+    "fora": "OH Leuven",
+    "gc": 1,
+    "gf": 3,
+    "prova": "Pro League, jornada 24",
+    "data": "7 fev 2026",
+    "estadio": "Planet Group Arena",
+    "papel": null,
+    "golos": "Nyakossi 17', Schrijvers 25' (penálti), Goore 54', Maziz 70'"
+   },
+   "pessoa": {
+    "completo": "Moctar Diop",
+    "nascimento": "6 jan 2005, Senegal",
+    "posicao": "Ponta de lança, 1,93 m, pé esquerdo",
+    "agora": "KAA Gent, n.º 19, a jogar também na equipa de sub-23",
+    "percurso": "Aalesund 2023–24 · Lillestrøm 2024–26 · KAA Gent desde janeiro de 2026",
+    "selecao": null,
+    "destaques": [
+     "Campeão da 2.ª divisão norueguesa e vencedor da Taça da Noruega em 2025, pelo Lillestrøm"
+    ],
+    "numeros": [
+     {
+      "epoca": "Desde jan 2026",
+      "equipa": "Gent",
+      "jogos": 3,
+      "golos": 0
+     },
+     {
+      "epoca": "2024–26",
+      "equipa": "Lillestrøm",
+      "jogos": 35,
+      "golos": 6
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Ivan Leko até dezembro de 2025, depois Rik De Mil",
+    "linhas": [
+     [
+      "Pro League, fase regular",
+      "4.º, 45 pontos",
+      ""
+     ],
+     [
+      "Play-off do título",
+      "5.º, 29 pontos",
+      ""
+     ],
+     [
+      "Taça da Bélgica",
+      "Quartos de final",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "Sprint Auctions | Day 3 | App Exclusive",
+    "url": "https://mws.com/pt/product/moctar-diop-kaa-gent-4i5yVNh39EebYCC3k7P8eg",
+    "autenticacao": "Fabricks: certificado digital"
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/moctar-diop-kaa-gent-4i5yVNh39EebYCC3k7P8eg"
+    ],
+    [
+     "FotMob, Moctar Diop",
+     "https://www.fotmob.com/players/1460671/moctar-diop"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Gent",
+     "https://en.wikipedia.org/wiki/2025%E2%80%9326_KAA_Gent_season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0035,
+     0.0112,
+     0.0247,
+     0.0456,
+     0.0756,
+     0.1173,
+     0.1689,
+     0.2292,
+     0.2962,
+     0.3602,
+     0.4202,
+     0.4711,
+     0.5109,
+     0.5643,
+     0.6296,
+     0.7002,
+     0.7673,
+     0.8245,
+     0.8714,
+     0.9078,
+     0.9363,
+     0.9588,
+     0.9752,
+     0.9863,
+     0.9929,
+     0.9961,
+     0.9969,
+     0.9977,
+     0.9983,
+     0.9989,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#0f2162",
+   "emblema": "emblemas/gent.webp"
+  },
+  {
+   "id": "pobega",
+   "jogador": "Tommaso Pobega",
+   "camisola": "POBEGA",
+   "numero": 4,
+   "equipa": "Bologna FC 1909",
+   "pais": "Itália",
+   "epoca": "2025/26",
+   "equipamento": "Principal",
+   "marca": "Macron",
+   "patrocinios": [
+    "Saputo (peito)",
+    "Selenella (costas)",
+    "Lavoropiù (manga)"
+   ],
+   "tipo": "preparada",
+   "assinada": true,
+   "tamanho": "XL",
+   "cor": "#a51622",
+   "comprada": "2026-03-16",
+   "resumo": "Preparada para Tommaso Pobega no Bologna 1-2 Hellas Verona, no Dall'Ara. No peito traz a roseta tricolor de vencedor da Taça de Itália de 2025.",
+   "jogo": {
+    "casa": "Bologna",
+    "fora": "Hellas Verona",
+    "gc": 1,
+    "gf": 2,
+    "prova": "Serie A, jornada 28",
+    "data": "8 mar 2026",
+    "estadio": "Stadio Renato Dall'Ara",
+    "papel": null,
+    "golos": "Rowe 4', Frese, Bowie"
+   },
+   "pessoa": {
+    "completo": "Tommaso Pobega",
+    "nascimento": "15 jul 1999, Trieste (Itália)",
+    "posicao": "Médio, 1,89 m",
+    "agora": "Bologna, n.º 4",
+    "percurso": "Formação no AC Milan · empréstimos a Ternana, Pordenone, Spezia e Torino · AC Milan · Bologna desde 2024, em definitivo desde fevereiro de 2026",
+    "selecao": "Itália: 3 jogos",
+    "destaques": [
+     "Primeiro golo pelo Milan na Liga dos Campeões, ao Dinamo Zagreb, em 2022",
+     "Reencontrou em Bolonha o treinador Vincenzo Italiano, com quem já tinha trabalhado no Spezia"
+    ],
+    "numeros": [
+     {
+      "epoca": "2025/26",
+      "equipa": "Bologna",
+      "jogos": 38,
+      "golos": 4
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Vincenzo Italiano",
+    "linhas": [
+     [
+      "Serie A",
+      "8.º, 56 pontos",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Quartos de final",
+      ""
+     ],
+     [
+      "Taça de Itália",
+      "Quartos de final",
+      ""
+     ],
+     [
+      "Supertaça de Itália",
+      "Finalista vencido",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "Bologna FC 1909 - Hellas Verona FC",
+    "url": "https://mws.com/pt/product/tommaso-pobega-MgAV9Hu2TUi94_T7sE1T9w",
+    "autenticacao": "Fabricks: chip NFC e certificado digital. Veio diretamente do clube."
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/tommaso-pobega-MgAV9Hu2TUi94_T7sE1T9w"
+    ],
+    [
+     "LaPresse, crónica do jogo",
+     "https://uk.lapresse.it/sport-en/2026/03/08/football-serie-a-bologna-verona-1-2"
+    ],
+    [
+     "Wikipedia, Tommaso Pobega",
+     "https://en.wikipedia.org/wiki/Tommaso_Pobega"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Bologna",
+     "https://en.wikipedia.org/wiki/2025–26_Bologna_FC_1909_season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0014,
+     0.002,
+     0.0026,
+     0.0035,
+     0.0075,
+     0.019,
+     0.0394,
+     0.0704,
+     0.1142,
+     0.1659,
+     0.2246,
+     0.2856,
+     0.3468,
+     0.403,
+     0.4526,
+     0.4977,
+     0.5576,
+     0.622,
+     0.6901,
+     0.755,
+     0.8134,
+     0.8614,
+     0.8976,
+     0.9237,
+     0.9436,
+     0.9603,
+     0.9753,
+     0.9877,
+     0.9952,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#5b78a3",
+   "emblema": "emblemas/bologna.webp",
+   "halo": 0.34
+  },
+  {
+   "id": "joaomario",
+   "jogador": "João Mário",
+   "camisola": "JOÃO MÁRIO",
+   "numero": 17,
+   "equipa": "Bologna FC 1909",
+   "pais": "Itália",
+   "epoca": "2025/26",
+   "equipamento": "Principal",
+   "marca": "Macron",
+   "patrocinios": [
+    "Saputo (peito)",
+    "Selenella (costas)",
+    "Lavoropiù (manga)"
+   ],
+   "tipo": "usada",
+   "assinada": true,
+   "tamanho": "L",
+   "cor": "#a51622",
+   "comprada": "2026-03-16",
+   "resumo": "Usada por João Mário como titular no Bologna 1-2 Hellas Verona, dois meses depois de o lateral português chegar por empréstimo da Juventus.",
+   "jogo": {
+    "casa": "Bologna",
+    "fora": "Hellas Verona",
+    "gc": 1,
+    "gf": 2,
+    "prova": "Serie A, jornada 28",
+    "data": "8 mar 2026",
+    "estadio": "Stadio Renato Dall'Ara",
+    "papel": "Titular",
+    "golos": "Rowe 4', Frese, Bowie"
+   },
+   "pessoa": {
+    "completo": "João Mário Neto Lopes",
+    "nascimento": "3 jan 2000, São João da Madeira (Portugal)",
+    "posicao": "Lateral direito, 1,78 m",
+    "agora": "Fiorentina, por empréstimo da Juventus, n.º 17",
+    "percurso": "Formação no FC Porto · FC Porto 2020–25 · Juventus desde 2025 · Bologna (empréstimo) 2026 · Fiorentina (empréstimo) desde 2026",
+    "selecao": "Portugal: 3 jogos",
+    "destaques": [
+     "181 jogos pela equipa principal do FC Porto, com 2 Ligas e 4 Taças de Portugal",
+     "Sérgio Conceição transformou-o de extremo em lateral direito",
+     "Marcou o golo do Bologna ao Brann no play-off da Liga Europa de 2026"
+    ],
+    "numeros": [
+     {
+      "epoca": "2025/26",
+      "equipa": "Bologna",
+      "jogos": 15,
+      "golos": 2
+     },
+     {
+      "epoca": "2025/26",
+      "equipa": "Juventus",
+      "jogos": 13,
+      "golos": 0
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Vincenzo Italiano",
+    "linhas": [
+     [
+      "Serie A",
+      "8.º, 56 pontos",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Quartos de final",
+      ""
+     ],
+     [
+      "Taça de Itália",
+      "Quartos de final",
+      ""
+     ],
+     [
+      "Supertaça de Itália",
+      "Finalista vencido",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "Bologna FC 1909 - Hellas Verona FC",
+    "url": "https://mws.com/pt/product/joao-mario-neto-lopes-WWXFERfweEWjPn8Emt8WXQ",
+    "autenticacao": "Fabricks: chip NFC e certificado digital. Veio diretamente do clube."
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/joao-mario-neto-lopes-WWXFERfweEWjPn8Emt8WXQ"
+    ],
+    [
+     "LaPresse, crónica do jogo",
+     "https://uk.lapresse.it/sport-en/2026/03/08/football-serie-a-bologna-verona-1-2"
+    ],
+    [
+     "Wikipedia, João Mário",
+     "https://en.wikipedia.org/wiki/João_Mário_(footballer,_born_2000)"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Bologna",
+     "https://en.wikipedia.org/wiki/2025–26_Bologna_FC_1909_season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0058,
+     0.0117,
+     0.0196,
+     0.0321,
+     0.0517,
+     0.0797,
+     0.124,
+     0.1693,
+     0.2219,
+     0.2763,
+     0.3323,
+     0.3855,
+     0.439,
+     0.4795,
+     0.5321,
+     0.5937,
+     0.6607,
+     0.7273,
+     0.7965,
+     0.8522,
+     0.897,
+     0.9316,
+     0.9567,
+     0.9739,
+     0.9843,
+     0.9929,
+     0.9959,
+     0.9975,
+     0.9982,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#5b78a3",
+   "emblema": "emblemas/bologna.webp",
+   "halo": 0.34
+  },
+  {
+   "id": "espi",
+   "jogador": "Carlos Espí",
+   "camisola": "C. ESPÍ",
+   "numero": 19,
+   "equipa": "Levante UD",
+   "pais": "Espanha",
+   "epoca": "2025/26",
+   "equipamento": "Principal",
+   "marca": "Macron",
+   "patrocinios": [
+    "Marcos Automoción (peito)",
+    "LOWI (costas)",
+    "Baleària (costas)"
+   ],
+   "tipo": "preparada",
+   "assinada": true,
+   "tamanho": "L",
+   "cor": "#7d1c28",
+   "comprada": "2026-03-12",
+   "resumo": "Preparada para Carlos Espí no jogo em que ele marcou os dois golos da vitória sobre o Alavés, ambos perto do fim. Nesse verão assinou pelo Real Madrid.",
+   "jogo": {
+    "casa": "Levante UD",
+    "fora": "Deportivo Alavés",
+    "gc": 2,
+    "gf": 0,
+    "prova": "La Liga",
+    "data": "27 fev 2026",
+    "estadio": "Estadio Ciudad de Valencia",
+    "papel": "Marcou os dois golos",
+    "golos": "Espí (2), ambos nos últimos minutos. O Alavés jogou a última meia hora com 10."
+   },
+   "pessoa": {
+    "completo": "Carlos Espí Escrihuela",
+    "nascimento": "24 jul 2005, Tavernes de la Valldigna (Espanha)",
+    "posicao": "Ponta de lança, 1,94 m",
+    "agora": "Real Madrid, n.º 19",
+    "percurso": "Formação no Tavernes e no Alzira · Levante 2022–26 · Real Madrid desde 2026",
+    "selecao": "Espanha sub-19 e sub-20",
+    "destaques": [
+     "Jogador sub-23 da LaLiga em 2025/26",
+     "Jogador do mês da LaLiga em março de 2026",
+     "Marcou na estreia pelo Real Madrid, ao Espanyol, em agosto de 2026"
+    ],
+    "numeros": [
+     {
+      "epoca": "2025/26",
+      "equipa": "Levante",
+      "jogos": 27,
+      "golos": 13
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Julián Calero até novembro de 2025, depois Luís Castro",
+    "linhas": [
+     [
+      "La Liga",
+      "16.º, 42 pontos, manteve-se",
+      ""
+     ],
+     [
+      "Taça do Rei",
+      "1/16 de final",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "Levante UD - Deportivo Alavés",
+    "url": "https://mws.com/pt/product/carlos-espi-8azGCNK4iEeNO2sdxtnCLQ-18-98",
+    "autenticacao": "Fabricks: chip NFC e certificado digital. Veio diretamente do clube."
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/carlos-espi-8azGCNK4iEeNO2sdxtnCLQ-18-98"
+    ],
+    [
+     "AP, crónica do jogo",
+     "https://www.oskaloosa.com/sports/national_sports/esp-late-show-gives-levante-priceless-win-over-alaves/article_90216116-f67b-5da8-889f-9384b8489823.html"
+    ],
+    [
+     "Wikipedia, Carlos Espí",
+     "https://en.wikipedia.org/wiki/Carlos_Espí"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Levante",
+     "https://en.wikipedia.org/wiki/2025–26_Levante_UD_season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0079,
+     0.0176,
+     0.0316,
+     0.0529,
+     0.0821,
+     0.1229,
+     0.1727,
+     0.2286,
+     0.2895,
+     0.352,
+     0.4129,
+     0.4699,
+     0.5243,
+     0.5923,
+     0.6642,
+     0.7336,
+     0.7979,
+     0.853,
+     0.8954,
+     0.9272,
+     0.9499,
+     0.9662,
+     0.9778,
+     0.9865,
+     0.9914,
+     0.9932,
+     0.9938,
+     0.9943,
+     0.9955,
+     0.9967,
+     0.9982,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#9a5a6c",
+   "emblema": "emblemas/levante.webp",
+   "halo": 0.34
+  },
+  {
+   "id": "aursnes",
+   "jogador": "Fredrik Aursnes",
+   "camisola": "AURSNES",
+   "numero": 8,
+   "equipa": "SL Benfica",
+   "pais": "Portugal",
+   "epoca": "2024/25",
+   "equipamento": "Principal",
+   "marca": "adidas",
+   "patrocinios": [
+    "Emirates (peito)",
+    "Sagres (costas)"
+   ],
+   "tipo": "usada",
+   "assinada": true,
+   "tamanho": "S",
+   "cor": "#d43234",
+   "comprada": "2025-04-17",
+   "resumo": "Usada por Aursnes no Clássico que o Benfica venceu por 4-1 no Dragão, com hat-trick de Pavlidis. A vitória deixou o Benfica na liderança da Liga.",
+   "jogo": {
+    "casa": "FC Porto",
+    "fora": "SL Benfica",
+    "gc": 1,
+    "gf": 4,
+    "prova": "Liga Portugal, jornada 28",
+    "data": "6 abr 2025",
+    "estadio": "Estádio do Dragão",
+    "papel": "No meio-campo, acabou a lateral direito",
+    "golos": "Pavlidis (3), Otamendi; Samu pelo FC Porto"
+   },
+   "pessoa": {
+    "completo": "Fredrik Aursnes",
+    "nascimento": "10 dez 1995, Hareid (Noruega)",
+    "posicao": "Médio, 1,80 m",
+    "agora": "SL Benfica, n.º 8 e capitão",
+    "percurso": "Hødd 2012–16 · Molde 2016–21 · Feyenoord 2021–22 · Benfica desde 2022",
+    "selecao": "Noruega: 28 jogos, 1 golo",
+    "destaques": [
+     "Vencedor mais novo de sempre da Taça da Noruega, aos 16 anos",
+     "No Benfica: Liga 2022/23, Taça da Liga 2024/25 e Supertaças 2023 e 2025"
+    ],
+    "numeros": [
+     {
+      "epoca": "2024/25",
+      "equipa": "Benfica",
+      "jogos": 53,
+      "golos": 3
+     },
+     {
+      "epoca": "2025/26",
+      "equipa": "Benfica",
+      "jogos": 49,
+      "golos": 4
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Roger Schmidt até agosto de 2024, depois Bruno Lage",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "2.º, 80 pontos (campeão: Sporting CP)",
+      ""
+     ],
+     [
+      "Taça da Liga",
+      "Vencedor, nos penáltis ao Sporting CP",
+      "win"
+     ],
+     [
+      "Taça de Portugal",
+      "Finalista vencido (Sporting CP, 1-3 a.p.)",
+      ""
+     ],
+     [
+      "Liga dos Campeões",
+      "Oitavos de final (Barcelona)",
+      ""
+     ],
+     [
+      "Mundial de Clubes",
+      "Oitavos de final (Chelsea, 1-4 a.p.)",
+      ""
+     ]
+    ]
+   },
+   "lote": {
+    "plataforma": "MWS",
+    "evento": "FC Porto - SL Benfica",
+    "url": "https://mws.com/pt/product/fredrik-aursnes-ixd5J8-DREKrkQaEFKShJg",
+    "autenticacao": "Fabricks: chip NFC e certificado digital. Veio diretamente do clube."
+   },
+   "creditoFotos": "Fotos: MWS",
+   "fontes": [
+    [
+     "MWS, ficha do lote",
+     "https://mws.com/pt/product/fredrik-aursnes-ixd5J8-DREKrkQaEFKShJg"
+    ],
+    [
+     "A Bola, relatório do jogo",
+     "https://www.abola.pt/futebol/jogo/fc-porto-benfica-4386565/relatorio-de-jogo"
+    ],
+    [
+     "Wikipedia, Fredrik Aursnes",
+     "https://en.wikipedia.org/wiki/Fredrik_Aursnes"
+    ],
+    [
+     "Wikipedia, época 2024/25 do Benfica",
+     "https://en.wikipedia.org/wiki/2024–25_S.L._Benfica_season"
+    ]
+   ],
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0013,
+     0.0039,
+     0.0125,
+     0.0271,
+     0.048,
+     0.084,
+     0.1191,
+     0.1605,
+     0.2091,
+     0.265,
+     0.3251,
+     0.3927,
+     0.4537,
+     0.5112,
+     0.5617,
+     0.6078,
+     0.6519,
+     0.7041,
+     0.7537,
+     0.8021,
+     0.8468,
+     0.8859,
+     0.9188,
+     0.9442,
+     0.9716,
+     0.9858,
+     0.9942,
+     0.9981,
+     0.9987,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "fundo": "#5a0a0e",
+   "emblema": "emblemas/benfica.webp"
+  },
+  {
+   "id": "canada",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Canadá",
+   "pais": "Canadá",
+   "epoca": "Mundial 2026",
+   "equipamento": "Alternativo",
+   "marca": "Nike",
+   "patrocinios": [],
+   "tipo": "adepto",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#24242a",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O equipamento preto do Canadá no Mundial que organizou em casa: um grafismo de gelo rachado a branco, como o corte de uma lâmina de patim, e a folha de ácer gelada. Foi apresentado a 16 de março de 2026 e estreou nos particulares com a Islândia e a Tunísia, no BMO Field.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Jesse Marsch",
+    "linhas": [
+     [
+      "Mundial 2026",
+      "Oitavos de final, o melhor resultado de sempre do Canadá",
+      ""
+     ],
+     [
+      "Grupo B",
+      "2.º, 4 pontos: 1-1 Bósnia e Herzegovina, 6-0 Catar, 1-2 Suíça",
+      ""
+     ],
+     [
+      "16 avos de final",
+      "Vitória sobre a África do Sul",
+      ""
+     ],
+     [
+      "Oitavos de final",
+      "0-3 com Marrocos, em Houston (Ounahi 50' e 82', Rahimi nos descontos)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Daily Hive, apresentação dos equipamentos",
+     "https://dailyhive.com/toronto/canada-fifa-world-cup-2026-jerseys-red-black"
+    ],
+    [
+     "Wikipedia, Grupo B do Mundial 2026",
+     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"
+    ],
+    [
+     "Wikipedia, fase a eliminar do Mundial 2026",
+     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage"
+    ]
+   ],
+   "fundo": "#8f1f30",
+   "ghost": "1912",
+   "emblema": "emblemas/canada.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0014,
+     0.0027,
+     0.0074,
+     0.0202,
+     0.0434,
+     0.0844,
+     0.1279,
+     0.1789,
+     0.243,
+     0.3047,
+     0.3701,
+     0.4443,
+     0.5027,
+     0.5485,
+     0.5902,
+     0.6379,
+     0.696,
+     0.7642,
+     0.8283,
+     0.883,
+     0.9275,
+     0.9601,
+     0.9776,
+     0.9869,
+     0.9919,
+     0.9928,
+     0.9935,
+     0.9961,
+     0.9976,
+     0.9991,
+     1.0
+    ],
+    "sentido": 1
+   }
+  },
+  {
+   "id": "bernardo",
+   "jogador": "Bernardo Silva",
+   "camisola": "BERNARDO",
+   "numero": 20,
+   "equipa": "Manchester City",
+   "pais": "Inglaterra",
+   "epoca": "2020/21",
+   "equipamento": "Terceiro",
+   "marca": "Puma",
+   "patrocinios": [
+    "Etihad Airways (peito)"
+   ],
+   "tipo": "adepto",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#efe7dc",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O terceiro equipamento do City em 2020/21, em branco «whisper» com um paisley rosa e azul desenhado a partir da rosa e dos três rios do emblema, uma homenagem à cultura musical de Manchester. Com o nome e o 20 de Bernardo Silva, numa época de campeão inglês e de final da Liga dos Campeões.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": {
+    "completo": "Bernardo Mota Veiga de Carvalho e Silva",
+    "nascimento": "10 ago 1994, Lisboa",
+    "posicao": "Médio, 1,73 m",
+    "agora": "Real Madrid, n.º 20, desde junho de 2026",
+    "percurso": "Benfica 2013–15 · Monaco 2014–17 · Manchester City 2017–26 · Real Madrid desde 2026",
+    "selecao": "Portugal: 115 jogos, 14 golos",
+    "destaques": [
+     "Seis títulos de campeão inglês e a Liga dos Campeões de 2023 pelo City",
+     "Liga das Nações em 2019 e 2025 por Portugal",
+     "Capitão do City em 2025/26, a última época antes de sair livre"
+    ],
+    "numeros": [
+     {
+      "epoca": "2020/21",
+      "equipa": "Manchester City",
+      "jogos": 45,
+      "golos": 5
+     },
+     {
+      "epoca": "2025/26",
+      "equipa": "Manchester City",
+      "jogos": 53,
+      "golos": 3
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Pep Guardiola",
+    "linhas": [
+     [
+      "Premier League",
+      "Campeão, 86 pontos",
+      "win"
+     ],
+     [
+      "Taça da Liga",
+      "Vencedor (1-0 ao Tottenham)",
+      "win"
+     ],
+     [
+      "Taça de Inglaterra",
+      "Meia-final (Chelsea, 0-1)",
+      ""
+     ],
+     [
+      "Liga dos Campeões",
+      "Finalista vencido (Chelsea, 0-1, a 29 de maio de 2021)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Fashion, terceiro equipamento 2020/21",
+     "https://footballfashion.org/wordpress/2020/08/27/manchester-city-2020-21-puma-third-kit"
+    ],
+    [
+     "Wikipedia, época 2020/21 do Manchester City",
+     "https://en.wikipedia.org/wiki/2020–21_Manchester_City_F.C._season"
+    ],
+    [
+     "Wikipedia, Bernardo Silva",
+     "https://en.wikipedia.org/wiki/Bernardo_Silva"
+    ]
+   ],
+   "fundo": "#1c2c5b",
+   "ghost": null,
+   "emblema": "emblemas/mancity.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0012,
+     0.0053,
+     0.0143,
+     0.0327,
+     0.0622,
+     0.1046,
+     0.1619,
+     0.2274,
+     0.2928,
+     0.3562,
+     0.4159,
+     0.4673,
+     0.5091,
+     0.5707,
+     0.6427,
+     0.7152,
+     0.7807,
+     0.8369,
+     0.8834,
+     0.921,
+     0.949,
+     0.9672,
+     0.9777,
+     0.9853,
+     0.991,
+     0.9955,
+     0.9968,
+     0.9973,
+     0.998,
+     0.9993,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "city",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Manchester City",
+   "pais": "Inglaterra",
+   "epoca": "2025/26",
+   "equipamento": "Pré-jogo (Ano do Cavalo)",
+   "marca": "Puma",
+   "patrocinios": [
+    "Etihad Airways (peito)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#e9e3d8",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A camisola de pré-jogo do Ano do Cavalo de Fogo: cavalos desenhados a tinta-da-china ao estilo da pintura chinesa shui-mo, com o emblema e os logótipos em dourado. Foi apresentada a 27 de janeiro de 2026 e estreou no aquecimento do jogo com o Tottenham, a 1 de fevereiro, duas semanas antes do Ano Novo Chinês.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Pep Guardiola, na última época",
+    "linhas": [
+     [
+      "Premier League",
+      "2.º, 78 pontos (campeão: Arsenal)",
+      ""
+     ],
+     [
+      "Taça de Inglaterra",
+      "Vencedor (1-0 ao Chelsea)",
+      "win"
+     ],
+     [
+      "Taça da Liga",
+      "Vencedor (2-0 ao Arsenal)",
+      "win"
+     ],
+     [
+      "Liga dos Campeões",
+      "Oitavos de final (Real Madrid, 1-5 no conjunto)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "SoccerBible, o equipamento do Ano do Cavalo",
+     "https://www.soccerbible.com/performance/football-apparel/2026/01/manchester-city-x-puma-celebrate-the-year-of-the-horse-with-lunar-new-year-2026-kit/"
+    ],
+    [
+     "Manchester City, apresentação",
+     "https://www.mancity.com/news/club/year-of-the-horse-special-kit-release-63905022"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Manchester City",
+     "https://en.wikipedia.org/wiki/2025–26_Manchester_City_F.C._season"
+    ]
+   ],
+   "fundo": "#14315e",
+   "ghost": "1894",
+   "emblema": "emblemas/mancity.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0025,
+     0.0098,
+     0.0227,
+     0.0447,
+     0.0802,
+     0.13,
+     0.1947,
+     0.2728,
+     0.3556,
+     0.4364,
+     0.5061,
+     0.5633,
+     0.6076,
+     0.6624,
+     0.7216,
+     0.7794,
+     0.8343,
+     0.8822,
+     0.9203,
+     0.9482,
+     0.9668,
+     0.9783,
+     0.9853,
+     0.99,
+     0.9931,
+     0.9959,
+     0.9976,
+     0.9981,
+     0.9987,
+     0.9993,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "especial": true
+  },
+  {
+   "id": "betis",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Real Betis",
+   "pais": "Espanha",
+   "epoca": "2025/26",
+   "equipamento": "Principal",
+   "marca": "hummel",
+   "patrocinios": [
+    "Gree (peito)",
+    "Trainline (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#00954c",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do Betis em 2025/26, de riscas verdes e brancas mais largas, com os «chevrons» da hummel nos ombros e, por dentro da gola, um verso do «Verde, verde» de María Jiménez. Foi a época em que o Betis acabou 5.º e voltou à Liga dos Campeões, 21 anos depois.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Manuel Pellegrini",
+    "linhas": [
+     [
+      "LaLiga",
+      "5.º, 60 pontos: apurado para a Liga dos Campeões",
+      ""
+     ],
+     [
+      "Taça do Rei",
+      "Quartos de final (derrota por 0-5, a 5 de fevereiro de 2026)",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Quartos de final; 4.º na fase de liga, com 17 pontos",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Footy Headlines, principal 2025/26",
+     "https://www.footyheadlines.com/2025/02/betis-25-26-home-kit.html"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Real Betis",
+     "https://en.wikipedia.org/wiki/2025–26_Real_Betis_season"
+    ]
+   ],
+   "fundo": "#0b3b22",
+   "ghost": "1907",
+   "emblema": "emblemas/betis.webp",
+   "halo": 0.22,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0014,
+     0.0057,
+     0.0165,
+     0.0335,
+     0.0603,
+     0.1006,
+     0.1516,
+     0.21,
+     0.2743,
+     0.3419,
+     0.4168,
+     0.4794,
+     0.5425,
+     0.6246,
+     0.7052,
+     0.7771,
+     0.8291,
+     0.8645,
+     0.8889,
+     0.908,
+     0.9251,
+     0.9442,
+     0.9609,
+     0.9748,
+     0.9848,
+     0.9918,
+     0.9963,
+     0.9975,
+     0.9983,
+     0.9989,
+     0.9994,
+     1.0
+    ],
+    "sentido": 1
+   }
+  },
+  {
+   "id": "palmeiras",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Palmeiras",
+   "pais": "Brasil",
+   "epoca": "2025",
+   "equipamento": "Principal",
+   "marca": "Puma",
+   "patrocinios": [
+    "Sportingbet (peito)",
+    "Fictor (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#006437",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal de 2025, à venda desde 14 de fevereiro: um jacquard de estrelas, folhas e o P do emblema, e na gola a frase «De fato é campeão», do título mundial de 1951. O Palmeiras foi vice-campeão brasileiro e perdeu a final da Libertadores com o Flamengo.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Abel Ferreira",
+    "linhas": [
+     [
+      "Brasileirão",
+      "2.º, 76 pontos (campeão: Flamengo, 79)",
+      ""
+     ],
+     [
+      "Libertadores",
+      "Finalista vencido (Flamengo, 0-1, a 29 de novembro em Lima)",
+      ""
+     ],
+     [
+      "Mundial de Clubes",
+      "Quartos de final (Chelsea, 1-2)",
+      ""
+     ],
+     [
+      "Paulistão",
+      "Finalista vencido (Corinthians)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Palmeiras, apresentação dos equipamentos de 2025",
+     "https://www.palmeiras.com.br/noticias/palmeiras-e-puma-revelam-novos-uniformes-home-e-away-para-temporada-2025"
+    ],
+    [
+     "Wikipedia, Brasileirão 2025",
+     "https://en.wikipedia.org/wiki/2025_Campeonato_Brasileiro_Série_A"
+    ],
+    [
+     "Wikipedia, final da Libertadores 2025",
+     "https://en.wikipedia.org/wiki/2025_Copa_Libertadores_final"
+    ]
+   ],
+   "fundo": "#2f8b58",
+   "ghost": "1914",
+   "emblema": "emblemas/palmeiras.webp",
+   "halo": 0.26,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0005,
+     0.001,
+     0.0022,
+     0.0038,
+     0.0091,
+     0.0178,
+     0.0317,
+     0.0578,
+     0.101,
+     0.1658,
+     0.2521,
+     0.3545,
+     0.4535,
+     0.5331,
+     0.5828,
+     0.6458,
+     0.7191,
+     0.7972,
+     0.8643,
+     0.913,
+     0.9443,
+     0.9625,
+     0.9747,
+     0.9822,
+     0.9841,
+     0.9859,
+     0.9899,
+     0.9942,
+     0.997,
+     0.9984,
+     0.9995,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "inter",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Inter",
+   "pais": "Itália",
+   "epoca": "2025/26",
+   "equipamento": "Pré-jogo (terceiro)",
+   "marca": "Nike",
+   "patrocinios": [
+    "Betsson.sport (peito)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#1b4db1",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A camisola de pré-jogo do terceiro equipamento de 2025/26, em azul, preto e laranja ao estilo Total 90, da coleção com que a Nike voltou aos anos 2000. Na época, o Inter de Chivu foi campeão de Itália e venceu a Taça.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Cristian Chivu",
+    "linhas": [
+     [
+      "Serie A",
+      "Campeão, 87 pontos",
+      "win"
+     ],
+     [
+      "Taça de Itália",
+      "Vencedor",
+      "win"
+     ],
+     [
+      "Supertaça",
+      "Meia-final (Bologna, nos penáltis)",
+      ""
+     ],
+     [
+      "Liga dos Campeões",
+      "10.º na fase de liga; eliminado no play-off",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Inter, o terceiro equipamento 2025/26",
+     "https://www.inter.it/en/news/inter-third-kit-2025-2026"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Inter",
+     "https://en.wikipedia.org/wiki/2025–26_Inter_Milan_season"
+    ]
+   ],
+   "fundo": "#4a63a0",
+   "ghost": "1908",
+   "emblema": "emblemas/inter.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0059,
+     0.0111,
+     0.019,
+     0.0338,
+     0.0596,
+     0.0984,
+     0.1535,
+     0.2232,
+     0.305,
+     0.3898,
+     0.4702,
+     0.5375,
+     0.589,
+     0.6307,
+     0.678,
+     0.7293,
+     0.7821,
+     0.8336,
+     0.878,
+     0.9133,
+     0.94,
+     0.9605,
+     0.9749,
+     0.9855,
+     0.9919,
+     0.9956,
+     0.9968,
+     0.9978,
+     0.9983,
+     0.9989,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "alemanha",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Alemanha",
+   "pais": "Alemanha",
+   "epoca": "Mundial 2022",
+   "equipamento": "Alternativo",
+   "marca": "adidas",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#1a1a1a",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O alternativo da Alemanha no Mundial 2022, preto com um grafismo em vermelho e grená e as três riscas douradas nos ombros. Foi com ele que a Alemanha empatou 1-1 com a Espanha, com o golo de Füllkrug; mesmo assim caiu na fase de grupos pela segunda vez seguida.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Hansi Flick",
+    "linhas": [
+     [
+      "Mundial 2022",
+      "Fase de grupos: 3.º do Grupo E, com 4 pontos",
+      ""
+     ],
+     [
+      "Grupo E",
+      "1-2 Japão, 1-1 Espanha, 4-2 Costa Rica",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Footy Headlines, alternativo da Alemanha para 2022",
+     "https://www.footyheadlines.com/2021/11/germany-2022-world-cup-away-kit.html"
+    ],
+    [
+     "Wikipedia, Grupo E do Mundial 2022",
+     "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Group_E"
+    ]
+   ],
+   "fundo": "#7a1f28",
+   "ghost": "1900",
+   "emblema": "emblemas/alemanha.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0013,
+     0.002,
+     0.0042,
+     0.0103,
+     0.0202,
+     0.0357,
+     0.0593,
+     0.0931,
+     0.1373,
+     0.1926,
+     0.2578,
+     0.3291,
+     0.4035,
+     0.4786,
+     0.5477,
+     0.6037,
+     0.6479,
+     0.6926,
+     0.7377,
+     0.7855,
+     0.8328,
+     0.877,
+     0.9146,
+     0.9424,
+     0.9632,
+     0.9782,
+     0.9869,
+     0.9908,
+     0.9921,
+     0.9945,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "flamengo",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Flamengo",
+   "pais": "Brasil",
+   "epoca": "2026",
+   "equipamento": "Terceiro",
+   "marca": "adidas",
+   "patrocinios": [],
+   "tipo": "adepto",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#c3272b",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O terceiro equipamento de 2026, de ar retro: vermelho com o escudo do remo repetido em tom sobre tom, o trevo da adidas Originals e a gola branca com debrum vermelho e preto. Foi apresentado a 31 de julho de 2026, na campanha «Segue o Mengo».",
+   "nota": "Esta versão não tem o patrocínio Betano no peito; é a versão de adepto (torcedor), feita no Brasil.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Leonardo Jardim",
+    "emCurso": true,
+    "linhas": [
+     [
+      "Brasileirão",
+      "Líder a 13 de setembro, com 57 pontos em 27 jogos",
+      ""
+     ],
+     [
+      "2025",
+      "Campeão brasileiro e da Libertadores; finalista da Taça Intercontinental (PSG, 1-2)",
+      "win"
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Mantos do Futebol, terceiro equipamento 2026/27",
+     "https://mantosdofutebol.com.br/2026/07/terceira-camisa-flamengo-2026-2027-adidas/"
+    ],
+    [
+     "Gazeta Esportiva, apresentação",
+     "https://www.gazetaesportiva.com/times/flamengo/flamengo-lanca-terceiro-uniforme-temporada-2026/"
+    ],
+    [
+     "Wikipedia, Brasileirão 2026",
+     "https://en.wikipedia.org/wiki/2026_Campeonato_Brasileiro_Série_A"
+    ],
+    [
+     "Wikipedia, final da Libertadores 2025",
+     "https://en.wikipedia.org/wiki/2025_Copa_Libertadores_final"
+    ]
+   ],
+   "fundo": "#24090c",
+   "ghost": "1895",
+   "emblema": "emblemas/flamengo.webp",
+   "halo": 0.22,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0013,
+     0.0019,
+     0.0032,
+     0.0104,
+     0.0279,
+     0.0582,
+     0.1023,
+     0.1585,
+     0.2246,
+     0.2951,
+     0.3651,
+     0.4268,
+     0.4733,
+     0.5151,
+     0.5693,
+     0.6274,
+     0.6904,
+     0.754,
+     0.8158,
+     0.8694,
+     0.9133,
+     0.9442,
+     0.9658,
+     0.9787,
+     0.9853,
+     0.9894,
+     0.9934,
+     0.9967,
+     0.9987,
+     0.9994,
+     1.0
+    ],
+    "sentido": 1
+   }
+  },
+  {
+   "id": "rios",
+   "jogador": "Richard Ríos",
+   "camisola": "RICHARD RÍOS",
+   "numero": 20,
+   "equipa": "SL Benfica",
+   "pais": "Portugal",
+   "epoca": "2025/26",
+   "equipamento": "Principal",
+   "marca": "adidas",
+   "patrocinios": [
+    "Emirates (peito)",
+    "Sagres (costas)"
+   ],
+   "tipo": "jogador",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#d43234",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do Benfica em 2025/26 com o nome e o 20 de Richard Ríos, o médio colombiano que chegou do Palmeiras por 27 milhões, o recorde do clube. Foi a época em que Mourinho substituiu Bruno Lage em setembro e o Benfica acabou 3.º, sem perder um jogo na Liga.",
+   "nota": "Etiqueta da gola «Slim fit», a da versão autêntica da adidas.",
+   "jogo": null,
+   "pessoa": {
+    "completo": "Richard Ríos Montoya",
+    "nascimento": "2 jun 2000, Vegachí (Colômbia)",
+    "posicao": "Médio centro, 1,85 m",
+    "agora": "Al-Ittihad, emprestado pelo Benfica desde setembro de 2026 (n.º 5)",
+    "percurso": "Flamengo 2020–22 · Mazatlán (empréstimo) 2021–22 · Guarani 2022–23 · Palmeiras 2023–25 · Benfica desde 2025",
+    "selecao": "Colômbia: 40 jogos, 2 golos",
+    "destaques": [
+     "Veio do futsal; no Palmeiras ganhou o Brasileirão 2023 e o Paulista 2024",
+     "Finalista da Copa América 2024, com golo ao Panamá",
+     "Mundial 2026: entrou nos cinco jogos; a Colômbia caiu nos penáltis com a Suíça"
+    ],
+    "numeros": [
+     {
+      "epoca": "2025/26",
+      "equipa": "Benfica",
+      "jogos": 45,
+      "golos": 8
+     },
+     {
+      "epoca": "2023–25",
+      "equipa": "Palmeiras",
+      "jogos": 138,
+      "golos": 11
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Bruno Lage até 16 de setembro, depois José Mourinho",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "3.º, 80 pontos, invicto (campeão: FC Porto, 88)",
+      ""
+     ],
+     [
+      "Supertaça",
+      "Vencedor (1-0 ao Sporting CP)",
+      "win"
+     ],
+     [
+      "Taça de Portugal",
+      "Quartos de final",
+      ""
+     ],
+     [
+      "Taça da Liga",
+      "Meia-final",
+      ""
+     ],
+     [
+      "Liga dos Campeões",
+      "Play-off de acesso aos oitavos (Real Madrid, 1-3 na 2.ª mão)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia, Richard Ríos",
+     "https://en.wikipedia.org/wiki/Richard_Ríos"
+    ],
+    [
+     "Wikipedia, época 2025/26 do Benfica",
+     "https://en.wikipedia.org/wiki/2025–26_S.L._Benfica_season"
+    ],
+    [
+     "Wikipedia, Primeira Liga 2025/26",
+     "https://en.wikipedia.org/wiki/2025–26_Primeira_Liga"
+    ]
+   ],
+   "fundo": "#5a0a0e",
+   "ghost": null,
+   "emblema": "emblemas/benfica.webp",
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0016,
+     0.0082,
+     0.0243,
+     0.0509,
+     0.0874,
+     0.1334,
+     0.1878,
+     0.2485,
+     0.309,
+     0.3701,
+     0.4281,
+     0.4802,
+     0.5223,
+     0.5601,
+     0.6056,
+     0.6569,
+     0.7105,
+     0.7651,
+     0.8167,
+     0.8627,
+     0.9023,
+     0.9335,
+     0.9586,
+     0.9765,
+     0.9875,
+     0.9922,
+     0.9929,
+     0.9935,
+     0.9943,
+     0.9966,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "arsenal",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Arsenal FC",
+   "pais": "Inglaterra",
+   "epoca": "1992/93",
+   "equipamento": "Alternativo",
+   "marca": "adidas",
+   "patrocinios": [
+    "JVC (peito)"
+   ],
+   "tipo": "reedicao",
+   "assinada": false,
+   "tamanho": "M",
+   "cor": "#f2c230",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A «bruised banana», o alternativo amarelo e azul-marinho que o Arsenal usou entre 1991 e 1993, da linha adidas Equipment, com o patrocínio JVC. Em 1992/93, o Arsenal de George Graham ganhou as duas taças inglesas, as duas ao Sheffield Wednesday.",
+   "nota": "A etiqueta (adidas Equipment com a grelha de tamanhos moderna, feita na China) é a da reedição que a adidas lançou em 2019, não a de uma camisola de 1991-93.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "George Graham",
+    "linhas": [
+     [
+      "Premier League",
+      "10.º, 56 pontos",
+      ""
+     ],
+     [
+      "Taça de Inglaterra",
+      "Vencedor (2-1 ao Sheffield Wednesday, a.p., na repetição da final)",
+      "win"
+     ],
+     [
+      "Taça da Liga",
+      "Vencedor (2-1 ao Sheffield Wednesday)",
+      "win"
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia, época 1992/93 do Arsenal",
+     "https://en.wikipedia.org/wiki/1992–93_Arsenal_F.C._season"
+    ]
+   ],
+   "fundo": "#0e1f4a",
+   "ghost": "1886",
+   "emblema": "emblemas/arsenal.webp",
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0012,
+     0.0019,
+     0.0039,
+     0.0098,
+     0.0218,
+     0.0427,
+     0.074,
+     0.1169,
+     0.1688,
+     0.2276,
+     0.2912,
+     0.3578,
+     0.4245,
+     0.4886,
+     0.5438,
+     0.5871,
+     0.6337,
+     0.6828,
+     0.7348,
+     0.788,
+     0.8377,
+     0.881,
+     0.9181,
+     0.9494,
+     0.9717,
+     0.9858,
+     0.9933,
+     0.9973,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "palestra",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Palmeiras",
+   "pais": "Brasil",
+   "epoca": "2024",
+   "equipamento": "Ringer tee (Puma × Palmeiras)",
+   "marca": "Puma",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#0b6b3a",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A ringer tee da coleção Puma × Palmeiras, em verde malaquite com punhos brancos e, na nuca, «Scoppia che la vittoria è nostra», o grito do hino em italiano, das origens do Palestra Itália. Foi revelada em outubro de 2024, numa sessão com Troye Sivan. Não é camisola de jogo.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Abel Ferreira",
+    "linhas": [
+     [
+      "Brasileirão",
+      "2.º, 73 pontos (campeão: Botafogo)",
+      ""
+     ],
+     [
+      "Paulistão",
+      "Campeão (Santos)",
+      "win"
+     ],
+     [
+      "Libertadores",
+      "Oitavos de final (Botafogo)",
+      ""
+     ],
+     [
+      "Copa do Brasil",
+      "Oitavos de final (Flamengo)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Asphaltgold, Puma × Palmeiras Ringer Tee",
+     "https://asphaltgold.com/en/products/puma-x-palmeiras-sao-paulo-ringer-tee-malachite"
+    ],
+    [
+     "Wikipedia, época 2024 do Palmeiras",
+     "https://en.wikipedia.org/wiki/2024_Sociedade_Esportiva_Palmeiras_season"
+    ]
+   ],
+   "fundo": "#48a06a",
+   "ghost": "1914",
+   "emblema": "emblemas/palmeiras.webp",
+   "halo": 0.26,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0005,
+     0.0011,
+     0.0063,
+     0.0161,
+     0.0339,
+     0.0628,
+     0.1115,
+     0.1728,
+     0.2451,
+     0.3213,
+     0.3992,
+     0.4729,
+     0.5453,
+     0.604,
+     0.6662,
+     0.7236,
+     0.7713,
+     0.8132,
+     0.8546,
+     0.8907,
+     0.9217,
+     0.9465,
+     0.9636,
+     0.976,
+     0.9853,
+     0.9921,
+     0.9959,
+     0.9976,
+     0.9982,
+     0.9987,
+     0.9995,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "especial": true
+  },
+  {
+   "id": "gales",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "País de Gales",
+   "pais": "País de Gales",
+   "epoca": "2026",
+   "equipamento": "Principal",
+   "marca": "adidas",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#d30731",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do País de Gales para 2026, em «Better Scarlet», com a faixa branca e verde ao peito a lembrar a bandeira e o emblema da FAW ao centro. À venda desde 6 de novembro de 2025. Gales ficou a um penálti do Mundial: perdeu nos penáltis a meia-final do play-off com a Bósnia, em Cardiff.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Craig Bellamy",
+    "linhas": [
+     [
+      "Qualificação para o Mundial 2026",
+      "2.º do grupo, atrás da Bélgica",
+      ""
+     ],
+     [
+      "Play-off",
+      "Meia-final: 1-1 com a Bósnia e Herzegovina em Cardiff (James 51', Džeko 86'), 2-4 nos penáltis, a 26 de março de 2026",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Footy Headlines, equipamentos de Gales para 2026",
+     "https://www.footyheadlines.com/2025/10/wales-2026-home-away-kits.html"
+    ],
+    [
+     "Wikipedia, seleção do País de Gales",
+     "https://en.wikipedia.org/wiki/Wales_national_football_team"
+    ]
+   ],
+   "fundo": "#0b3d26",
+   "ghost": "1876",
+   "emblema": "emblemas/gales.webp",
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0018,
+     0.0062,
+     0.0159,
+     0.033,
+     0.0597,
+     0.0971,
+     0.1454,
+     0.2041,
+     0.2696,
+     0.3398,
+     0.4115,
+     0.4813,
+     0.5476,
+     0.6049,
+     0.649,
+     0.6941,
+     0.7416,
+     0.7891,
+     0.8364,
+     0.8815,
+     0.9216,
+     0.9524,
+     0.9736,
+     0.986,
+     0.9922,
+     0.9947,
+     0.9962,
+     0.9973,
+     0.9981,
+     0.9991,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "bragaazul",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "SC Braga",
+   "pais": "Portugal",
+   "epoca": "2016/17",
+   "equipamento": "Terceiro",
+   "marca": "Lacatoni",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#1c2b5a",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O terceiro equipamento do Braga em 2016/17, azul-marinho com a gola e os punhos vermelhos e «Gverreiros do Minho» bordado na nuca, da Lacatoni. Foi a época de três treinadores: Peseiro, Jorge Simão e, no fim, Abel Ferreira.",
+   "nota": "Identificada pela assinatura «Gverreiros do Minho» e pelo registo do Football Kit Archive (terceiro de 2016/17, azul-marinho e vermelho). Falta o Gabriel confirmar.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "José Peseiro até dezembro, Jorge Simão até abril, depois Abel Ferreira",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "5.º, 54 pontos (campeão: Benfica)",
+      ""
+     ],
+     [
+      "Taça da Liga",
+      "Finalista vencido (Moreirense, 0-1)",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Fase de grupos",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Kit Archive, terceiro equipamento 2016/17",
+     "https://footballkitarchive.com/sc-braga-2016-17-third-kit"
+    ],
+    [
+     "Football Fashion, equipamentos 2016/17",
+     "https://footballfashion.org/wordpress/2016/09/05/sc-braga-201617-lacatoni-home-and-away-kits/amp"
+    ],
+    [
+     "Wikipedia, Primeira Liga 2016/17",
+     "https://en.wikipedia.org/wiki/2016–17_Primeira_Liga"
+    ]
+   ],
+   "fundo": "#9c1f2c",
+   "ghost": "1921",
+   "emblema": "emblemas/braga.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0255,
+     0.0548,
+     0.0894,
+     0.1319,
+     0.1827,
+     0.2394,
+     0.3012,
+     0.3626,
+     0.4226,
+     0.479,
+     0.528,
+     0.5761,
+     0.6279,
+     0.6867,
+     0.7457,
+     0.7987,
+     0.847,
+     0.8877,
+     0.9178,
+     0.9421,
+     0.9603,
+     0.9728,
+     0.9797,
+     0.9824,
+     0.9848,
+     0.9891,
+     0.9951,
+     0.9973,
+     0.998,
+     0.9987,
+     0.9993,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "estrela",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Estrela da Amadora",
+   "pais": "Portugal",
+   "epoca": "2024/25",
+   "equipamento": "Terceiro",
+   "marca": "Umbro",
+   "patrocinios": [
+    "Hospital da Luz (peito)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#2d6b4a",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O terceiro equipamento do Estrela em 2024/25: painéis em diagonal de grená, preto e verde com um mapa da Amadora em tom sobre tom e os filetes dourados. Com o Hospital da Luz ao peito, o patrocínio que o clube usava nos jogos com os grandes.",
+   "nota": "Com o Hospital da Luz ao peito, o patrocínio que o Estrela usava nos jogos com os grandes em 2024/25 (o terceiro de 2025/26 era preto e verde, com outro patrocinador).",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Filipe Martins até setembro, depois José Faria",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "15.º, 29 pontos (campeão: Sporting CP)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Shirt Society, terceiro equipamento 2024/25",
+     "https://shirtsociety.eu/shirt/estrela-da-amadora-2024-25-third-kit"
+    ],
+    [
+     "A Bola, o patrocínio rotativo do Estrela em 2024/25",
+     "https://www.abola.pt/noticias/e-amadora-sporting-proporcionou-mudanca-pontual-de-main-sponsor-2025040110511872591"
+    ],
+    [
+     "Wikipedia, Primeira Liga 2024/25",
+     "https://en.wikipedia.org/wiki/2024–25_Primeira_Liga"
+    ]
+   ],
+   "fundo": "#3f7a5c",
+   "ghost": "1932",
+   "emblema": "emblemas/estrela.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0055,
+     0.0205,
+     0.0468,
+     0.0813,
+     0.1233,
+     0.1724,
+     0.2271,
+     0.288,
+     0.3513,
+     0.4171,
+     0.4825,
+     0.5462,
+     0.603,
+     0.6463,
+     0.6787,
+     0.7149,
+     0.7508,
+     0.7869,
+     0.8211,
+     0.8526,
+     0.8829,
+     0.9111,
+     0.9382,
+     0.962,
+     0.979,
+     0.99,
+     0.995,
+     0.9975,
+     0.9986,
+     0.9993,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "nani",
+   "jogador": "Nani",
+   "camisola": "NANI",
+   "numero": 17,
+   "equipa": "Estrela da Amadora",
+   "pais": "Portugal",
+   "epoca": "2024/25",
+   "equipamento": "Principal",
+   "marca": "Umbro",
+   "patrocinios": [
+    "CMR, Correio da Manhã Rádio (peito)",
+    "ESC Online (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#7b1c2e",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do Estrela em 2024/25 com o 17 de Nani, que voltou ao clube da sua Amadora aos 37 anos, a 31 de julho de 2024, para a última época da carreira: 10 jogos e um golo até se despedir em dezembro.",
+   "nota": "Falta o Gabriel confirmar se é a versão de adepto ou a de jogador.",
+   "jogo": null,
+   "pessoa": {
+    "completo": "Luís Carlos Almeida da Cunha",
+    "nascimento": "17 nov 1986, Amadora",
+    "posicao": "Extremo, 1,77 m",
+    "agora": "Retirou-se a 8 de dezembro de 2024; em janeiro de 2026 voltou a jogar, no Aktobe (Cazaquistão)",
+    "percurso": "Sporting CP 2005–07 · Manchester United 2007–15 · Sporting CP (empréstimo) 2014–15 · Fenerbahçe 2015–16 · Valencia 2016–18 · Lazio (empréstimo) 2017–18 · Sporting CP 2018–19 · Orlando City 2019–21 · Venezia 2021–22 · Melbourne Victory 2022–23 · Adana Demirspor 2023–24 · Estrela da Amadora 2024",
+    "selecao": "Portugal: 112 jogos, 24 golos",
+    "destaques": [
+     "Campeão da Europa em 2016 por Portugal",
+     "Liga dos Campeões de 2008 e quatro títulos ingleses pelo Manchester United",
+     "Último jogo: 1-5 em Alvalade, a 1 de novembro de 2024"
+    ],
+    "numeros": [
+     {
+      "epoca": "2024/25",
+      "equipa": "Estrela da Amadora",
+      "jogos": 10,
+      "golos": 1
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Filipe Martins, depois José Faria",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "15.º, 29 pontos (campeão: Sporting CP)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia, Nani",
+     "https://en.wikipedia.org/wiki/Nani_(footballer)"
+    ],
+    [
+     "Wikipedia, Primeira Liga 2024/25",
+     "https://en.wikipedia.org/wiki/2024–25_Primeira_Liga"
+    ]
+   ],
+   "fundo": "#a04a58",
+   "ghost": null,
+   "emblema": "emblemas/estrela.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0017,
+     0.0069,
+     0.0142,
+     0.0238,
+     0.0372,
+     0.0576,
+     0.0877,
+     0.128,
+     0.1756,
+     0.229,
+     0.289,
+     0.3549,
+     0.419,
+     0.4812,
+     0.538,
+     0.5815,
+     0.6166,
+     0.6565,
+     0.7042,
+     0.7579,
+     0.814,
+     0.8667,
+     0.9142,
+     0.9541,
+     0.9812,
+     0.991,
+     0.9935,
+     0.996,
+     0.9984,
+     0.9993,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "bragamangas",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "SC Braga",
+   "pais": "Portugal",
+   "epoca": "2016/17",
+   "equipamento": "Principal, manga comprida",
+   "marca": "Lacatoni",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#c8102e",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal de manga comprida do Braga em 2016/17: vermelha com as mangas brancas, o corte clássico dos «arsenalistas», gola de botões com vivos brancos e «Gverreiros do Minho» na nuca, da Lacatoni.",
+   "nota": "Identificada pela assinatura «Gverreiros do Minho» e pela gola de botões dos equipamentos de 2016/17. Falta o Gabriel confirmar.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "José Peseiro até dezembro, Jorge Simão até abril, depois Abel Ferreira",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "5.º, 54 pontos (campeão: Benfica)",
+      ""
+     ],
+     [
+      "Taça da Liga",
+      "Finalista vencido (Moreirense, 0-1)",
+      ""
+     ],
+     [
+      "Liga Europa",
+      "Fase de grupos",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Fashion, equipamentos 2016/17",
+     "https://footballfashion.org/wordpress/2016/09/05/sc-braga-201617-lacatoni-home-and-away-kits/amp"
+    ],
+    [
+     "Wikipedia, Primeira Liga 2016/17",
+     "https://en.wikipedia.org/wiki/2016–17_Primeira_Liga"
+    ]
+   ],
+   "fundo": "#4a0c14",
+   "ghost": "1921",
+   "emblema": "emblemas/braga.webp",
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0005,
+     0.0013,
+     0.0033,
+     0.0093,
+     0.0219,
+     0.0422,
+     0.0746,
+     0.1228,
+     0.1865,
+     0.2599,
+     0.3378,
+     0.412,
+     0.4793,
+     0.5319,
+     0.5831,
+     0.6431,
+     0.7049,
+     0.7636,
+     0.8165,
+     0.8613,
+     0.8996,
+     0.93,
+     0.9534,
+     0.9699,
+     0.9798,
+     0.9867,
+     0.9925,
+     0.9963,
+     0.9973,
+     0.9982,
+     0.9995,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "gilazul",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Gil Vicente FC",
+   "pais": "Portugal",
+   "epoca": "2019–21",
+   "equipamento": "Alternativo",
+   "marca": "Lacatoni",
+   "patrocinios": [
+    "Crédito Agrícola (costas)",
+    "H.M Motor (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#1f3f8f",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "Um alternativo azul do Gil Vicente com a gola e os punhos em vermelho, branco e azul, da Lacatoni, com o Crédito Agrícola e a H.M Motor nas costas. Tem o emblema do galo, que o clube usou até junho de 2021, quando voltou ao escudo antigo: é das duas primeiras épocas de regresso à Primeira Liga.",
+   "nota": "Datada pelo emblema (o do galo deixou de se usar em junho de 2021). Falta o Gabriel dizer se é de 2019/20 ou 2020/21.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": null,
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia (pt), Gil Vicente: regresso ao emblema antigo em junho de 2021",
+     "https://pt.wikipedia.org/wiki/Gil_Vicente_Futebol_Clube"
+    ],
+    [
+     "Football Kit Archive, equipamentos do Gil Vicente",
+     "https://www.footballkitarchive.com/gil-vicente-kits/"
+    ]
+   ],
+   "fundo": "#9e2436",
+   "ghost": "1924",
+   "emblema": "emblemas/gilvicente.webp",
+   "halo": 0.24,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0008,
+     0.0015,
+     0.0023,
+     0.0034,
+     0.0095,
+     0.0246,
+     0.0513,
+     0.088,
+     0.1362,
+     0.1918,
+     0.2531,
+     0.3171,
+     0.3781,
+     0.4317,
+     0.481,
+     0.5177,
+     0.5616,
+     0.6228,
+     0.6895,
+     0.7519,
+     0.8079,
+     0.8571,
+     0.8961,
+     0.9275,
+     0.953,
+     0.972,
+     0.9831,
+     0.9891,
+     0.9936,
+     0.9973,
+     0.9992,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "gilbranco",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Gil Vicente FC",
+   "pais": "Portugal",
+   "epoca": "2021–25",
+   "equipamento": "Alternativo",
+   "marca": "Lacatoni",
+   "patrocinios": [
+    "Barcelos (peito)",
+    "Crédito Agrícola (costas)",
+    "H.M Motor (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#e8e8e8",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "Um alternativo branco do Gil Vicente com um padrão cinzento em tom sobre tom, «Barcelos» ao peito e o Crédito Agrícola e a H.M Motor nas costas, da Lacatoni, já com o escudo das armas de Barcelos que o clube recuperou em 2021.",
+   "nota": "Datada pelo emblema: o escudo com as armas de Barcelos voltou em junho de 2021, e a Lacatoni vestiu o clube até 2025. Falta o Gabriel dizer a época exata.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": null,
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia (pt), Gil Vicente: regresso ao emblema antigo em junho de 2021",
+     "https://pt.wikipedia.org/wiki/Gil_Vicente_Futebol_Clube"
+    ],
+    [
+     "Football Kit Archive, equipamentos do Gil Vicente",
+     "https://www.footballkitarchive.com/gil-vicente-kits/"
+    ]
+   ],
+   "fundo": "#172f6e",
+   "ghost": "1924",
+   "emblema": "emblemas/gilvicente.webp",
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0044,
+     0.0163,
+     0.0363,
+     0.0659,
+     0.1064,
+     0.1588,
+     0.2189,
+     0.2819,
+     0.3438,
+     0.4015,
+     0.4541,
+     0.5001,
+     0.5468,
+     0.6031,
+     0.663,
+     0.722,
+     0.777,
+     0.8268,
+     0.8693,
+     0.9043,
+     0.932,
+     0.9526,
+     0.9683,
+     0.9809,
+     0.9893,
+     0.9939,
+     0.9956,
+     0.9962,
+     0.9968,
+     0.9973,
+     0.9985,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "boavista",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Boavista FC",
+   "pais": "Portugal",
+   "epoca": "2018/19",
+   "equipamento": "Terceiro",
+   "marca": "Lacatoni",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#f2d21b",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O terceiro equipamento amarelo do Boavista, com a carcela e a gola pretas, da Lacatoni.",
+   "nota": "O Football Kit Archive regista um terceiro amarelo em 2018/19. Falta o Gabriel confirmar a época.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": null,
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Kit Archive, equipamentos do Boavista",
+     "https://www.footballkitarchive.com/boavista-kits/"
+    ]
+   ],
+   "fundo": "#1c1c1c",
+   "ghost": "1903",
+   "emblema": "emblemas/boavista.webp",
+   "halo": 0.2,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0013,
+     0.0023,
+     0.006,
+     0.0143,
+     0.0358,
+     0.0594,
+     0.0878,
+     0.1222,
+     0.1622,
+     0.2059,
+     0.2702,
+     0.3296,
+     0.3925,
+     0.4555,
+     0.5106,
+     0.5523,
+     0.6168,
+     0.6716,
+     0.7262,
+     0.779,
+     0.8285,
+     0.8737,
+     0.9124,
+     0.9501,
+     0.9704,
+     0.9836,
+     0.9926,
+     0.9967,
+     0.9976,
+     0.9993,
+     1.0
+    ],
+    "sentido": 1
+   }
+  },
+  {
+   "id": "boavistacasa",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Boavista FC",
+   "pais": "Portugal",
+   "epoca": "2014–19",
+   "equipamento": "Principal",
+   "marca": "Lacatoni",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#1a1a1a",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal aos quadrados pretos e brancos do Boavista, o xadrez que o clube usa desde os anos 30, aqui na versão da Lacatoni.",
+   "nota": "A Lacatoni vestiu o Boavista até 2019 (a Kelme veio a seguir); a etiqueta não tem data. Falta o Gabriel dizer a época exata.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": null,
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Kit Archive, equipamentos do Boavista",
+     "https://www.footballkitarchive.com/boavista-kits/"
+    ]
+   ],
+   "fundo": "#3a3a44",
+   "ghost": "1903",
+   "emblema": "emblemas/boavista.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0013,
+     0.0063,
+     0.0211,
+     0.0478,
+     0.0886,
+     0.142,
+     0.2006,
+     0.2598,
+     0.3144,
+     0.3685,
+     0.4238,
+     0.484,
+     0.5354,
+     0.5756,
+     0.6253,
+     0.676,
+     0.725,
+     0.7733,
+     0.818,
+     0.8593,
+     0.8987,
+     0.9334,
+     0.9607,
+     0.9801,
+     0.9912,
+     0.996,
+     0.9972,
+     0.9979,
+     0.9987,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "aves",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "CD Aves",
+   "pais": "Portugal",
+   "epoca": "2017–20",
+   "equipamento": "Principal",
+   "marca": "Lacatoni",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#c8102e",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do Desportivo das Aves, vermelha com o painel branco em diagonal, da Lacatoni, dos anos em que o clube de Vila das Aves esteve na Primeira Liga e ganhou a Taça de Portugal de 2018, antes de fechar portas em 2020.",
+   "nota": "Dos anos da Lacatoni no Aves, na Primeira Liga; a etiqueta não tem data. Falta o Gabriel dizer a época exata.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": null,
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia, Desportivo das Aves",
+     "https://en.wikipedia.org/wiki/C.D._Aves"
+    ]
+   ],
+   "fundo": "#4a0c14",
+   "ghost": "1930",
+   "emblema": "emblemas/aves.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0005,
+     0.0016,
+     0.0059,
+     0.0114,
+     0.0218,
+     0.0407,
+     0.0698,
+     0.1112,
+     0.1697,
+     0.2428,
+     0.3277,
+     0.4154,
+     0.4965,
+     0.5585,
+     0.6047,
+     0.6523,
+     0.7071,
+     0.763,
+     0.8161,
+     0.8637,
+     0.9012,
+     0.9319,
+     0.9557,
+     0.9731,
+     0.9837,
+     0.9907,
+     0.9946,
+     0.9972,
+     0.9984,
+     0.9989,
+     0.9995,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "gilbranco2",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Gil Vicente FC",
+   "pais": "Portugal",
+   "epoca": "2021–25",
+   "equipamento": "Alternativo",
+   "marca": "Lacatoni",
+   "patrocinios": [
+    "Crédito Agrícola (costas)",
+    "H.M Motor (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#e8e8e8",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "Outro alternativo branco do Gil Vicente, liso, com a gola e os punhos em vermelho, branco e azul e o Crédito Agrícola e a H.M Motor nas costas, da Lacatoni, com o escudo das armas de Barcelos que o clube recuperou em 2021.",
+   "nota": "Datada pelo emblema: o escudo com as armas de Barcelos voltou em junho de 2021, e a Lacatoni vestiu o clube até 2025. Falta o Gabriel dizer a época exata.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": null,
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia (pt), Gil Vicente: regresso ao emblema antigo em junho de 2021",
+     "https://pt.wikipedia.org/wiki/Gil_Vicente_Futebol_Clube"
+    ],
+    [
+     "Football Kit Archive, equipamentos do Gil Vicente",
+     "https://www.footballkitarchive.com/gil-vicente-kits/"
+    ]
+   ],
+   "fundo": "#172f6e",
+   "ghost": "1924",
+   "emblema": "emblemas/gilvicente.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0015,
+     0.0074,
+     0.02,
+     0.0385,
+     0.0637,
+     0.0962,
+     0.1365,
+     0.1837,
+     0.2352,
+     0.2877,
+     0.3404,
+     0.3912,
+     0.4391,
+     0.4784,
+     0.5253,
+     0.5792,
+     0.6363,
+     0.695,
+     0.7547,
+     0.8062,
+     0.8574,
+     0.904,
+     0.9427,
+     0.969,
+     0.9856,
+     0.9933,
+     0.9963,
+     0.9973,
+     0.998,
+     0.9986,
+     0.9993,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "eusebio",
+   "jogador": "Eusébio",
+   "camisola": "EUSÉBIO",
+   "numero": 13,
+   "equipa": "Portugal",
+   "pais": "Portugal",
+   "epoca": "2025/26",
+   "equipamento": "Edição especial Eusébio",
+   "marca": "Puma",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#141414",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A camisola preta e dourada com que Portugal homenageou Eusébio nos 60 anos da sua Bola de Ouro de 1965: emblema e puma a ouro, o 13 do Pantera Negra e a assinatura «Pantera Negra» por dentro da gola. Edição limitada a 1965 unidades. A seleção usou-a uma única vez, no 9-1 à Arménia que carimbou o apuramento para o Mundial 2026.",
+   "nota": "Falta o Gabriel confirmar se é a versão de adepto ou a de jogador.",
+   "jogo": {
+    "casa": "Portugal",
+    "fora": "Arménia",
+    "gc": 9,
+    "gf": 1,
+    "prova": "Qualificação para o Mundial 2026, Grupo F",
+    "data": "16 nov 2025",
+    "estadio": "Estádio do Dragão, Porto",
+    "papel": null,
+    "golos": "Veiga 7', Gonçalo Ramos 28', João Neves 30', 41' e 81', Bruno Fernandes 45+3' (g.p.), 51' e 72' (g.p.), Francisco Conceição 90+2'; Spertsyan 18' pela Arménia",
+    "marco": true
+   },
+   "pessoa": {
+    "completo": "Eusébio da Silva Ferreira",
+    "nascimento": "25 jan 1942, Lourenço Marques (hoje Maputo, Moçambique)",
+    "posicao": "Avançado",
+    "agora": "Morreu a 5 de janeiro de 2014, em Lisboa; está no Panteão Nacional",
+    "percurso": "Sporting de Lourenço Marques 1957–60 · Benfica 1960–75 · Boston Minutemen, Monterrey, Toronto Metros-Croatia, Beira-Mar, Las Vegas Quicksilvers, União de Tomar e New Jersey Americans 1975–79",
+    "selecao": "Portugal: 64 jogos, 41 golos",
+    "destaques": [
+     "Bola de Ouro de 1965 e Bota de Ouro do Mundial 1966, com 9 golos",
+     "Taça dos Campeões de 1962 e 11 campeonatos pelo Benfica, com 473 golos em 440 jogos",
+     "Duas Botas de Ouro europeias, em 1968 e 1973"
+    ],
+    "numeros": [
+     {
+      "epoca": "Mundial 1966",
+      "equipa": "Portugal",
+      "jogos": 6,
+      "golos": 9
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Roberto Martínez",
+    "linhas": [
+     [
+      "Qualificação para o Mundial 2026",
+      "1.º do Grupo F, com 13 pontos: apurado",
+      ""
+     ],
+     [
+      "Liga das Nações 2024/25",
+      "Vencedor (Espanha, 2-2, 5-3 nos penáltis)",
+      "win"
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "SoccerBible, a camisola de homenagem a Eusébio",
+     "https://www.soccerbible.com/performance/football-apparel/2025/11/puma-honour-eusébio-with-special-edition-portugal-kit/"
+    ],
+    [
+     "Soccerway, Portugal joga com a Arménia com a camisola de Eusébio",
+     "https://pt.soccerway.com/noticias/futebol-campeonato-do-mundo-mundial-2026-portugal-defronta-armenia-com-camisola-em-homenagem-a-eusebio/8zcheKiI"
+    ],
+    [
+     "Wikipedia, Grupo F da qualificação europeia",
+     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_–_UEFA_Group_F"
+    ],
+    [
+     "Wikipedia, Eusébio",
+     "https://en.wikipedia.org/wiki/Eusébio"
+    ],
+    [
+     "ESPN, relatório do Portugal-Arménia",
+     "https://www.espn.com/soccer/match/_/gameId/724900"
+    ]
+   ],
+   "fundo": "#9a7a2a",
+   "ghost": null,
+   "emblema": "emblemas/portugal.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0005,
+     0.0011,
+     0.0054,
+     0.0121,
+     0.0248,
+     0.0465,
+     0.0797,
+     0.1269,
+     0.1876,
+     0.2556,
+     0.3282,
+     0.3983,
+     0.4594,
+     0.509,
+     0.5761,
+     0.6612,
+     0.7499,
+     0.8245,
+     0.8789,
+     0.9149,
+     0.9401,
+     0.9595,
+     0.9732,
+     0.9837,
+     0.9912,
+     0.9943,
+     0.9949,
+     0.9954,
+     0.9962,
+     0.9973,
+     0.999,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "especial": true
+  },
+  {
+   "id": "covilha",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "SC Covilhã",
+   "pais": "Portugal",
+   "epoca": "2015–25",
+   "equipamento": "Alternativo",
+   "marca": "Lacatoni",
+   "patrocinios": [
+    "Sport Hotel (peito)",
+    "Sabores da Gardunha (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#d9d9d9",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "Um alternativo do Sporting da Covilhã às listras brancas e cinzentas, com o Sport Hotel ao peito e os Sabores da Gardunha nas costas, da Lacatoni. Os «leões da serra» são o clube mais alto de Portugal.",
+   "nota": "Falta o Gabriel confirmar a época.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": null,
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia, Sporting da Covilhã",
+     "https://en.wikipedia.org/wiki/S.C._Covilhã"
+    ]
+   ],
+   "fundo": "#1c5a3a",
+   "ghost": "1923",
+   "emblema": "emblemas/covilha.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0013,
+     0.0021,
+     0.0036,
+     0.0079,
+     0.0177,
+     0.0343,
+     0.0601,
+     0.0947,
+     0.1382,
+     0.1896,
+     0.2483,
+     0.3141,
+     0.3822,
+     0.4482,
+     0.5067,
+     0.5522,
+     0.607,
+     0.6655,
+     0.7262,
+     0.7874,
+     0.8452,
+     0.8959,
+     0.9373,
+     0.9651,
+     0.9818,
+     0.9907,
+     0.9949,
+     0.9969,
+     0.9981,
+     0.9991,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "rioave",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Rio Ave FC",
+   "pais": "Portugal",
+   "epoca": "1983/84",
+   "equipamento": "Réplica de 1983/84",
+   "marca": "Sem marca visível",
+   "patrocinios": [],
+   "tipo": "reedicao",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#1a7a45",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A réplica da camisola de 1983/84 que o Rio Ave lançou em maio de 2024: riscas verdes e brancas, mangas compridas e o emblema cosido ao peito. Foi a época em que os vila-condenses chegaram pela primeira vez à final da Taça de Portugal, no Jamor.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Félix Mourinho",
+    "linhas": [
+     [
+      "Taça de Portugal 1983/84",
+      "Finalista vencido (FC Porto, 1-4, no Jamor)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "A Bola, a camisola de homenagem à equipa de 1983/84",
+     "https://www.abola.pt/noticias/rio-ave-lanca-camisola-de-homenagem-a-equipa-de-198384-2024052614200673559"
+    ],
+    [
+     "Wikipedia, Rio Ave FC",
+     "https://en.wikipedia.org/wiki/Rio_Ave_F.C."
+    ]
+   ],
+   "fundo": "#0b3d26",
+   "ghost": "1939",
+   "emblema": "emblemas/rioave.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0016,
+     0.0047,
+     0.0142,
+     0.03,
+     0.0514,
+     0.077,
+     0.1091,
+     0.1493,
+     0.1972,
+     0.2517,
+     0.3103,
+     0.3727,
+     0.4336,
+     0.4837,
+     0.5266,
+     0.5807,
+     0.6421,
+     0.7021,
+     0.7605,
+     0.8175,
+     0.8726,
+     0.9204,
+     0.9569,
+     0.9761,
+     0.9826,
+     0.985,
+     0.9892,
+     0.9925,
+     0.9933,
+     0.997,
+     1.0
+    ],
+    "sentido": 1
+   }
+  },
+  {
+   "id": "matthaus",
+   "jogador": "Lothar Matthäus",
+   "camisola": "Matthäus",
+   "numero": 10,
+   "equipa": "Bayern de Munique",
+   "pais": "Alemanha",
+   "epoca": "1998/99",
+   "equipamento": "Alternativo",
+   "marca": "adidas",
+   "patrocinios": [
+    "Opel (peito)"
+   ],
+   "tipo": "adepto",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#1c2b5a",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O alternativo azul-marinho do Bayern com a faixa vermelha da Opel, da época em que o Bayern de Hitzfeld foi campeão e perdeu a final da Liga dos Campeões para o Manchester United nos descontos, em Camp Nou. Com o 10 de Matthäus, o capitão.",
+   "nota": "Camisola da época, com a etiqueta adidas dos anos 90 (versão de adepto). A adidas usou este alternativo de 1998 a 2000; fica em 1998/99, a época da final de Camp Nou.",
+   "jogo": null,
+   "pessoa": {
+    "completo": "Lothar Herbert Matthäus",
+    "nascimento": "21 mar 1961, Erlangen (Alemanha)",
+    "posicao": "Médio, depois líbero; 1,74 m",
+    "agora": "Comentador da Sky Deutschland",
+    "percurso": "Borussia Mönchengladbach 1979–84 · Bayern 1984–88 · Inter 1988–92 · Bayern 1992–2000 · MetroStars 2000",
+    "selecao": "Alemanha: 150 jogos, 23 golos, cinco Mundiais",
+    "destaques": [
+     "Campeão do Mundo em 1990, como capitão; Bola de Ouro de 1990 e melhor do mundo da FIFA em 1991",
+     "Sete títulos de campeão alemão e duas Taças UEFA, com o Inter em 1991 e com o Bayern em 1996",
+     "Em 1998/99: 42 jogos pelo Bayern, aos 38 anos"
+    ],
+    "numeros": [
+     {
+      "epoca": "1998/99",
+      "equipa": "Bayern",
+      "jogos": 42,
+      "golos": 2
+     },
+     {
+      "epoca": "1992–2000",
+      "equipa": "Bayern",
+      "jogos": 256,
+      "golos": 31
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Ottmar Hitzfeld",
+    "linhas": [
+     [
+      "Bundesliga",
+      "Campeão, 78 pontos",
+      "win"
+     ],
+     [
+      "Liga dos Campeões",
+      "Finalista vencido (Manchester United, 1-2: Basler 6', Sheringham 90+1', Solskjær 90+3')",
+      ""
+     ],
+     [
+      "Taça da Alemanha",
+      "Finalista vencido (Werder Bremen, nos penáltis)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Classic Football Shirts, alternativo 1998-00 Matthäus 10",
+     "https://classicfootballshirts.com/1998-00-bayern-munich-away-shirt-matthaus-10-byna9810v.html"
+    ],
+    [
+     "Wikipedia, época 1998/99 do Bayern",
+     "https://en.wikipedia.org/wiki/1998–99_FC_Bayern_Munich_season"
+    ],
+    [
+     "Wikipedia, Lothar Matthäus",
+     "https://en.wikipedia.org/wiki/Lothar_Matthäus"
+    ]
+   ],
+   "fundo": "#8a1c22",
+   "ghost": null,
+   "emblema": "emblemas/bayern.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0013,
+     0.002,
+     0.0027,
+     0.0044,
+     0.0103,
+     0.0263,
+     0.0416,
+     0.0635,
+     0.0914,
+     0.1257,
+     0.1644,
+     0.2173,
+     0.2638,
+     0.3097,
+     0.3509,
+     0.3944,
+     0.4556,
+     0.5377,
+     0.6141,
+     0.6903,
+     0.7622,
+     0.826,
+     0.8775,
+     0.9169,
+     0.9547,
+     0.9723,
+     0.9844,
+     0.9922,
+     0.9974,
+     0.9993,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "benficabranca",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "SL Benfica",
+   "pais": "Portugal",
+   "epoca": "2003/04",
+   "equipamento": "Alternativo",
+   "marca": "adidas",
+   "patrocinios": [
+    "Vodafone (peito)",
+    "Banco Espírito Santo (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#f0f0f0",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O alternativo branco do centenário do Benfica, com a gola de atilhos vermelha ao estilo das primeiras camisolas do clube, a Vodafone ao peito e o Banco Espírito Santo nas costas. Serviu em 2003/04 e continuou em 2004/05, a época do título.",
+   "nota": "Feita em Portugal, sem data na etiqueta: pode ser de 2003/04 ou da época seguinte, em que o modelo continuou.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "José Antonio Camacho",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "2.º, 74 pontos (campeão: FC Porto)",
+      ""
+     ],
+     [
+      "Taça de Portugal",
+      "Vencedor (2-1 ao FC Porto, no Jamor, com golo de Simão no prolongamento)",
+      "win"
+     ],
+     [
+      "Taça UEFA",
+      "Quarta eliminatória (Inter)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Kit Archive, alternativo 2003/04",
+     "https://footballkitarchive.com/sl-benfica-2003-04-away-kit"
+    ],
+    [
+     "Football Kit Archive, alternativo 2004/05",
+     "https://www.footballkitarchive.com/sl-benfica-2004-05-away-kit"
+    ],
+    [
+     "Wikipedia, época 2003/04 do Benfica",
+     "https://en.wikipedia.org/wiki/2003–04_S.L._Benfica_season"
+    ]
+   ],
+   "fundo": "#5a0a0e",
+   "ghost": "1904",
+   "emblema": "emblemas/benfica.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0007,
+     0.0013,
+     0.0066,
+     0.0173,
+     0.0297,
+     0.0483,
+     0.0746,
+     0.1086,
+     0.1488,
+     0.2048,
+     0.2536,
+     0.3047,
+     0.3554,
+     0.4017,
+     0.4436,
+     0.4896,
+     0.5379,
+     0.5924,
+     0.6528,
+     0.7163,
+     0.7782,
+     0.8395,
+     0.8978,
+     0.9355,
+     0.962,
+     0.98,
+     0.9898,
+     0.9939,
+     0.998,
+     0.9987,
+     0.9993,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "universitario",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Universitario",
+   "pais": "Peru",
+   "epoca": "2024",
+   "equipamento": "Linha Original (retro)",
+   "marca": "Marathon",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#efe3c8",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A camisola creme do Universitario de Deportes, o maior clube do Peru, da linha Original da Marathon: gola polo grená, o U ao peito e, na nuca, o lema «Merengue». O creme é a cor do clube desde a fundação, em 1924.",
+   "nota": "Falta o Gabriel confirmar a época.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Fabián Bustos",
+    "linhas": [
+     [
+      "Liga 1 2024",
+      "Campeão, no ano do centenário (bicampeão, depois de 2023)",
+      "win"
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "América TV, a camisola de 2024 da Marathon",
+     "https://www.americatv.com.pe/deportes/futbol-peruano/universitario-nueva-camiseta-centenario-2024-n441009"
+    ],
+    [
+     "Wikipedia, Club Universitario de Deportes",
+     "https://en.wikipedia.org/wiki/Club_Universitario_de_Deportes"
+    ]
+   ],
+   "fundo": "#5a1a2a",
+   "ghost": "1924",
+   "emblema": "emblemas/universitario.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0011,
+     0.0019,
+     0.0062,
+     0.0152,
+     0.0296,
+     0.0527,
+     0.0858,
+     0.1338,
+     0.2001,
+     0.2786,
+     0.3629,
+     0.4422,
+     0.5135,
+     0.5767,
+     0.6297,
+     0.6813,
+     0.7364,
+     0.7881,
+     0.8366,
+     0.8786,
+     0.9164,
+     0.9461,
+     0.9663,
+     0.9799,
+     0.9889,
+     0.9933,
+     0.9952,
+     0.996,
+     0.9966,
+     0.9971,
+     0.9983,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "venezia",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Venezia FC",
+   "pais": "Itália",
+   "epoca": "2024/25",
+   "equipamento": "Pré-jogo (NOCTA)",
+   "marca": "NOCTA",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#1c1c1c",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A camisola de pré-jogo da primeira coleção da NOCTA, a marca do Drake, para o Venezia: preta com as bandas laranja e verde do clube e um símbolo que funde o leão do Venezia com a marca. Chegou às lojas em outubro de 2024, na época em que o Venezia desceu à Serie B.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Eusebio Di Francesco",
+    "linhas": [
+     [
+      "Serie A",
+      "18.º: despromovido",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Hypebeast, as camisolas NOCTA × Venezia 2024/25",
+     "https://hypebeast.com/2024/9/nocta-venezia-fc-jerseys-2024-25-season-release-date"
+    ],
+    [
+     "Wikipedia, época 2024/25 do Venezia",
+     "https://en.wikipedia.org/wiki/2024–25_Venezia_FC_season"
+    ]
+   ],
+   "fundo": "#2e6b4a",
+   "ghost": "1907",
+   "emblema": "emblemas/venezia.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0008,
+     0.0036,
+     0.014,
+     0.0354,
+     0.0685,
+     0.1147,
+     0.1734,
+     0.2401,
+     0.3113,
+     0.377,
+     0.4382,
+     0.4911,
+     0.5323,
+     0.5607,
+     0.5865,
+     0.6236,
+     0.6688,
+     0.7162,
+     0.7632,
+     0.808,
+     0.8483,
+     0.8857,
+     0.918,
+     0.9459,
+     0.9685,
+     0.9827,
+     0.9904,
+     0.9918,
+     0.9927,
+     0.9935,
+     0.9955,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "barca",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "FC Barcelona",
+   "pais": "Espanha",
+   "epoca": "2023/24",
+   "equipamento": "Pré-jogo (Ano Novo Chinês)",
+   "marca": "Nike",
+   "patrocinios": [
+    "Spotify (peito)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#e0a020",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A camisola de pré-jogo do Ano Novo Chinês de 2024, o Ano do Dragão: escamas feitas de emblemas do Barça, em vermelho e dourado, que recriam as riscas blaugrana. À venda desde 7 de fevereiro de 2024, para os aquecimentos da segunda metade da época.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Xavi Hernández",
+    "linhas": [
+     [
+      "LaLiga",
+      "2.º, 85 pontos (campeão: Real Madrid)",
+      ""
+     ],
+     [
+      "Taça do Rei",
+      "Quartos de final (Athletic Club)",
+      ""
+     ],
+     [
+      "Liga dos Campeões",
+      "Quartos de final (PSG)",
+      ""
+     ],
+     [
+      "Supertaça",
+      "Finalista vencido (Real Madrid, 1-4)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Footy Headlines, pré-jogo do Ano Novo Chinês 2024",
+     "https://www.footyheadlines.com/2024/01/barcelona-2024-chinese-new-year-pre-match-shirt.html"
+    ],
+    [
+     "Wikipedia, época 2023/24 do Barcelona",
+     "https://en.wikipedia.org/wiki/2023–24_FC_Barcelona_season"
+    ]
+   ],
+   "fundo": "#1a2a6a",
+   "ghost": "1899",
+   "emblema": "emblemas/barcelona.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0012,
+     0.0018,
+     0.0024,
+     0.0054,
+     0.0132,
+     0.0276,
+     0.0494,
+     0.0801,
+     0.1179,
+     0.1641,
+     0.2168,
+     0.2736,
+     0.3325,
+     0.392,
+     0.4462,
+     0.4919,
+     0.5277,
+     0.567,
+     0.6151,
+     0.6691,
+     0.7257,
+     0.7811,
+     0.8344,
+     0.8825,
+     0.924,
+     0.9553,
+     0.977,
+     0.9901,
+     0.9965,
+     0.9992,
+     1.0
+    ],
+    "sentido": -1
+   },
+   "especial": true
+  },
+  {
+   "id": "nocta",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Venezia FC",
+   "pais": "Itália",
+   "epoca": "2025/26",
+   "equipamento": "Principal (NOCTA)",
+   "marca": "NOCTA",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#2a2a2e",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal de 2025/26 do Venezia com a NOCTA: preta com um mapa de cartografia do século XV em tom sobre tom, as bandas laranja e verde do ombro à bainha e a estrela da Basílica de São Marcos na nuca. À venda desde 23 de julho de 2025; esta é a edição Venezia, sem o patrocínio da versão de jogo.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Giovanni Stroppa",
+    "emCurso": false,
+    "linhas": [
+     [
+      "Serie B",
+      "Época do regresso à segunda divisão",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Venezia FC, apresentação da principal 2025/26",
+     "https://www.veneziafc.it/en/news/venezia-fc-and-nocta-unveil-the-25-26-home-jersey"
+    ]
+   ],
+   "fundo": "#c8702a",
+   "ghost": "1907",
+   "emblema": "emblemas/venezia.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0012,
+     0.0046,
+     0.0123,
+     0.0281,
+     0.0533,
+     0.0999,
+     0.1477,
+     0.2047,
+     0.2672,
+     0.3314,
+     0.3929,
+     0.4582,
+     0.5025,
+     0.5386,
+     0.5818,
+     0.6328,
+     0.6885,
+     0.7526,
+     0.808,
+     0.8566,
+     0.8993,
+     0.9333,
+     0.9579,
+     0.9739,
+     0.9863,
+     0.9915,
+     0.9958,
+     0.9982,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "citycasa",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Manchester City",
+   "pais": "Inglaterra",
+   "epoca": "2024/25",
+   "equipamento": "Principal",
+   "marca": "Puma",
+   "patrocinios": [
+    "Etihad Airways (peito)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#6cabdd",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do City em 2024/25, azul-celeste lisa, com o 0161, o indicativo telefónico de Manchester, tecido na gola e nos punhos. Foi a época em que o City deixou fugir o título depois de quatro seguidos.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Pep Guardiola",
+    "linhas": [
+     [
+      "Premier League",
+      "3.º, 71 pontos (campeão: Liverpool)",
+      ""
+     ],
+     [
+      "Taça de Inglaterra",
+      "Finalista vencido (Crystal Palace, 0-1)",
+      ""
+     ],
+     [
+      "Liga dos Campeões",
+      "Play-off de acesso aos oitavos (Real Madrid)",
+      ""
+     ],
+     [
+      "Mundial de Clubes",
+      "Oitavos de final (Al-Hilal, 3-4 a.p.)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "SoccerBible, principal 2024/25",
+     "https://www.soccerbible.com/performance/football-apparel/2024/05/puma-launch-manchester-city-2425-home-kit/"
+    ],
+    [
+     "Wikipedia, época 2024/25 do Manchester City",
+     "https://en.wikipedia.org/wiki/2024–25_Manchester_City_F.C._season"
+    ]
+   ],
+   "fundo": "#1c2c5b",
+   "ghost": "1894",
+   "emblema": "emblemas/mancity.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0013,
+     0.0046,
+     0.0093,
+     0.0158,
+     0.0248,
+     0.0376,
+     0.0564,
+     0.0832,
+     0.1191,
+     0.1657,
+     0.2242,
+     0.296,
+     0.3783,
+     0.4647,
+     0.5404,
+     0.5977,
+     0.6644,
+     0.737,
+     0.8067,
+     0.8704,
+     0.9223,
+     0.9585,
+     0.9791,
+     0.9895,
+     0.9942,
+     0.9963,
+     0.9974,
+     0.9982,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "caboverde",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Cabo Verde",
+   "pais": "Cabo Verde",
+   "epoca": "2025",
+   "equipamento": "Principal",
+   "marca": "Tempo Sport",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": true,
+   "tamanho": null,
+   "cor": "#1e3f8f",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal azul de Cabo Verde da Tempo Sport, a marca austríaca que vestiu os Tubarões Azuis desde 2022 e durante toda a qualificação para o Mundial 2026, com a gola vermelha e as dez estrelas das ilhas. Nas costas, «No Stress», o grito da campanha, e o 10. Assinada pela equipa.",
+   "nota": "Falta o Gabriel confirmar quem assinou e em que ocasião.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Bubista (Pedro Leitão Brito)",
+    "linhas": [
+     [
+      "Qualificação para o Mundial 2026",
+      "1.º do Grupo D, com 23 pontos, à frente dos Camarões: apurado pela primeira vez",
+      "win"
+     ],
+     [
+      "O jogo decisivo",
+      "3-0 ao Eswatini, na Praia, a 13 de outubro de 2025",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "nss sports, a Tempo Sport e Cabo Verde",
+     "https://www.nss-sports.com/pt/lifestyle/42975/como-e-que-um-fornecedor-de-kits-ajudou-a-redefinir-a-estetica-de-cabo-verde"
+    ],
+    [
+     "Wikipedia, Grupo D da qualificação africana",
+     "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_–_CAF_Group_D"
+    ]
+   ],
+   "fundo": "#b8302e",
+   "ghost": "1982",
+   "emblema": "emblemas/caboverde.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0016,
+     0.0083,
+     0.0207,
+     0.0431,
+     0.07,
+     0.1028,
+     0.1407,
+     0.1826,
+     0.2281,
+     0.2822,
+     0.3259,
+     0.3673,
+     0.4035,
+     0.4373,
+     0.4833,
+     0.5468,
+     0.6051,
+     0.6683,
+     0.7341,
+     0.7994,
+     0.858,
+     0.9091,
+     0.9492,
+     0.9712,
+     0.985,
+     0.9924,
+     0.9964,
+     0.9982,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "bayern",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Bayern de Munique",
+   "pais": "Alemanha",
+   "epoca": "2023/24",
+   "equipamento": "Principal",
+   "marca": "adidas",
+   "patrocinios": [
+    "Telekom (peito)"
+   ],
+   "tipo": "jogador",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#dc052d",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do Bayern em 2023/24, branca com as mangas e as faixas vermelhas, uma das raras épocas recentes sem título: o Bayer Leverkusen foi campeão invicto e o Bayern acabou em 3.º.",
+   "nota": "Etiqueta da gola «Slim fit», a da versão autêntica da adidas; sem data na etiqueta.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Thomas Tuchel",
+    "linhas": [
+     [
+      "Bundesliga",
+      "3.º, 72 pontos (campeão: Bayer Leverkusen)",
+      ""
+     ],
+     [
+      "Taça da Alemanha",
+      "Segunda eliminatória (Saarbrücken, 1-2)",
+      ""
+     ],
+     [
+      "Liga dos Campeões",
+      "Meia-final (Real Madrid, 3-4 no conjunto)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia, época 2023/24 do Bayern",
+     "https://en.wikipedia.org/wiki/2023–24_FC_Bayern_Munich_season"
+    ]
+   ],
+   "fundo": "#4a0a12",
+   "ghost": "1900",
+   "emblema": "emblemas/bayern.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0005,
+     0.001,
+     0.0049,
+     0.0125,
+     0.0263,
+     0.048,
+     0.0883,
+     0.1317,
+     0.1851,
+     0.2449,
+     0.3111,
+     0.3805,
+     0.4604,
+     0.5207,
+     0.5693,
+     0.6234,
+     0.6798,
+     0.7358,
+     0.7988,
+     0.8482,
+     0.8915,
+     0.9272,
+     0.9518,
+     0.9693,
+     0.9822,
+     0.993,
+     0.9954,
+     0.996,
+     0.9966,
+     0.9981,
+     0.9995,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "ferro",
+   "jogador": "Ferro",
+   "camisola": "FERRO",
+   "numero": 4,
+   "equipa": "Estrela da Amadora",
+   "pais": "Portugal",
+   "epoca": "2024/25",
+   "equipamento": "Principal",
+   "marca": "Umbro",
+   "patrocinios": [
+    "Noble Capital (peito)",
+    "ESC Online (costas)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#7b1c2e",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do Estrela em 2024/25, grená e verde em diagonal, com o 4 de Ferro, o central que o clube foi buscar ao Hajduk Split em julho de 2024. Nessa época o Estrela não tinha um patrocinador fixo e a frente da camisola ia mudando: aqui é a Noble Capital.",
+   "nota": "Falta o Gabriel confirmar se é a versão de adepto ou a de jogador.",
+   "jogo": null,
+   "pessoa": {
+    "completo": "Francisco Reis Ferreira",
+    "nascimento": "26 mar 1997, Oliveira de Azeméis",
+    "posicao": "Defesa central, 1,91 m",
+    "agora": "Estoril Praia, desde julho de 2025",
+    "percurso": "Benfica 2019–23 · Valencia (empréstimo) 2020–21 · Hajduk Split 2021–22 e 2023–24 · Estrela da Amadora 2024–25 · Estoril desde 2025",
+    "selecao": "Portugal: 51 jogos nas seleções jovens, dos sub-17 aos sub-21",
+    "destaques": [
+     "Campeão nacional pelo Benfica em 2018/19",
+     "Taça da Croácia em 2022, pelo Hajduk",
+     "Rescindiu com o Estrela em julho de 2025 e assinou pelo Estoril"
+    ],
+    "numeros": [
+     {
+      "epoca": "2024/25",
+      "equipa": "Estrela da Amadora",
+      "jogos": 18,
+      "golos": 0
+     }
+    ]
+   },
+   "epocaEquipa": {
+    "treinador": "Filipe Martins até setembro, depois José Faria",
+    "linhas": [
+     [
+      "Primeira Liga",
+      "15.º, 29 pontos (campeão: Sporting CP)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia, Ferro",
+     "https://en.wikipedia.org/wiki/Ferro_(footballer)"
+    ],
+    [
+     "A Bola, o patrocínio rotativo do Estrela em 2024/25",
+     "https://www.abola.pt/noticias/e-amadora-sporting-proporcionou-mudanca-pontual-de-main-sponsor-2025040110511872591"
+    ],
+    [
+     "Wikipedia, época 2024/25 do Estrela da Amadora",
+     "https://en.wikipedia.org/wiki/2024–25_C.F._Estrela_da_Amadora_season"
+    ]
+   ],
+   "fundo": "#a04a58",
+   "ghost": null,
+   "emblema": "emblemas/estrela.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0011,
+     0.0061,
+     0.0209,
+     0.048,
+     0.0874,
+     0.1379,
+     0.1943,
+     0.254,
+     0.3192,
+     0.3865,
+     0.4543,
+     0.514,
+     0.5645,
+     0.6021,
+     0.6324,
+     0.6654,
+     0.7105,
+     0.7571,
+     0.8041,
+     0.8474,
+     0.885,
+     0.9175,
+     0.9452,
+     0.9681,
+     0.9831,
+     0.9923,
+     0.9963,
+     0.9974,
+     0.9981,
+     0.9987,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "gala",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Galatasaray",
+   "pais": "Turquia",
+   "epoca": "2024/25",
+   "equipamento": "Alternativo",
+   "marca": "Puma",
+   "patrocinios": [],
+   "tipo": "adepto",
+   "assinada": false,
+   "tamanho": "L",
+   "cor": "#ededed",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "O alternativo branco do Galatasaray na primeira época com a Puma, com o decote em V grená e laranja e um padrão tonal. Foi o ano do tricampeonato e da dobradinha, com os 37 golos de Osimhen.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Okan Buruk",
+    "linhas": [
+     [
+      "Süper Lig",
+      "Campeão, o terceiro título seguido",
+      "win"
+     ],
+     [
+      "Taça da Turquia",
+      "Vencedor",
+      "win"
+     ],
+     [
+      "Liga Europa",
+      "Play-off de acesso aos oitavos (AZ Alkmaar)",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Kit Archive, alternativo 2024/25",
+     "https://footballkitarchive.com/galatasaray-2024-25-away-kit"
+    ],
+    [
+     "Wikipedia, época 2024/25 do Galatasaray",
+     "https://en.wikipedia.org/wiki/2024–25_Galatasaray_S.K._season"
+    ]
+   ],
+   "fundo": "#8a2a1a",
+   "ghost": "1905",
+   "emblema": "emblemas/galatasaray.webp",
+   "halo": 0.16,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.0016,
+     0.0097,
+     0.0224,
+     0.0442,
+     0.0799,
+     0.1401,
+     0.2039,
+     0.2726,
+     0.3365,
+     0.3966,
+     0.4492,
+     0.5121,
+     0.5727,
+     0.6329,
+     0.6975,
+     0.7674,
+     0.831,
+     0.8839,
+     0.9182,
+     0.9424,
+     0.9594,
+     0.9705,
+     0.9808,
+     0.986,
+     0.9866,
+     0.9892,
+     0.9945,
+     0.9961,
+     0.9968,
+     0.9984,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "stuttgart",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "VfB Stuttgart",
+   "pais": "Alemanha",
+   "epoca": "2009–13",
+   "equipamento": "Treino",
+   "marca": "Puma",
+   "patrocinios": [],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": "M",
+   "cor": "#1a1a1a",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "Uma camisola preta de treino do VfB Stuttgart, da Puma, só com o emblema e a estrela do pentacampeão. A etiqueta «sportlifestyle» é a que a Puma usou por volta de 2009-2013, nos anos em que vestiu o clube.",
+   "nota": "Época aproximada, pela etiqueta da Puma; o Gabriel confirma que é de treino.",
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": null,
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Wikipedia, VfB Stuttgart",
+     "https://en.wikipedia.org/wiki/VfB_Stuttgart"
+    ]
+   ],
+   "fundo": "#8a1a2a",
+   "ghost": "1893",
+   "emblema": "emblemas/stuttgart.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0015,
+     0.0049,
+     0.0141,
+     0.0302,
+     0.0572,
+     0.0978,
+     0.153,
+     0.221,
+     0.3004,
+     0.3812,
+     0.4597,
+     0.5284,
+     0.578,
+     0.6309,
+     0.6898,
+     0.7497,
+     0.8078,
+     0.8611,
+     0.9046,
+     0.936,
+     0.9563,
+     0.97,
+     0.9779,
+     0.9845,
+     0.9907,
+     0.9946,
+     0.9963,
+     0.9974,
+     0.9979,
+     0.9984,
+     0.9995,
+     1.0
+    ],
+    "sentido": -1
+   }
+  },
+  {
+   "id": "brugge",
+   "jogador": null,
+   "camisola": null,
+   "numero": null,
+   "equipa": "Club Brugge",
+   "pais": "Bélgica",
+   "epoca": "2023/24",
+   "equipamento": "Principal",
+   "marca": "Macron",
+   "patrocinios": [
+    "Daikin (peito)",
+    "Proximus (costas)",
+    "Unibet (manga)"
+   ],
+   "tipo": "oficial",
+   "assinada": false,
+   "tamanho": null,
+   "cor": "#1a5fb4",
+   "comprada": null,
+   "adicionada": "2026-11-06",
+   "resumo": "A principal do Club Brugge em 2023/24, a última da Macron: riscas azuis e pretas que escurecem para o preto nos ombros, gola de polo e «No sweat, no glory» na nuca. O Brugge foi campeão nos play-offs, com Nicky Hayen, e chegou à meia-final da Liga Conferência.",
+   "nota": null,
+   "jogo": null,
+   "pessoa": null,
+   "epocaEquipa": {
+    "treinador": "Ronny Deila até março, depois Nicky Hayen",
+    "linhas": [
+     [
+      "Pro League",
+      "Campeão: 4.º na fase regular, invicto nos play-offs",
+      "win"
+     ],
+     [
+      "Liga Conferência",
+      "Meia-final (Fiorentina, 3-4 no conjunto)",
+      ""
+     ],
+     [
+      "Taça da Bélgica",
+      "Meia-final",
+      ""
+     ]
+    ]
+   },
+   "lote": null,
+   "creditoFotos": "Fotos: Gabriel",
+   "fontes": [
+    [
+     "Football Kit Archive, principal 2023/24",
+     "https://footballkitarchive.com/club-brugge-2023-24-home-kit"
+    ],
+    [
+     "Wikipedia, época 2023/24 do Club Brugge",
+     "https://en.wikipedia.org/wiki/2023–24_Club_Brugge_KV_season"
+    ]
+   ],
+   "fundo": "#0b1c3f",
+   "ghost": "1891",
+   "emblema": "emblemas/brugge.webp",
+   "halo": 0.3,
+   "video": {
+    "dur": 10.083,
+    "costas": 5.042,
+    "meia": true,
+    "curva": [
+     0.0,
+     0.0006,
+     0.005,
+     0.0184,
+     0.0397,
+     0.0723,
+     0.1099,
+     0.1547,
+     0.2048,
+     0.2623,
+     0.3184,
+     0.3821,
+     0.4423,
+     0.5029,
+     0.549,
+     0.5883,
+     0.6359,
+     0.6938,
+     0.7526,
+     0.809,
+     0.855,
+     0.8933,
+     0.9251,
+     0.9501,
+     0.972,
+     0.9852,
+     0.9932,
+     0.9963,
+     0.9974,
+     0.9981,
+     0.9988,
+     0.9994,
+     1.0
+    ],
+    "sentido": -1
+   }
+  }
+ ]
+}
