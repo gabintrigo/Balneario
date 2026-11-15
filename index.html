@@ -739,7 +739,7 @@ details[open] summary svg:where(:not(#sala *)){transform:rotate(45deg)}
           <div class="bil-canhoto" id="canhoto"><div class="canhoto-in"><span class="bil-cod" aria-hidden="true"></span></div></div>
         </div>
         <nav class="portas" aria-label="Maneiras de ver a coleção">
-          <a class="porta-i" id="ir-bal" href="#balneario"><img src="sala/i/porta-bal.webp?v=3" alt="" width="1440" height="810" decoding="async"><span class="porta-t"><b>O balneário</b><small id="porta-bal-s">Os cacifos</small><span>Os cacifos e o varão, por categoria.</span></span></a>
+          <a class="porta-i" id="ir-bal" href="#balneario"><img src="sala/i/porta-bal.webp?v=4" alt="" width="1440" height="810" decoding="async"><span class="porta-t"><b>O balneário</b><small id="porta-bal-s">Os cacifos</small><span>Os cacifos e o varão, por categoria.</span></span></a>
           <a class="porta-i" id="ir-mundo" href="#mundo"><img src="sala/i/porta-mundo.webp?v=2" alt="" width="1440" height="810" decoding="async"><span class="porta-t"><b>A volta ao mundo</b><small id="porta-mundo-s">O globo</small><span>O globo, com paragem em cada país.</span></span></a>
         </nav>
       </header>
@@ -1699,9 +1699,10 @@ function luzBaia(j,l){corI.setScalar(l);for(var q=0;q<insts.length;q++)insts[q].
 /* Cada camisola com o que anda com ela (o reflexo no chão, a sombra e, mais abaixo, a placa) é um conjunto à parte dos cacifos:
    ao filtrar por categoria, as que ficam arrumam-se nos primeiros cacifos. "slot" é o cacifo onde está (-1 = fora da sala). */
 /* os pormenores de um cacifo (as chapinhas, o bilhete, a espessura da camisola, a segunda sombra) só se desenham quando a camisola tem tamanho
-   para se verem: de longe e na vista geral não se distinguem, e eram mais uma centena de desenhos por imagem (na vista geral, 350 em vez de 226) */
-var DETPX=32;      /* largura da camisola no ecrã, em pontos (não em píxeis do aparelho) */
-function detalhe(q,o){q.det.push(o);q.perto=null}
+   para se verem: de longe e na vista geral não se distinguem, e eram mais uma centena de desenhos por imagem (na vista geral, 350 em vez de 226).
+   O bilhete, que é a peça maior, entra mais cedo do que os outros (cedo): assim aparece ainda pequeno, sem dar um salto no ecrã */
+var DETPX=32,DETL=24;      /* largura da camisola no ecrã, em pontos (não em píxeis do aparelho): a partir de onde se desenham os pormenores, e os que entram cedo */
+function detalhe(q,o,cedo){q.det.push({o:o,n:cedo?1:2});q.perto=null}
 function fazKit(d,i){
   var q={d:d,i:i,slot:i,mats:[],g:new THREE.Group(),gm:new THREE.Group(),bal:0,vbal:0,luzA:-1,alta:null,eAlta:0,px:0,tFalha:0,longe:false,det:[],perto:null};
   q.g.position.x=q.gm.position.x=i*P;cima.add(q.g);espelho.add(q.gm);
@@ -1709,7 +1710,7 @@ function fazKit(d,i){
   var mpp=WS/d.larg,cx=d.caixa,w=(cx[2]-cx[0])*mpp,h=(cx[3]-cx[1])*mpp;
   /* não deixa a bainha tocar na almofada */
   if(ZV+.02-h<ZC+.07){var f=(ZV+.02-ZC-.07)/h;mpp*=f;w*=f;h*=f}
-  q.mpp=mpp;
+  q.mpp=mpp;q.h=h;
   var geo=new THREE.PlaneGeometry(w,h,REAL?24:1,1);geo.translate(((cx[0]+cx[2])/2-d.gancho[0])*mpp,-h/2,0);
   /* um pouco de corpo: a peça curva-se para trás dos ombros para fora (as mangas ficam uns centímetros atrás do peito) */
   if(REAL&&CURVA){var pg=geo.attributes.position;for(var vi=0;vi<pg.count;vi++){var xn=pg.getX(vi)/(WS/2);pg.setZ(vi,-CURVA*xn*xn)}pg.needsUpdate=true}
@@ -1755,7 +1756,7 @@ function pxKit(q){
 function gereAltas(){
   var quer=null,vq=0,pior=null,vp=1e9,agora=performance.now(),i,q,v;
   for(i=0;i<kits.length;i++){q=kits[i];v=q.px=pxKit(q);
-    if(q.det.length){var pt=v>DETPX*(DENS||razao());if(pt!==q.perto){q.perto=pt;for(var z=0;z<q.det.length;z++)q.det[z].visible=pt;suja=true}}
+    if(q.det.length){var dn=DENS||razao(),pt=v>DETPX*dn?2:v>DETL*dn?1:0;if(pt!==q.perto){q.perto=pt;for(var z=0;z<q.det.length;z++)q.det[z].o.visible=pt>=q.det[z].n;suja=true}}
     /* precisa da grande quando no ecrã fica maior do que a miniatura (um quinto da largura da camisola no vídeo) */
     if(q.eAlta===0){if(v>q.d.larg*.2*1.15&&v>vq&&agora>q.tFalha){vq=v;quer=q}}
     else if(q.eAlta===2&&v<vp){vp=v;pior=q}}
@@ -1863,8 +1864,9 @@ var FS_SALA_PLACA=[
 '  return c;}'].join('\n');
 /* O material de uma peça de latão. peca 0: a placa (quatro parafusos, o medalhão do emblema e a fita de esmalte); peca 1: uma peça pequena
    (proto/toques.js: as chapinhas e a base do bilhete), com dois rebites aos lados (uReb é o raio; a zero não há rebites) e sem medalhão.
-   aro: a largura do aro em relevo no desenho «fundida» (por dentro do chanfro). */
-function plFrag(comum,peca,aro){var A=function(d){return (aro+d).toFixed(4)};return [
+   aro: a largura do aro em relevo no desenho «fundida» (por dentro do chanfro). reb: a que distância da aresta ficam os rebites de uma peça
+   pequena, no latão escovado e na fundida (sem nada: 9 e 11,8 mm, os das primeiras chapinhas). */
+function plFrag(comum,peca,aro,reb){var A=function(d){return (aro+d).toFixed(4)},RB=(reb||[.0090,.0118]).map(function(v){return v.toFixed(4)});return [
 'uniform sampler2D uTinta,uRuido;uniform vec3 uCor,uFogC;uniform float uOp,uEstilo,uSem,uFogN,uFogF,uFoco;'+(peca?'uniform float uReb;':'uniform sampler2D uEmb;uniform vec4 uMed,uFita;'),
 'varying vec3 vW;varying vec3 vL;varying float vProf;',
 comum,
@@ -1905,7 +1907,7 @@ peca?'':'vec3 emblema(vec2 uv){vec2 dx=dFdx(uv),dy=dFdy(uv);\n'+
 '    occ*=1.-.55*(1.-topo)*max(clamp(so*1.3,0.,1.),smoothstep(-CH-'+A(.0008)+',-CH-'+A(-.0004)+',sd2));',
 '  }'].concat(peca?[
    /* dois rebites, um de cada lado, a meia altura (no desenho «fundida» ficam por dentro do aro) */
-'  vec2 sg=vec2(p.x<0.?-1.:1.,1.),o=vec2((abs(p.x)-(TAM.x-mix(.0090,.0118,uEstilo)))*sg.x,p.y);float RS=max(uReb,1e-5),rs=length(o),aas=fwidth(rs)*.7+1e-5;',
+'  vec2 sg=vec2(p.x<0.?-1.:1.,1.),o=vec2((abs(p.x)-(TAM.x-mix('+RB[0]+','+RB[1]+',uEstilo)))*sg.x,p.y);float RS=max(uReb,1e-5),rs=length(o),aas=fwidth(rs)*.7+1e-5;',
 '  float dS=step(.0001,uReb)*(1.-smoothstep(RS-aas,RS+aas,rs));',
 '  float ang=fract(sin(dot(sg,vec2(12.9898,78.233))+uSem*3.7)*43758.5453)*3.14159;',
 '  float fenda=1.-smoothstep(.00028,.00028+aas*1.5,abs(dot(o,vec2(-sin(ang),cos(ang)))));',
@@ -2088,47 +2090,58 @@ function fazLetreiro(txt,x0){
 /* ---------- os toques pessoais de cada cacifo ----------
    Só existem com PERS. São três, e o primeiro vive no material da placa (placas.js): a fita de esmalte na cor da camisola.
    Aqui ficam os outros dois:
-   - as chapinhas: pequenas peças de latão por baixo da placa, só onde há história para contar («Usada em jogo», «Preparada para jogo»,
+   - as chapinhas: peças de latão por baixo da placa, só onde há história para contar («Usada em jogo», «Preparada para jogo»,
      «Assinada», «Edição especial»). São do latão das placas (o mesmo material, com outras medidas), gravadas e presas por dois rebites;
    - o bilhete do jogo: nos cacifos cuja camisola tem um jogo, um bilhete em pé no banco, numa base de latão com ranhura, com as equipas,
      o resultado e a data, no papel do bilhete do início da aplicação.
-   Tudo entra no conjunto da camisola (q.g): acende com o cacifo, apaga-se quando as camisolas vão para o varão e muda de cacifo com ela ao filtrar. */
-var CHA=.040,CHE=.005,CHR=.004,CHC=.0024,CHM=.019,CHF=.014,CHV=.014,CHG=.012;      /* chapinha: altura, espessura, raio dos cantos, chanfro, margem das letras, altura das maiúsculas, distância à placa, intervalo entre duas */
-var FS_CHAPA=null,FS_SOMBRA_CHAPA=null,chTela=null,chTintas={},chGeos={},chSombras={},chVazia=null,nChapas=0,nBilhetes=0;
-function chProgramas(){if(FS_CHAPA)return;var c=plComum(0,0,CHR,CHC);FS_CHAPA=plFrag(c,1,.0034);FS_SOMBRA_CHAPA=plFragSombra(c,CHE/PLE);if(!plRuido)plRuido=plFazRuido()}
-/* a tinta de uma chapinha (as letras, num só canal, como nas placas) e a largura que a peça tem de ter para elas caberem. Uma por texto: são quatro ao todo */
-function chTinta(txt){
-  if(chTintas[txt])return chTintas[txt];
-  var k=PLPX/1000,c=chTela||(chTela=document.createElement('canvas')),x=c.getContext('2d',{willReadFrequently:true}),f=CHF*1000*k/.7,e=('letterSpacing' in x)?f*.085:0;
-  var poe=function(){x.font='700 '+f.toFixed(1)+'px "Barlow Condensed"';if(e)x.letterSpacing=e.toFixed(1)+'px';x.textBaseline='alphabetic';x.textAlign='left'};
-  poe();var wt=x.measureText(txt).width-e,larg=Math.ceil(wt/k+2*CHM*1000)/1000,W=Math.round(larg*PLPX),H=Math.round(CHA*PLPX);
-  c.width=W;c.height=H;poe();x.fillStyle='#000';x.fillRect(0,0,W,H);x.fillStyle='#fff';x.fillText(txt,(W-wt)/2,H/2+CHF*500*k);
+   Tudo entra no conjunto da camisola (q.g): acende com o cacifo, apaga-se quando as camisolas vão para o varão e muda de cacifo com ela ao filtrar.
+   O tamanho: as primeiras tinham as medidas de uma peça a sério (letras de 14 mm, um bilhete de 20 cm) e no telemóvel mal se liam. As medidas
+   de agora partem dessas, multiplicadas: TQC para as chapinhas, TQB para o bilhete. tq=c,b,l muda-as no endereço, para afinar (l é a largura
+   máxima de uma fila de chapinhas, em metros; sem nada, a largura da placa). */
+var TQ=((/[?&]tq=([\d.,]+)/.exec(location.search)||[])[1]||'').split(',').map(Number),TQC=TQ[0]||1.5,TQB=TQ[1]||2.15,CHX=TQ[2]||PLW,TQR=Math.sqrt(TQC);
+var CHA=.040*TQC,CHF=.0147*TQC,CHM=.014*TQC,CHG=.008*TQC,CHV=.014*TQR,CHE=.005*TQR,CHR=.004*TQR,CHC=.0024*TQR,CHT=.04;      /* chapinha: altura, altura das maiúsculas, margem das letras, intervalo entre duas, distância à placa, espessura, raio dos cantos, chanfro, espaço entre letras (em partes do corpo) */
+var FS_CHAPA=null,FS_SOMBRA_CHAPA=null,chTela=null,chTintas={},chGeos={},chSombras={},chVazia=null,nChapas=0,nBilhetes=0,chFila=0;
+function chProgramas(){if(FS_CHAPA)return;var c=plComum(0,0,CHR,CHC);FS_CHAPA=plFrag(c,1,.0034*TQR,[.0090*TQR,.0118*TQR]);FS_SOMBRA_CHAPA=plFragSombra(c,CHE/PLE);if(!plRuido)plRuido=plFazRuido()}
+/* as letras de uma chapinha, com as maiúsculas à altura pedida (m); devolve o espaço entre letras, em píxeis */
+function chLetra(x,alt){var f=alt*PLPX/.7,e=('letterSpacing' in x)?f*CHT:0;x.font='700 '+f.toFixed(1)+'px "Barlow Condensed"';if(e)x.letterSpacing=e.toFixed(1)+'px';x.textBaseline='alphabetic';x.textAlign='left';return e}
+function chCtx(){return (chTela||(chTela=document.createElement('canvas'))).getContext('2d',{willReadFrequently:true})}
+/* a largura (m) que a peça tem de ter para o texto caber, com as letras a essa altura */
+function chLarg(txt,alt){var x=chCtx(),e=chLetra(x,alt);return Math.ceil((x.measureText(txt).width-e)/PLPX*1000+2*CHM*1000)/1000}
+/* a tinta de uma chapinha (as letras, num só canal, como nas placas). Uma por texto e por altura de letra: são quatro textos ao todo */
+function chTinta(txt,alt){
+  var ch=txt+'|'+alt.toFixed(4);if(chTintas[ch])return chTintas[ch];
+  var larg=chLarg(txt,alt),x=chCtx(),c=chTela,W=Math.round(larg*PLPX),H=Math.round(CHA*PLPX);
+  c.width=W;c.height=H;var e=chLetra(x,alt),wt=x.measureText(txt).width-e;x.fillStyle='#000';x.fillRect(0,0,W,H);x.fillStyle='#fff';x.fillText(txt,(W-wt)/2,H/2+alt*PLPX/2);
   var px=x.getImageData(0,0,W,H).data,u=new Uint8Array(W*H);
   for(var y=0;y<H;y++){var o=(H-1-y)*W*4,q=y*W;for(var i=0;i<W;i++)u[q+i]=px[o+i*4]}
   var t=new THREE.DataTexture(u,W,H,THREE.RedFormat,THREE.UnsignedByteType);t.colorSpace=THREE.NoColorSpace;t.generateMipmaps=true;t.minFilter=THREE.LinearMipmapLinearFilter;t.magFilter=THREE.LinearFilter;t.anisotropy=ANISO;t.needsUpdate=true;
-  return chTintas[txt]={t:t,w:larg};
+  return chTintas[ch]={t:t,w:larg};
 }
-/* o material de uma peça pequena de latão. fixo: não muda com o desenho das placas (a base do bilhete é sempre de latão escovado) */
+/* o material de uma peça pequena de latão. fixo: é a base do bilhete, que não muda com o desenho das placas (é sempre de latão escovado) e se apaga com o bilhete */
 function chMaterial(tinta,larg,alt,reb,sem,fixo){
   var m=new THREE.ShaderMaterial({uniforms:{uTinta:{value:tinta},uRuido:{value:plRuido},uCor:{value:new THREE.Color(1,1,1)},uFogC:{value:cena.fog.color},uFogN:{value:cena.fog.near},uFogF:{value:cena.fog.far},
     uOp:{value:1},uEstilo:{value:fixo?0:plEstilo},uSem:{value:sem},uFoco:{value:7},uTam:{value:new THREE.Vector2(larg/2,alt/2)},uReb:{value:reb}},vertexShader:VS_PLACA,fragmentShader:FS_CHAPA,transparent:true});
   m.color=m.uniforms.uCor.value;
   Object.defineProperty(m,'opacity',{get:function(){return this.uniforms.uOp.value},set:function(v){this.uniforms.uOp.value=v}});
-  (fixo?plFixos:plMats).push(m);placas.push(m);return m;
+  (fixo?plFixos:plMats).push(m);(fixo?blMats:placas).push(m);return m;
 }
 function chSombra(larg,alt){
   var ch=larg+'x'+alt;if(chSombras[ch])return chSombras[ch];
   var m=new THREE.ShaderMaterial({uniforms:{uOp:{value:1},uTam:{value:new THREE.Vector2(larg/2,alt/2)}},vertexShader:VS_SOMBRA_PLACA,fragmentShader:FS_SOMBRA_CHAPA,transparent:true,depthWrite:false});
   Object.defineProperty(m,'opacity',{get:function(){return this.uniforms.uOp.value},set:function(v){this.uniforms.uOp.value=v}});placas.push(m);
-  return chSombras[ch]={m:m,g:new THREE.PlaneGeometry(larg+.045,alt+.045)};
+  return chSombras[ch]={m:m,g:new THREE.PlaneGeometry(larg+.045*TQR,alt+.045*TQR)};
 }
-/* as chapinhas de um cacifo, lado a lado e centradas por baixo da placa (duas no máximo: mais do que isso já não cabia à largura da placa) */
+/* as chapinhas de um cacifo, lado a lado e centradas por baixo da placa (duas no máximo). A fila nunca fica mais larga do que a placa:
+   se ficasse, as letras desse cacifo encolhem até caber (é a regra dos nomes compridos nas placas) */
 function fazChapas(q,l,n){
   chProgramas();
-  var ps=l.slice(0,2).map(function(t){return chTinta(t.toUpperCase())}),tot=CHG*(ps.length-1);ps.forEach(function(p){tot+=p.w});
+  var txt=l.slice(0,2).map(function(t){return t.toUpperCase()}),alt=CHF,ws,tot;
+  var mede=function(){ws=txt.map(function(t){return chLarg(t,alt)});tot=CHG*(txt.length-1);ws.forEach(function(w){tot+=w})};
+  for(mede();tot>CHX+1e-6&&alt>CHF*.6;mede())alt-=.0002;
+  if(tot>chFila)chFila=tot;
   var x=-tot/2,y=(ZT+2.15)/2+.012-PLH/2-CHV-CHA/2;
-  ps.forEach(function(p,j){
-    var g=chGeos[p.w]||(chGeos[p.w]=plGeometria(p.w,CHA,CHE,CHR,CHC)),so=chSombra(p.w,CHA),m=chMaterial(p.t,p.w,CHA,.0022,n*1.618+7.3*(j+1));
+  txt.forEach(function(t,j){
+    var p=chTinta(t,alt),g=chGeos[p.w]||(chGeos[p.w]=plGeometria(p.w,CHA,CHE,CHR,CHC)),so=chSombra(p.w,CHA),m=chMaterial(p.t,p.w,CHA,.0022*TQR,n*1.618+7.3*(j+1));
     q.mats.push(m);
     var s=new THREE.Mesh(so.g,so.m);s.position.set(x+p.w/2,y,D+.0034);s.renderOrder=1;q.g.add(s);detalhe(q,s);
     var o=new THREE.Mesh(g,m);o.position.set(x+p.w/2,y,D+.003+CHE);o.renderOrder=2;q.g.add(o);detalhe(q,o);nChapas++;
@@ -2137,18 +2150,21 @@ function fazChapas(q,l,n){
 }
 
 /* ---------- o bilhete do jogo ---------- */
-var BLW=.200,BLH=.084,BLPX=3,BLZ=.47,BLI=.15,BLP=154;      /* largura e altura (m), píxeis por milímetro, a que distância do fundo do cacifo fica, inclinação para trás (rad), onde está o picotado (mm) */
-var BSW=.214,BSH=.014,BSE=.018;                           /* a base: largura, altura e fundura */
+var BLW0=200,BLH0=84,BLPX=3,BLP=154;      /* o desenho do bilhete: largura e altura (em milímetros do desenho), píxeis por milímetro, onde está o picotado */
+var BLW=BLW0/1000*TQB,BLH=BLH0/1000*TQB,BLZ=.47,BLI=.15;      /* a peça no cacifo: largura e altura (m), a que distância do fundo do cacifo fica, inclinação para trás (rad) */
+var BSW=BLW+.014*Math.sqrt(TQB),BSH=.014*Math.sqrt(TQB),BSE=.018*Math.pow(TQB,.75);      /* a base: largura, altura e fundura */
 var blTela=null,blGeo=null,blGeoB=null,blGeoS=null,blMatS=null;
+/* os materiais dos bilhetes (o papel, a base e a sombra na almofada): além de se apagarem com as camisolas, apagam-se com a camisola em foco (ver passoBal) */
+var blMats=[],fBil=1,opBA=-1,blFolga=9;      /* blFolga: a menor folga (m), vista de frente, entre o cimo de um bilhete e a bainha da camisola que tem por cima */
 /* o bilhete desenhado: papel creme com riscas finas (o do bilhete do início), uma faixa na cor da camisola, a prova, as duas equipas com o resultado,
    o estádio e, no canhoto, a data e um código de barras. A luz do cacifo já vai no desenho: vem de cima, e cá em baixo chega mais fraca. */
 function blTextura(d){
-  var j=d.jogo,k=BLPX,W=Math.round(BLW*1000*k),H=Math.round(BLH*1000*k),c=blTela||(blTela=document.createElement('canvas'));
+  var j=d.jogo,k=BLPX,W=Math.round(BLW0*k),H=Math.round(BLH0*k),c=blTela||(blTela=document.createElement('canvas'));
   if(c.width!==W||c.height!==H){c.width=W;c.height=H}
   var x=c.getContext('2d',{willReadFrequently:true}),TINTA='#17160f',TINTA2='#5f5a4e',temEsp='letterSpacing' in x;
   x.globalCompositeOperation='source-over';x.textBaseline='alphabetic';
   x.fillStyle='#efe6d2';x.fillRect(0,0,W,H);
-  x.fillStyle='rgba(60,40,10,.07)';for(var i=0;i<BLW*1000;i+=4)x.fillRect(i*k,0,.6*k,H);
+  x.fillStyle='rgba(60,40,10,.07)';for(var i=0;i<BLW0;i+=4)x.fillRect(i*k,0,.6*k,H);
   x.fillStyle=d.cor||'#c4302b';x.fillRect(0,0,9*k,H);
   /* escreve com as maiúsculas à altura pedida (mm); se não couber na largura, encolhe. Devolve a altura com que ficou */
   var letra=function(peso,alt,espaco){var f=alt*k/.7;x.font=peso+' '+f.toFixed(1)+'px "Barlow Condensed"';if(temEsp)x.letterSpacing=(f*espaco).toFixed(1)+'px'};
@@ -2161,12 +2177,12 @@ function blTextura(d){
   letra(800,12.5,0);x.textAlign='right';x.fillText(j.gc==null?'':String(j.gc),XR*k,37.4*k);x.fillText(j.gf==null?'':String(j.gf),XR*k,56.4*k);
   x.textAlign='left';x.fillStyle=TINTA2;var est=String(j.estadio||'').toUpperCase();cabe(est,700,5.8,.09,XR-X0);x.fillText(est,X0*k,75*k);
   /* o canhoto: picotado, a data e o código de barras */
-  x.fillStyle='rgba(23,22,15,.4)';for(var y=5;y<BLH*1000-5;y+=3.4)x.fillRect((BLP-.3)*k,y*k,.6*k,1.9*k);
-  var dt=String(j.data||'').toUpperCase().split(' '),xm=(BLP+BLW*1000)/2;
-  x.textAlign='center';x.fillStyle=TINTA;cabe(dt.slice(0,2).join(' '),800,9,.02,BLW*1000-BLP-12);x.fillText(dt.slice(0,2).join(' '),xm*k,27*k);
+  x.fillStyle='rgba(23,22,15,.4)';for(var y=5;y<BLH0-5;y+=3.4)x.fillRect((BLP-.3)*k,y*k,.6*k,1.9*k);
+  var dt=String(j.data||'').toUpperCase().split(' '),xm=(BLP+BLW0)/2;
+  x.textAlign='center';x.fillStyle=TINTA;cabe(dt.slice(0,2).join(' '),800,9,.02,BLW0-BLP-12);x.fillText(dt.slice(0,2).join(' '),xm*k,27*k);
   if(dt[2]){x.fillStyle=TINTA2;letra(700,6.6,.08);x.fillText(dt[2],xm*k+(temEsp?6.6*.08/.7*k/2:0),39*k)}
   x.fillStyle=TINTA;var s=7;for(i=0;i<d.id.length;i++)s=(s*31+d.id.charCodeAt(i))%2147483647;
-  for(var bx=BLP+9;bx<BLW*1000-9;){s=(s*16807)%2147483647;var lb=.5+(s%3)*.45;x.fillRect(bx*k,50*k,lb*k,22*k);s=(s*16807)%2147483647;bx+=lb+.5+(s%3)*.4}
+  for(var bx=BLP+9;bx<BLW0-9;){s=(s*16807)%2147483647;var lb=.5+(s%3)*.45;x.fillRect(bx*k,50*k,lb*k,22*k);s=(s*16807)%2147483647;bx+=lb+.5+(s%3)*.4}
   x.globalCompositeOperation='multiply';var g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'rgb(232,217,194)');g.addColorStop(1,'rgb(188,173,151)');x.fillStyle=g;x.fillRect(0,0,W,H);x.globalCompositeOperation='source-over';
   /* o recorte (cantos boleados e as duas meias-luas do picotado) vai na transparência, calculado à parte: assim as margens não escurecem ao encolher a imagem */
   var px=x.getImageData(0,0,W,H).data,u=new Uint8Array(W*H*4),r=2.4*k,rn=3.4*k,xp=BLP*k;
@@ -2180,21 +2196,24 @@ function blTextura(d){
 }
 function fazBilhete(q,n){
   chProgramas();
+  var e=Math.pow(TQB,.75);
   if(!blGeo){
     blGeo=new THREE.PlaneGeometry(BLW,BLH);blGeo.translate(0,BLH/2,0);blGeoB=plGeometria(BSW,BSH,BSE,CHR,CHC);
     chVazia=new THREE.DataTexture(new Uint8Array([0]),1,1,THREE.RedFormat,THREE.UnsignedByteType);chVazia.needsUpdate=true;
     /* a sombra do bilhete e da base na almofada: uma mancha suave, mais para trás do que para a frente (a luz do cacifo vem de cima e da frente) */
     var c=document.createElement('canvas');c.width=128;c.height=64;var x=c.getContext('2d'),g=x.createRadialGradient(64,32,2,64,32,62);
     g.addColorStop(0,'rgba(0,0,0,.62)');g.addColorStop(.45,'rgba(0,0,0,.34)');g.addColorStop(1,'rgba(0,0,0,0)');x.setTransform(1,0,0,.5,0,16);x.fillStyle=g;x.fillRect(0,-32,128,128);
-    var ts=new THREE.CanvasTexture(c);blMatS=new THREE.MeshBasicMaterial({map:ts,transparent:true,depthWrite:false});placas.push(blMatS);
-    blGeoS=new THREE.PlaneGeometry(BSW+.10,.13);
+    var ts=new THREE.CanvasTexture(c);blMatS=new THREE.MeshBasicMaterial({map:ts,transparent:true,depthWrite:false});blMats.push(blMatS);
+    blGeoS=new THREE.PlaneGeometry(BSW+.10*e,.13*e);
   }
-  var gb=new THREE.Group();gb.position.set(0,ZC,BLZ);q.g.add(gb);detalhe(q,gb);
-  var so=new THREE.Mesh(blGeoS,blMatS);so.rotation.x=-Math.PI/2;so.position.set(0,.0015,-.022);so.renderOrder=1;gb.add(so);
+  var gb=new THREE.Group();gb.position.set(0,ZC,BLZ);q.g.add(gb);detalhe(q,gb,1);
+  /* a folga até à bainha: onde a linha que vai da câmara (na vista de frente) ao cimo do bilhete chega ao plano da camisola */
+  var F=VISTAS[1].p,yt=ZC+BSH-.004*Math.sqrt(TQB)+BLH*Math.cos(BLI),zt=BLZ-BLH*Math.sin(BLI),fg=ZV+.02-q.h-(yt-(F[1]-yt)/(F[2]-zt)*(zt-ZR));if(fg<blFolga)blFolga=fg;
+  var so=new THREE.Mesh(blGeoS,blMatS);so.rotation.x=-Math.PI/2;so.position.set(0,.0015,-.022*e);so.renderOrder=1;gb.add(so);
   var mb=chMaterial(chVazia,BSW,BSH,0,n*2.39,true);q.mats.push(mb);
   var base=new THREE.Mesh(blGeoB,mb);base.position.set(0,BSH/2,BSE/2);base.renderOrder=2;gb.add(base);
-  var m=new THREE.MeshBasicMaterial({map:blTextura(q.d),transparent:true,depthWrite:false});q.mats.push(m);placas.push(m);
-  var b=new THREE.Mesh(blGeo,m);b.position.set(0,BSH-.004,0);b.rotation.x=-BLI;b.renderOrder=3;gb.add(b);nBilhetes++;
+  var m=new THREE.MeshBasicMaterial({map:blTextura(q.d),transparent:true,depthWrite:false});q.mats.push(m);blMats.push(m);
+  var b=new THREE.Mesh(blGeo,m);b.position.set(0,BSH-.004*Math.sqrt(TQB),0);b.rotation.x=-BLI;b.renderOrder=3;gb.add(b);nBilhetes++;
 }
 /* o que cada cacifo leva, pelo que a camisola é */
 function fazToques(q,n){
@@ -2209,7 +2228,7 @@ function fazToques(q,n){
 var letreiros=[],placas=[];
 function fazTextos(){
   CATS.forEach(function(c){var ml=fazLetreiro(c,0);ml.userData.sec=c;letreiros.push(ml)});arrumaLetreiros();
-  var k=0;(function lote(){for(var f=Math.min(kits.length,k+6);k<f;k++){fazPlaca(kits[k],kits[k].i+1);if(PERS)fazToques(kits[k],kits[k].i+1)}opA=-1;suja=true;if(k<kits.length)setTimeout(lote,0);else{pend--;verPronto()}})();
+  var k=0;(function lote(){for(var f=Math.min(kits.length,k+6);k<f;k++){fazPlaca(kits[k],kits[k].i+1);if(PERS)fazToques(kits[k],kits[k].i+1)}opA=opBA=-1;suja=true;if(k<kits.length)setTimeout(lote,0);else{pend--;verPronto()}})();
 }
 /* cada letreiro fica por cima do primeiro cacifo da sua secção; se a secção não está à vista, sai */
 function arrumaLetreiros(){letreiros.forEach(function(m){var s=-1,n=0;for(var j=0;j<NV;j++)if(DADOS[VIS[j]].sec===m.userData.sec){if(s<0)s=j;n++}
@@ -2690,6 +2709,8 @@ function passoBal(dt){
   var ac=modo==='varao'?0:1;if(Math.abs(fCam-ac)>.002){fCam=Math.abs(fCam-ac)<.01?ac:mistura(fCam,ac,k1);mexe=true}
   var op=fCam*fFil;if(op!==opA){opA=op;var vis=op>.01;
     kits.forEach(function(q){q.mCam.opacity=op;q.mSom.opacity=.6*op;q.cam.visible=q.camE.visible=q.sombra.visible=vis;if(q.mCos){q.mCos.opacity=.86*op;q.mSom2.opacity=.36*op}});letreiros.forEach(function(m){m.opacity=op});placas.forEach(function(m){m.opacity=op})}
+  /* com a camisola tirada do cacifo o bilhete apaga-se: a câmara chega-se à camisola e ele ficava ao fundo do ecrã, por trás do nome */
+  if(PERS){var ab=foco&&!foco.varao?0:1;if(fBil!==ab){fBil=mistura(fBil,ab,k2);if(Math.abs(fBil-ab)<.004)fBil=ab;mexe=true}var ob=op*fBil;if(ob!==opBA){opBA=ob;blMats.forEach(function(m){m.opacity=ob})}}
   /* o varão desce do teto quando se muda para ele */
   var av=modo==='varao'?1:0;if(Math.abs(fVar-av)>.002){fVar=mistura(fVar,av,k1);mexe=true}
   gVar.visible=gVarE.visible=fVar>.01;
@@ -3219,7 +3240,7 @@ addEventListener('resize',mede);mede();vai('menu');verPronto();acorda();
 window.__proto={vai:vai,foca:foca,desfoca:desfoca,
   dorme:function(b){sono=!!b;if(sono){try{filme.pause()}catch(_){}}else{if(foco&&filme.classList.contains('on')&&!PARADO)filme.play().catch(function(){});suja=true;acorda()}},
   estado:function(){return {ecra:ecra,modo:modo,vista:vista,idx:idx,aberto:aberto,foco:!!foco,pend:pend,par:par,pr:razao(),sono:sono,roda:roda}},
-  toques:function(){return {pers:PERS,real:REAL,perto:kits.filter(function(q){return q.det.length&&q.perto}).length,chapas:nChapas,bilhetes:nBilhetes,fitas:plMats.filter(function(m){return m.uniforms.uFita&&m.uniforms.uFita.value.w>0}).length}},
+  toques:function(){return {pers:PERS,real:REAL,perto:kits.filter(function(q){return q.det.length&&q.perto}).length,chapas:nChapas,bilhetes:nBilhetes,fitas:plMats.filter(function(m){return m.uniforms.uFita&&m.uniforms.uFita.value.w>0}).length,fila:chFila,chapa:[CHA,CHF],bilhete:[BLW,BLH],opB:opBA,placa:[PLW,PLH],folga:blFolga,cedo:kits.filter(function(q){return q.perto===1}).length}},
   zoom:function(px,x){largaPin();if(x==null)x=W/2;if(px==null){if(zoomG!=null){zoomG=null;arruma(idxF);legenda();uiEstado();suja=true}return null}
     if(!comecaZoom(x))return false;pin.roda=true;mexeZoom(px/pin.px0,x);var a=poseGeral();offP.set(a.p[0],a.p[1],a.p[2]);offO.set(a.o[0],a.o[1],a.o[2]);fovA=a.f;passoBal(0);acabaZoom();return zoomG},
   mats:function(){return {longe:matLonge,focos:matFocos,teto:matTeto}},
