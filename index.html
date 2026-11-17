@@ -110,13 +110,16 @@ svg:where(:not(#sala *)){display:block;width:22px;height:22px;fill:none;stroke:c
 .sub:where(:not(#sala *)){margin-top:8px;font-size:15px;line-height:1.4;color:var(--cinza);text-wrap:pretty}
 .minha{color:var(--champanhe)}
 
-/* o papel: no início, o bilhete de estádio (título, contagens e, só para o dono, o canhoto com o valor);
-   na aba das camisolas, o cartão dos clubes e a tira dos filtros, por cima da parede escura */
+/* o papel: na entrada, o bilhete de estádio (título, contagens e, só para o dono, o canhoto com o valor);
+   na caderneta, o cartão dos clubes e a tira dos filtros, por cima da parede escura */
 #cabeca{position:relative;padding-top:6px;isolation:isolate}
 /* o campo de cor: as cores das últimas camisolas, desfocadas, à volta do bilhete */
-#cabeca::before{content:"";position:absolute;z-index:-1;left:0;right:0;top:-40px;height:380px;pointer-events:none;opacity:.6;
-  background:radial-gradient(42% 46% at 10% 22%,var(--c1,#d81f22) 0%,transparent 100%),radial-gradient(44% 48% at 82% 8%,var(--c2,#2740b0) 0%,transparent 100%),radial-gradient(40% 42% at 50% 58%,var(--c3,#6a4fa0) 0%,transparent 100%),radial-gradient(36% 36% at 92% 66%,var(--c4,#dec692) 0%,transparent 100%);
-  filter:blur(34px) saturate(1.2);-webkit-mask-image:linear-gradient(#000 45%,transparent 96%);mask-image:linear-gradient(#000 45%,transparent 96%)}
+#cabeca::before{content:"";position:absolute;z-index:-1;left:-120px;right:-120px;top:-160px;height:500px;pointer-events:none;opacity:.6;
+  background:radial-gradient(27.2% 35% at 24.1% 40.8%,var(--c1,#d81f22) 0%,transparent 100%),radial-gradient(28.5% 36.4% at 70.7% 30%,var(--c2,#2740b0) 0%,transparent 100%),radial-gradient(25.9% 32% at 50% 68%,var(--c3,#6a4fa0) 0%,transparent 100%),radial-gradient(23.2% 27.4% at 77.2% 74.2%,var(--c4,#dec692) 0%,transparent 100%);
+  filter:blur(34px) saturate(1.2);
+  /* as cores desvanecem para todos os lados (o bilhete está a meio do ecrã: não pode ver-se onde o campo de cor acaba) */
+  -webkit-mask-image:linear-gradient(transparent,#000 22%,#000 58.2%,transparent 97%),linear-gradient(90deg,transparent,#000 17.6%,#000 82.4%,transparent);mask-image:linear-gradient(transparent,#000 22%,#000 58.2%,transparent 97%),linear-gradient(90deg,transparent,#000 17.6%,#000 82.4%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect}
 .papel:where(:not(#sala *)){color:var(--tinta);background-color:var(--papel-b);background-image:repeating-linear-gradient(90deg,rgba(60,40,10,.08) 0 1px,transparent 1px 7px)}
 .papel :focus-visible:where(:not(#sala *)){outline-color:var(--caneta)}
 .conta b:where(:not(#sala *)),.canhoto-in>b:where(:not(#sala *)),.bil-t small:where(:not(#sala *)){font-family:'Barlow Condensed',var(--letra);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
@@ -150,8 +153,8 @@ button.canhoto-in:active{transform:scale(.97)}
 /* o cartão dos clubes: faixa vermelha, emblemas numerados como lugares, picotado entre cada um */
 .papel-clubes{max-width:640px;margin-top:10px;border:1.5px solid var(--banda-v);border-bottom:0;border-radius:14px 14px 0 0;overflow:hidden}
 .clubes-t{margin:0;padding:7px 14px 6px;background:var(--banda-v);color:var(--papel-b);font-size:10px;line-height:1.3;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-#clubes{display:flex;overflow-x:auto;scrollbar-width:none;margin:0;padding:0;-webkit-overflow-scrolling:touch;counter-reset:clube}
-#clubes::-webkit-scrollbar{display:none}
+.clubes:where(:not(#sala *)){display:flex;overflow-x:auto;scrollbar-width:none;margin:0;padding:0;-webkit-overflow-scrolling:touch;counter-reset:clube}
+.clubes:where(:not(#sala *))::-webkit-scrollbar{display:none}
 .clube:where(:not(#sala *)){position:relative;flex:none;width:76px;display:flex;flex-direction:column;align-items:center;gap:5px;padding:17px 4px 9px;border-right:2px dashed var(--picote);color:var(--tinta);counter-increment:clube}
 .clube:where(:not(#sala *))::before{content:counter(clube,decimal-leading-zero);position:absolute;left:6px;top:5px;font-size:8.5px;line-height:1;font-weight:700;letter-spacing:.06em;color:var(--carimbo)}
 .clube.todos:where(:not(#sala *)){counter-increment:none}
@@ -170,8 +173,8 @@ button.canhoto-in:active{transform:scale(.97)}
 .conta-g span:where(:not(#sala *)){font-size:20px;font-weight:500;color:var(--papel)}
 /* a tira dos filtros, que fica presa no topo ao descer a parede: caixas de marcar e a ordem escrita à caneta */
 #filtros{position:sticky;top:calc(var(--it) + 64px);z-index:5;max-width:640px;margin:0 max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));border:1.5px solid var(--banda-v);border-top:0;border-radius:0 0 14px 14px;box-shadow:0 12px 28px rgba(0,0,0,.45)}
-#chips{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:11px 14px 9px;border-top:2px dashed var(--picote);-webkit-overflow-scrolling:touch}
-#chips::-webkit-scrollbar{display:none}
+.chips:where(:not(#sala *)){display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:11px 14px 9px;border-top:2px dashed var(--picote);-webkit-overflow-scrolling:touch}
+.chips:where(:not(#sala *))::-webkit-scrollbar{display:none}
 .chip{flex:none;display:flex;align-items:center;gap:6px;height:20px;font-family:'Barlow Condensed',var(--letra);font-size:12.5px;line-height:1;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--tinta);white-space:nowrap;transition:transform .15s}
 .chip:active{transform:scale(.96)}
 .chip .cx:where(:not(#sala *)){flex:none;width:16px;height:16px;border:1.5px solid var(--carimbo);border-radius:2px;background:rgba(255,255,255,.35) center/140% no-repeat}
@@ -348,7 +351,7 @@ button.canhoto-in:active{transform:scale(.97)}
 #mais{margin-top:28px;max-width:60ch;color:var(--cinza);font-size:14.5px;line-height:1.5}
 
 /* separadores em baixo */
-#tabs{position:fixed;z-index:6;left:50%;bottom:calc(var(--ib) + 12px);width:min(100% - 24px,460px);height:60px;padding:5px;border-radius:30px;display:flex;transform:translate3d(-50%,0,0);transition:transform var(--t) var(--mola),opacity .25s ease;-webkit-user-select:none;user-select:none}
+#tabs{position:fixed;z-index:9;left:50%;bottom:calc(var(--ib) + 12px);width:min(100% - 24px,460px);height:60px;padding:5px;border-radius:30px;display:flex;transform:translate3d(-50%,0,0);transition:transform var(--t) var(--mola),opacity .25s ease;-webkit-user-select:none;user-select:none}
 .em-ficha #tabs{transform:translate3d(-50%,110px,0);opacity:0;pointer-events:none}
 #tab-marca{position:absolute;top:5px;left:5px;height:50px;width:80px;border-radius:25px;background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 .5px rgba(255,255,255,.18);transition:transform var(--t) var(--mola),width var(--t) var(--mola);will-change:transform}
 #tabs button:where(:not(#sala *)){position:relative;flex:1;min-width:0;height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:10.5px;font-weight:600;color:var(--cinza);transition:color .2s}
@@ -442,6 +445,7 @@ details[open] summary svg:where(:not(#sala *)){transform:rotate(45deg)}
 .seg b:where(:not(#sala *)){display:block;font-size:24px;font-weight:800;font-stretch:62%;line-height:1.05;text-transform:uppercase}
 .seg i:where(:not(#sala *)){font-style:normal;font-size:44px;font-weight:200;font-stretch:125%;font-variant-numeric:tabular-nums;line-height:1}
 .seg:active:where(:not(#sala *)){opacity:.7}
+.seg.ant{margin-top:26px}
 #comandos{position:fixed;z-index:30;left:50%;bottom:calc(var(--ib) + 12px);display:flex;align-items:center;gap:2px;padding:4px;border-radius:26px;transform:translate3d(-50%,80px,0);opacity:0;transition:transform var(--t) var(--mola),opacity .25s ease;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 .em-ficha #comandos{transform:translate3d(-50%,0,0);opacity:1}
 #comandos>button:where(:not(#sala *)){flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center}
@@ -471,44 +475,46 @@ details[open] summary svg:where(:not(#sala *)){transform:rotate(45deg)}
   .entrada .baia,.ecra.chega .ecra-in{animation:none}
   .filme.on:where(:not(#sala *)){transition:none}
 }
-/* ---------- o início: o bilhete e as duas portas — o balneário (a sala dos cacifos) e a volta ao mundo ----------
-   Cada porta é uma fotografia do que lá está dentro e abre-se por cima da aplicação (#sala). As duas enchem o que sobra do ecrã por baixo do bilhete.
-   A lista das camisolas, com os clubes, os filtros e a ordem, tem a sua aba (#e-camisolas). */
-#e-inicio .ecra-in{min-height:100%;display:flex;flex-direction:column}
-#cabeca{flex:1;display:flex;flex-direction:column;width:100%;max-width:672px;margin:0 auto}
-.portas:where(:not(#sala *)){flex:1;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:minmax(168px,1fr);gap:10px;margin-top:10px;max-height:calc(min(640px,100vw - 32px)*1.5 + 10px)}
-.porta-i{position:relative;display:block;border-radius:16px;overflow:hidden;background:#12100d;text-decoration:none;color:var(--papel);box-shadow:0 10px 24px rgba(0,0,0,.4);transform:translateZ(0);transition:transform .22s ease;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
-.porta-i:active{transform:scale(.985) translateZ(0)}
-.porta-i img:where(:not(#sala *)){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-user-drag:none}
-.porta-i::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(rgba(0,0,0,0) 34%,rgba(0,0,0,.86));box-shadow:inset 0 0 0 .5px rgba(255,255,255,.2);pointer-events:none}
-.porta-t{position:absolute;z-index:1;left:18px;right:16px;bottom:16px;display:block}
-.porta-t b:where(:not(#sala *)){display:block;font-size:clamp(28px,8.2vw,36px);line-height:.95;font-weight:900;font-stretch:62%;letter-spacing:-.008em;text-transform:uppercase}
-.porta-t small:where(:not(#sala *)){display:block;margin-top:6px;font-family:'Barlow Condensed',var(--letra);font-size:15px;line-height:1.1;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--champanhe)}
-.porta-t span:where(:not(#sala *)){display:block;margin-top:6px;max-width:36ch;font-size:14.5px;line-height:1.35;color:#d9d5cb}
-/* ao abrir, as duas portas chegam uma a seguir à outra */
-.entrada .porta-i{animation:pendura .7s var(--mola) both;animation-delay:.08s}
-.entrada .porta-i+.porta-i{animation-delay:.2s}
-@media (prefers-reduced-motion:reduce){.entrada .porta-i{animation:none}}
-/* ecrã baixo (telemóveis pequenos): as portas encolhem e perdem a frase, para caberem as duas sem descer */
-@media (max-height:700px){
-  .portas:where(:not(#sala *)){grid-auto-rows:minmax(128px,1fr)}
-  .porta-t{bottom:13px}
-  .porta-t span:where(:not(#sala *)){display:none}
-}
-/* telemóvel deitado (pouca altura): o bilhete à esquerda e as duas portas ao lado, uma por cima da outra, para caber tudo sem descer */
-@media (orientation:landscape) and (max-height:560px) and (min-width:640px){
-  #cabeca{flex:none;max-width:none;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);column-gap:10px;align-items:stretch}
-  .portas:where(:not(#sala *)){margin-top:0;max-height:none;grid-auto-rows:minmax(0,1fr)}
-  .porta-t{left:12px;right:10px;bottom:10px}
-  .porta-t b:where(:not(#sala *)){font-size:22px}
-  .porta-t small:where(:not(#sala *)){margin-top:4px;font-size:13px}
-  .porta-t span:where(:not(#sala *)){display:none}
-}
-/* computador e tablet deitado: o bilhete em cima e as duas portas lado a lado, a encher o resto */
-@media (min-width:940px) and (min-height:561px){
-  #cabeca{max-width:none}
-  .portas:where(:not(#sala *)){grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-auto-rows:minmax(220px,1fr);max-height:calc((min(1500px,100vw) - 42px)*.375)}
-}
+/* ---------- a entrada: as duas folhas da porta do balneário e, por cima, o bilhete e o botão de entrar ----------
+   Só ao abrir a aplicação. Por trás fica a vista em que se ficou da última vez (o balneário, a caderneta ou o mundo), a carregar; o botão diz
+   «A preparar» até ela estar pronta. Ao entrar, as folhas correm para os lados e o bilhete desvanece. */
+#entrada{position:fixed;inset:0;z-index:60;display:grid;place-items:center;overflow:hidden}
+.ent-f{position:absolute;top:0;bottom:0;width:50.5%;background:linear-gradient(90deg,#0b0a08,#191511 55%,#0d0b09);transition:transform 1.25s cubic-bezier(.7,0,.2,1)}
+.ent-f.e{left:0;border-right:1px solid rgba(222,198,146,.35)}
+.ent-f.d{right:0;border-left:1px solid rgba(222,198,146,.35);background:linear-gradient(270deg,#0b0a08,#191511 55%,#0d0b09)}
+#entrada.aberta{pointer-events:none}
+#entrada.aberta .ent-f.e{transform:translateX(-101%)}
+#entrada.aberta .ent-f.d{transform:translateX(101%)}
+.ent-in{position:relative;z-index:1;width:100%;margin-bottom:8vh;display:flex;flex-direction:column;align-items:center;transition:opacity .3s ease,transform .5s var(--mola)}
+#entrada.aberta .ent-in{opacity:0;transform:scale(.94)}
+#cabeca{width:100%;max-width:520px;margin:0 auto}
+#ent-b{margin-top:30px;height:52px;min-width:200px;padding:0 44px;border-radius:26px;background:var(--champanhe);color:var(--tinta);font-family:'Barlow Condensed',var(--letra);font-size:17px;line-height:1;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:opacity .25s ease,transform .15s}
+#ent-b:disabled{opacity:.5}
+#ent-b:active{transform:scale(.97)}
+#ent-b:focus-visible{outline-color:var(--champanhe)}
+@media (prefers-reduced-motion:reduce){.ent-f,.ent-in{transition:none}}
+/* enquanto a entrada está à frente, e com uma camisola tirada do cacifo ou uma fotografia do mundo aberta, a barra de baixo sai */
+.na-entrada #tabs,.sala-cheia #tabs{transform:translate3d(-50%,110px,0);opacity:0;pointer-events:none}
+/* com o menu das categorias do balneário aberto, a barra deixa passar os toques (tocar fora fecha o menu) */
+.sala-menu #tabs{pointer-events:none}
+/* o aviso de que o balneário ainda está a abrir, quando se chega lá pela barra antes de estar pronto */
+#espera{position:fixed;z-index:9;left:50%;top:46%;transform:translate(-50%,-50%);margin:0;padding:10px 16px;border-radius:18px;background:var(--vidro);color:var(--cinza);font-size:14px;white-space:nowrap;pointer-events:none}
+/* a caderneta por valor (só o dono): o total por cima da parede e o valor em cada camisola */
+#valor-faixa{margin-top:14px;margin-bottom:10px}
+#valor-faixa .conta-g b:where(:not(#sala *)){font-size:52px}
+#valor-faixa .conta-g span:where(:not(#sala *)){font-size:15px}
+#valor-faixa .sub:where(:not(#sala *)){max-width:60ch;font-size:14px}
+.baia .preco{position:absolute;z-index:5;left:8px;top:8px;padding:5px 9px 4px;border-radius:11px;background:rgba(10,10,10,.74);box-shadow:inset 0 0 0 .5px rgba(255,255,255,.14);color:var(--champanhe);font-size:13px;line-height:1.2;font-weight:600;font-variant-numeric:tabular-nums}
+.baia .preco.est{color:var(--papel);font-weight:500}
+.baia .preco.sem{color:var(--cinza);font-weight:400}
+/* a caderneta por jogo: cada prateleira é um jogo, com a data, a prova e o resultado */
+.prateleira.pj{display:block;margin-top:24px;text-transform:none;letter-spacing:0}
+.prateleira.pj:first-child{margin-top:8px}
+.prateleira.pj::after{content:none}
+.prateleira.pj small:where(:not(#sala *)){display:block;font-size:13px;font-weight:400;color:var(--fumo);line-height:1.3}
+.prateleira.pj .placar{margin-top:5px;margin-bottom:4px;color:var(--papel);column-gap:12px}
+.prateleira.pj .placar span:where(:not(#sala *)){font-size:19px}
+.prateleira.pj .placar b:where(:not(#sala *)){font-size:25px}
 /* a aba das camisolas começa pelo título, como as outras, e segue com o cartão dos clubes */
 #cabeca-c{padding-top:6px}
 #cabeca-c .papel-clubes{margin-top:16px}
@@ -710,6 +716,19 @@ details[open] summary svg:where(:not(#sala *)){transform:rotate(45deg)}
 @media (prefers-reduced-motion:reduce){#sala *{transition-duration:.01s!important}
 #sala #m-cam button{animation:none!important}
 #sala #rolo,#sala #trilho,#sala #trilho i{transition:none!important}}
+#sala .m-tit{top:calc(var(--it) + 74px);font-size:clamp(34px,9.4vw,60px);line-height:.96;font-weight:800;font-stretch:62%;letter-spacing:-.012em;text-transform:uppercase}
+#sala .m-tit em{font-family:inherit;font-style:normal;font-weight:inherit;font-size:1em;letter-spacing:inherit}
+#sala #m-pais{font-size:clamp(28px,8.6vw,38px);line-height:1;font-weight:800;font-stretch:62%;letter-spacing:-.005em;text-transform:uppercase}
+#sala #ui-mundo.clube #m-pais{font-size:clamp(24px,7.4vw,32px);letter-spacing:-.005em}
+#sala #legenda span{font-family:var(--letra);font-size:13.5px;font-weight:600;letter-spacing:.04em}
+#sala .seg button,#sala #b-vista,#sala #m-estilo button{font-family:var(--letra);font-size:14.5px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--papel)}
+#sala .seg button,#sala #m-estilo button{opacity:.62;transition:opacity .2s,background .25s}
+#sala .seg button[aria-pressed="true"],#sala #m-estilo button[aria-pressed="true"]{opacity:1;background:rgba(255,255,255,.17);box-shadow:inset 0 0 0 .5px rgba(255,255,255,.2);color:var(--papel)}
+#sala #m-estilo{padding:4px;border-radius:19px}
+#sala #m-estilo button{height:30px;padding:0 13px;border-radius:15px;font-size:13.5px}
+#sala #carga{font-family:var(--letra);font-size:14px;font-weight:400;letter-spacing:0;text-transform:none}
+#sala #bal-dica{top:calc(var(--it) + 76px)}
+#sala #bal-dica.pil{top:calc(var(--it) + 72px)}
 #sala{z-index:8}
 /* ao abrir uma porta a sala aparece a desvanecer, por cima da parede */
 #sala:not([hidden]){animation:s-abre .24s ease both}
@@ -721,52 +740,62 @@ details[open] summary svg:where(:not(#sala *)){transform:rotate(45deg)}
 #sala.falhou .ecra>:not(.voltar){visibility:hidden}
 #sala-erro{position:absolute;z-index:12;left:var(--il);right:var(--ir);top:42%;margin:0;text-align:center;font-size:15px;line-height:1.4;color:var(--cinza)}
 
+/* a sala dentro da moldura: a barra de baixo fica por cima dela, por isso o que a sala prende em baixo sobe a altura da barra.
+   A porta de latão não se usa: entra-se pelo bilhete. A camisola tirada do cacifo também não tem ecrã próprio (nome, etiquetas, «Ver a ficha»):
+   mal sai do cacifo abre-se a ficha da aplicação por cima; no mundo, o toque na camisola abre a ficha sem a fotografia do meio */
+#sala{--ib:calc(env(safe-area-inset-bottom,0px) + 76px)}
+#sala #m-luz{--ib:env(safe-area-inset-bottom,0px)}
+#sala #porta,#sala #bal-ficha{display:none}
+/* ---- o filtro no balneário e no mundo ----
+   O botão fica em cima, à altura do antigo «Início» da sala (que continua lá, invisível: o mundo mede-se por ele), e não desce mais do que ele: de
+   frente, a placa do cacifo começa logo abaixo. Dentro do Claude há dois botões dele a flutuar no topo (um redondo à esquerda e um comprido à
+   direita): o do filtro fica entre os dois. Fora do Claude (pipeline/web.py) encosta à esquerda. As categorias do balneário (o menu de vidro do canto direito) deixam de existir
+   dentro da aplicação: o filtro é um só. */
+#sala #cat-anc,#sala #cat-veu{display:none!important}
+#b-filtro{position:fixed;z-index:9;left:calc(max(16px,env(safe-area-inset-left,0px)) + 58px);top:calc(var(--it) + 14px);height:38px;max-width:calc(100% - 253px);padding:0 14px 0 11px;border-radius:19px;display:none;align-items:center;gap:8px;font-size:14px;line-height:1;font-weight:600;color:var(--papel);white-space:nowrap;transition:opacity .25s ease,transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease}
+.imerso #b-filtro{display:flex}
+#b-filtro svg:where(:not(#sala *)){flex:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}
+#b-filtro span:where(:not(#sala *)){min-width:0;overflow:hidden;text-overflow:ellipsis}
+#b-filtro b:where(:not(#sala *)){flex:none;font-weight:700;color:var(--champanhe);font-variant-numeric:tabular-nums}
+#b-filtro:active{transform:scale(.96)}
+#b-filtro.com{box-shadow:inset 0 0 0 1.5px var(--champanhe),0 12px 36px rgba(0,0,0,.4)}
+#b-filtro[aria-expanded="true"]{z-index:47}
+@media (max-width:400px){#b-filtro{padding:0 10px 0 8px;gap:6px;font-size:13.5px}#b-filtro svg:where(:not(#sala *)){width:16px;height:16px}}
+.na-entrada #b-filtro,.em-ficha #b-filtro,.sala-cheia #b-filtro{opacity:0;pointer-events:none}
+#veu-filtro{position:fixed;inset:0;z-index:45;background:rgba(0,0,0,.5);opacity:0;transition:opacity .25s ease}
+#veu-filtro.aberto{opacity:1}
+#filtro{position:fixed;z-index:46;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));top:calc(var(--it) + 72px);max-width:640px;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.6);opacity:0;transform:translate3d(0,-10px,0);transform-origin:20% 0;transition:opacity .22s ease,transform .3s cubic-bezier(.2,.8,.2,1)}
+#filtro.aberto{opacity:1;transform:none}
+#filtro .papel-clubes{max-width:none;margin:0}
+#filtro .filtro-b{border:1.5px solid var(--banda-v);border-top:0;border-radius:0 0 14px 14px}
 </style>
 
 <div id="tampa"></div>
 <p id="aviso" aria-live="polite">A abrir o balneário…</p>
 
 <main id="ecras">
-  <section class="ecra ativo" id="e-inicio" aria-label="Início" tabindex="-1">
-    <div class="ecra-in">
-      <header id="cabeca" class="gut">
-        <div class="bilhete papel" id="bilhete">
-          <div class="bil-corpo">
-            <div class="bil-linha1"><span class="bil-tag">Entrada</span><span class="bil-sub" id="bil-sub">Clubes e seleções</span></div>
-            <h1 class="bil-t"><b id="marca">O balneário</b><small id="dono">do Gabriel</small></h1>
-            <div id="contas" class="bil-stats" aria-label="Resumo da coleção"></div>
-          </div>
-          <div class="bil-canhoto" id="canhoto"><div class="canhoto-in"><span class="bil-cod" aria-hidden="true"></span></div></div>
-        </div>
-        <nav class="portas" aria-label="Maneiras de ver a coleção">
-          <a class="porta-i" id="ir-bal" href="#balneario"><img src="sala/i/porta-bal.webp?v=4" alt="" width="1440" height="810" decoding="async"><span class="porta-t"><b>O balneário</b><small id="porta-bal-s">Os cacifos</small><span>Os cacifos e o varão, por categoria.</span></span></a>
-          <a class="porta-i" id="ir-mundo" href="#mundo"><img src="sala/i/porta-mundo.webp?v=2" alt="" width="1440" height="810" decoding="async"><span class="porta-t"><b>A volta ao mundo</b><small id="porta-mundo-s">O globo</small><span>O globo, com paragem em cada país.</span></span></a>
-        </nav>
-      </header>
-    </div>
-  </section>
-  <section class="ecra" id="e-camisolas" aria-label="Camisolas" tabindex="-1">
+  <section class="ecra ativo" id="e-camisolas" aria-label="Caderneta" tabindex="-1">
     <div class="ecra-in">
       <header id="cabeca-c" class="gut">
-        <h1 class="titulo">As camisolas</h1>
+        <h1 class="titulo">A caderneta</h1>
         <div class="papel-clubes papel">
           <p class="clubes-t" id="clubes-t">Clubes e seleções</p>
-          <div id="clubes" role="toolbar" aria-label="Filtrar por clube"></div>
+          <div id="clubes" class="clubes" role="toolbar" aria-label="Filtrar por clube"></div>
         </div>
       </header>
       <div id="filtros" class="papel">
-        <div id="chips" role="toolbar" aria-label="Filtrar camisolas"></div>
+        <div id="chips" class="chips" role="toolbar" aria-label="Filtrar camisolas"></div>
         <button id="b-ordem" aria-haspopup="true" aria-expanded="false"><span class="rotulo">Ordem</span><span id="ordem-txt">Últimas a chegar</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
       </div>
+      <div id="valor-faixa" class="gut" hidden>
+        <div class="conta-g valor"><b id="valor-g">0 €</b><span>valor da coleção, só tu vês</span></div>
+        <p class="sub" id="valor-sub"></p>
+      </div>
       <div id="parede" class="parede"></div>
-      <footer id="pe"><p id="rod"></p><p>Fotos das camisolas de jogo: MWS. Rotações geradas com KlingAI a partir das fotos.</p></footer>
-    </div>
-  </section>
-  <section class="ecra" id="e-jogos" aria-label="Jogos" tabindex="-1">
-    <div class="ecra-in gut">
-      <h1 class="titulo">Os jogos</h1>
-      <p class="sub" id="jogos-sub"></p>
-      <ol class="lista" id="lista-jogos"></ol>
+      <footer id="pe"><p id="rod"></p><p>Fotos das camisolas de jogo: MWS. Rotações geradas com KlingAI a partir das fotos.</p>
+        <button id="exportar" hidden>Exportar a lista em CSV</button>
+        <p id="mais" hidden>Nova camisola? Abre uma conversa com o Claude e envia as fotos da frente e das costas, mais a etiqueta se puderes. Quando tiveres o vídeo da rotação, envia-o também e a camisola aparece aqui.</p>
+      </footer>
     </div>
   </section>
   <section class="ecra" id="e-procurar" aria-label="Procurar" tabindex="-1">
@@ -776,26 +805,40 @@ details[open] summary svg:where(:not(#sala *)){transform:rotate(45deg)}
       <ol class="lista" id="resultados"></ol>
     </div>
   </section>
-  <section class="ecra" id="e-valor" aria-label="Valor" tabindex="-1">
-    <div class="ecra-in gut">
-      <h1 class="titulo">O valor</h1>
-      <div class="conta-g valor" style="margin-top:14px"><b id="valor-g">0 €</b><span>valor da coleção, só tu vês</span></div>
-      <p class="sub" id="valor-sub"></p>
-      <ol class="lista" id="lista-valor"></ol>
-      <button id="exportar" hidden>Exportar a lista em CSV</button>
-      <p id="mais">Nova camisola? Abre uma conversa com o Claude e envia as fotos da frente e das costas, mais a etiqueta se puderes. Quando tiveres o vídeo da rotação, envia-o também e a camisola aparece aqui.</p>
-    </div>
-  </section>
 </main>
 
-<nav id="tabs" class="vidro" aria-label="Secções">
+<nav id="tabs" class="vidro" aria-label="Vistas da coleção">
   <span id="tab-marca"></span>
-  <button data-aba="inicio" aria-pressed="true"><svg viewBox="0 0 24 24"><path d="M4.5 11.2L12 4.8l7.5 6.4M6.6 9.6V19h10.8V9.6M10 19v-4.6h4V19"/></svg>Início</button>
-  <button data-aba="camisolas" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M9 4.5l-5 2.5 1.6 3.6 2.4-1V19h8v-9.4l2.4 1L20 7l-5-2.5a3 3 0 0 1-6 0z"/></svg>Camisolas</button>
-  <button data-aba="jogos" aria-pressed="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5l4 3-1.5 4.8h-5L8 10.5zM12 3.5v4M19.8 9.3l-3.8 1.2M17.6 18.7l-3.1-3.4M6.4 18.7l3.1-3.4M4.2 9.3l3.8 1.2"/></svg>Jogos</button>
+  <button data-aba="balneario" id="ir-bal" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 9.2V8c0-1.3 1.9-1.5 1.9-3.2a1.9 1.9 0 0 0-3.8 0"/><path d="M12 9.2l-8.4 6.3a1 1 0 0 0 .6 1.8h15.6a1 1 0 0 0 .6-1.8z"/></svg>Balneário</button>
+  <button data-aba="camisolas" aria-pressed="true"><svg viewBox="0 0 24 24"><rect x="4.5" y="4" width="6.3" height="7.6" rx="1.2"/><rect x="13.2" y="4" width="6.3" height="7.6" rx="1.2"/><rect x="4.5" y="13.9" width="6.3" height="6.1" rx="1.2"/><rect x="13.2" y="13.9" width="6.3" height="6.1" rx="1.2"/></svg>Caderneta</button>
+  <button data-aba="mundo" id="ir-mundo" aria-pressed="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.9 2.7 2.9 14.3 0 17M12 3.5c-2.9 2.7-2.9 14.3 0 17"/></svg>Mundo</button>
   <button data-aba="procurar" aria-pressed="false"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>Procurar</button>
-  <button data-aba="valor" aria-pressed="false" hidden><svg viewBox="0 0 24 24"><path d="M4 12.5V5.5h7l8.5 8.5-7 7zM8 9.5h.01"/></svg>Valor</button>
 </nav>
+<!-- a entrada: as duas folhas da porta do balneário e, por cima, o bilhete; só ao abrir a aplicação -->
+<div id="entrada" role="dialog" aria-modal="true" aria-label="Entrada" hidden>
+  <div class="ent-f e"></div><div class="ent-f d"></div>
+  <div class="ent-in">
+    <header id="cabeca" class="gut">
+        <div class="bilhete papel" id="bilhete">
+          <div class="bil-corpo">
+            <div class="bil-linha1"><span class="bil-tag">Entrada</span><span class="bil-sub" id="bil-sub">Clubes e seleções</span></div>
+            <h1 class="bil-t"><b id="marca">O balneário</b><small id="dono">do Gabriel</small></h1>
+            <div id="contas" class="bil-stats" aria-label="Resumo da coleção"></div>
+          </div>
+          <div class="bil-canhoto" id="canhoto"><div class="canhoto-in"><span class="bil-cod" aria-hidden="true"></span></div></div>
+        </div>
+    </header>
+    <button id="ent-b" disabled>A preparar</button>
+  </div>
+</div>
+<p id="espera" hidden aria-live="polite">A abrir o balneário…</p>
+<!-- o filtro no balneário e no mundo: o botão de cima diz o que está escolhido; um toque abre o mesmo cartão de papel da caderneta -->
+<button id="b-filtro" class="vidro" aria-haspopup="dialog" aria-expanded="false" aria-controls="filtro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h9M17 7.5h3M4 16.500h3M11 16.500h9"/><circle cx="15" cy="7.5" r="2"/><circle cx="9" cy="16.500" r="2"/></svg><span id="filtro-t">Todas</span><b id="filtro-n"></b></button>
+<div id="veu-filtro" hidden></div>
+<div id="filtro" role="dialog" aria-label="Escolher as camisolas" hidden>
+  <div class="papel-clubes papel"><p class="clubes-t" id="clubes-tf">Clubes e seleções</p><div id="clubes-f" class="clubes" role="toolbar" aria-label="Filtrar por clube"></div></div>
+  <div class="filtro-b papel"><div id="chips-f" class="chips" role="toolbar" aria-label="Filtrar camisolas"></div></div>
+</div>
 <div id="veu-ordem" hidden></div>
 <div id="ordenar" class="vidro" role="dialog" aria-label="Ordenar" hidden>
   <h2>Ordenar por</h2>
@@ -811,6 +854,7 @@ details[open] summary svg:where(:not(#sala *)){transform:rotate(45deg)}
   <button data-g="pais" aria-pressed="false">Por país<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
   <button data-g="decada" aria-pressed="false">Por década<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
   <button data-g="marca" aria-pressed="false">Por marca<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+  <button data-g="jogo" aria-pressed="false">Por jogo<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
 </div>
 
 <div id="veu"></div>
@@ -886,8 +930,12 @@ var calma=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').match
 /* os vídeos são HEVC (hvc1): o iPhone e quase todos os telemóveis leem-no; quem não o lê fica com as fotos da frente e das costas */
 var podeVideo=(function(){try{var v=document.createElement('video');return !!v.canPlayType('video/mp4; codecs="hvc1.1.6.L93.B0"')}catch(_){return false}})();
 var ease=window.CSS&&CSS.supports&&CSS.supports('transition-timing-function','linear(0,1)')?getComputedStyle(document.documentElement).getPropertyValue('--mola').trim():'cubic-bezier(.2,.9,.25,1)';
-var TIPO={usada:'Usada em jogo',preparada:'Preparada para o jogo',reedicao:'Reedição oficial',oficial:'Camisola oficial',replica:'Réplica',jogador:'Versão jogador',adepto:'Versão adepto'};
-var CURTO={usada:'Usada em jogo',preparada:'Preparada',reedicao:'Reedição oficial',oficial:'Oficial',replica:'Réplica',jogador:'Versão jogador',adepto:'Versão adepto'};
+/* Os nomes, numa tabela só, para a ficha, os cromos, as chapinhas dos cacifos e o mundo. TIPO: por extenso (a ficha, as chapinhas, a exportação);
+   CURTO: onde há pouco espaço (os cromos). As secções (CATS e categoria, mais abaixo) e o nome curto de cada clube (clubeCurto) também são só estes.
+   «Preparada para jogo» fica sem artigo, como já estava nas chapinhas de latão dos cacifos (com o artigo a fila de chapinhas não cabia na placa
+   sem encolher as letras) e como se diz entre quem coleciona. */
+var TIPO={usada:'Usada em jogo',preparada:'Preparada para jogo',reedicao:'Reedição oficial',oficial:'Camisola oficial',replica:'Réplica',jogador:'Versão jogador',adepto:'Versão adepto'};
+var CURTO={usada:'Usada em jogo',preparada:'Preparada',reedicao:'Reedição',oficial:'Oficial',replica:'Réplica',jogador:'Versão jogador',adepto:'Versão adepto'};
 var ICO={pausa:'<svg viewBox="0 0 24 24"><path d="M9 5.5v13M15 5.5v13"/></svg>',tocar:'<svg viewBox="0 0 24 24"><path d="M8.5 5.5v13l10-6.5z"/></svg>',mais:'<svg viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13"/></svg>',cadeado:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>'};
 var T=Math.round(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--t'))*1000)||840;
 var POS=.5;  /* igual a --pos */
@@ -900,8 +948,24 @@ var faixa=function(e){return e.min.toLocaleString('pt-PT')+'–'+e.max.toLocaleS
 var valorOuEst=function(c){var v=compras&&compras[c.id];if(v&&v.preco!=null)return v.preco;var e=estDe(c);return e?(e.min+e.max)/2:0};
 var filtro='todas',texto='',ordem='recentes',grupo='nenhum';
 /* a ordem e as prateleiras ficam lembradas neste telemóvel */
-try{var _o=localStorage.getItem('ordem'),_g=localStorage.getItem('grupo');if(_o&&/^(recentes|epoca|clube|jogador|valor)$/.test(_o))ordem=_o;if(_g&&/^(nenhum|categoria|clube|pais|decada|marca)$/.test(_g))grupo=_g}catch(_){}
-var aba='inicio',modo='parede',atual=null,baiaFoco=null,origemFicha=null,paredeVista=false;
+try{var _o=localStorage.getItem('ordem'),_g=localStorage.getItem('grupo');if(_o&&/^(recentes|epoca|clube|jogador|valor)$/.test(_o))ordem=_o;if(_g&&/^(nenhum|categoria|clube|pais|decada|marca|jogo)$/.test(_g))grupo=_g}catch(_){}
+var aba='camisolas',modo='parede',atual=null,baiaFoco=null,origemFicha=null,paredeVista=false;
+/* aba: 'camisolas' (a caderneta) ou 'procurar'; o balneário e o mundo são a sala (imerso).
+   contexto: a lista (de ids) de onde se abriu a ficha, pela ordem em que lá estava: a caderneta como está arrumada, os cacifos, o varão de um país, os
+   resultados da procura. É por ela que se passa de ficha em ficha. dirTroca: 1 ou -1 quando se pediu a ficha seguinte ou a anterior */
+var contexto=null,ultimaFicha=null,dirTroca=0;
+/* A camisola em que se está, partilhada pelas três vistas. Muda quando se abre uma ficha (em qualquer vista) e quando, no balneário, se anda até
+   outro cacifo. Ao chegar a uma vista que ainda não a viu, essa vista vai ter com ela: o balneário põe-se diante do cacifo, o mundo voa até ao país,
+   a caderneta rola até ao cromo. camDe: a vista que a mudou (essa não precisa de se mexer); verCam: conta as mudanças; viuCam: a última que cada
+   vista já seguiu, para não voltar a puxar por ela quando lá se anda à vontade. */
+var camAtual=null,camDe='',verCam=0,viuCam={bal:0,mundo:0,cad:0},balEntrada=null;
+function marcaAtual(id,de){if(!id||(id===camAtual&&de===camDe))return;camAtual=id;camDe=de;verCam++;viuCam[de]=verCam}
+function vistaAgora(){return imerso||(aba==='camisolas'?'cad':'proc')}
+/* há uma camisola nova para a vista v seguir? (só uma vez por mudança) */
+function segueCam(v){var ha=!!camAtual&&viuCam[v]!==verCam&&camDe!==v;viuCam[v]=verCam;return ha}
+/* a caderneta rola até ao cromo da camisola em que se está, se ele lá estiver com o filtro e a ordem de agora */
+function paraBaia(id){var b=baias[id];if(!b)return false;var r=b.querySelector('.im').getBoundingClientRect();if(!r.height)return false;
+  ecraCam.scrollTop+=Math.round((r.top+r.bottom)/2-vh*.46);return true}
 var vw=440,vh=894,ib=0,larga=false,AL=null;
 
 /* ---- dados ---- */
@@ -915,60 +979,23 @@ var nomeDe=function(c){return c.camisola||c.equipa.toUpperCase()};
 var subDe=function(c){return c.jogador?c.equipa+', '+c.epoca:c.epoca+', equipamento '+c.equipamento.toLowerCase()};
 var curtoDe=function(c){return c.jogador?c.equipa+', '+c.epoca:c.epoca+', '+c.equipamento.toLowerCase()};
 var tagDe=function(c){var t=TIPO[c.tipo]||c.tipo;return c.assinada?t+', assinada':t};
-var tagCurta=function(c){var t=CURTO[c.tipo]||c.tipo;return c.assinada?t+', assinada':t};
 var VER='';
 var img=function(c,s){return 'videos/'+c.id+'_'+s+'.webp'+VER};
 var SIGLAS={SL:1,FC:1,SC:1,KAA:1,UD:1,AFC:1,CF:1,AC:1,1909:1};
 var clubeCurto=function(n){var p=n.split(' ').filter(function(x){return !SIGLAS[x]});return (p.length?p:[n]).join(' ')};
 var iniciais=function(n){var p=clubeCurto(n).split(' ').filter(function(x){return x.length>2});if(!p.length)p=[n];return p.map(function(x){return x.charAt(0)}).join('').slice(0,2).toUpperCase()};
-/* o cromo: cores de cada clube (faixa, sombra do nome, cor do número e as riscas do equipamento) */
-var CROMO={
-  'Argentina':{banda:'#183E67',sombra:'#0C2444',num:'#12305A',riscas:['#6CB6E4','#FFFFFF']},
-  'SL Benfica':{banda:'#B5121B',sombra:'#5E090E',num:'#A5101A',riscas:['#E41E26','#FFFFFF']},
-  'FC Porto':{banda:'#163C9A',sombra:'#0C2258',num:'#163C9A',riscas:['#2446B4','#FFFFFF']},
-  'SC Braga':{banda:'#4F2E96',sombra:'#2A1554',num:'#4F2E96',riscas:['#6A4FA0','#FFFFFF']},
-  'KAA Gent':{banda:'#1748B8',sombra:'#0C2A70',num:'#1748B8',riscas:['#2255C8','#FFFFFF']},
-  'Bologna FC 1909':{banda:'#1A2340',sombra:'#080C1C',num:'#A51622',riscas:['#A51622','#1A2340']},
-  'Levante UD':{banda:'#7A1630',sombra:'#3E0A18',num:'#1E3A8A',riscas:['#8E1E3A','#1C3F8C']},
-  'Chelsea FC':{banda:'#034694',sombra:'#01295A',num:'#034694',riscas:['#034694','#FFFFFF']},
-  'Real Madrid':{banda:'#2A1C60',sombra:'#140B34',num:'#2A1C60',riscas:['#FFFFFF','#DCD7F0']},
-  'Santos FC':{banda:'#141414',sombra:'#000000',num:'#141414',riscas:['#FFFFFF','#141414']},
-  'São Paulo FC':{banda:'#141414',sombra:'#000000',num:'#C8102E',riscas:['#C8102E','#FFFFFF','#141414']},
-  'AFC Ajax':{banda:'#C8102E',sombra:'#6E0818',num:'#C8102E',riscas:['#FFFFFF','#C8102E']},
-  'Canadá':{banda:'#C8102E',sombra:'#6E0818',num:'#C8102E',riscas:['#C8102E','#FFFFFF']},
-  'Manchester City':{banda:'#6CABDD',sombra:'#1C2C5B',num:'#1C2C5B',riscas:['#6CABDD','#FFFFFF']},
-  'Real Betis':{banda:'#00954C',sombra:'#004D27',num:'#00954C',riscas:['#00954C','#FFFFFF']},
-  'Palmeiras':{banda:'#006437',sombra:'#00331C',num:'#006437',riscas:['#006437','#FFFFFF']},
-  'Inter':{banda:'#0B1C3F',sombra:'#05101F',num:'#0B1C3F',riscas:['#141414','#1B4DB1']},
-  'Alemanha':{banda:'#141414',sombra:'#000000',num:'#DD0000',riscas:['#141414','#DD0000','#FFCE00']},
-  'Flamengo':{banda:'#C3272B',sombra:'#5E0A0C',num:'#141414',riscas:['#C3272B','#141414']},
-  'Arsenal FC':{banda:'#EF0107',sombra:'#7A0004',num:'#063672',riscas:['#EF0107','#FFFFFF']},
-  'País de Gales':{banda:'#D30731',sombra:'#6B0318',num:'#00843D',riscas:['#D30731','#FFFFFF','#00843D']},
-  'Estrela da Amadora':{banda:'#8B1A2B',sombra:'#45090F',num:'#0F6B3A',riscas:['#8B1A2B','#0F6B3A']},
-  'Gil Vicente FC':{banda:'#C8102E',sombra:'#6E0818',num:'#1F3F8F',riscas:['#C8102E','#FFFFFF','#1F3F8F']},
-  'Boavista FC':{banda:'#141414',sombra:'#000000',num:'#141414',riscas:['#141414','#FFFFFF']},
-  'Portugal':{banda:'#B5121B',sombra:'#5E090E',num:'#046A38',riscas:['#DA291C','#046A38']},
-  'CD Aves':{banda:'#C8102E',sombra:'#6E0818',num:'#C8102E',riscas:['#C8102E','#FFFFFF']},
-  'SC Covilhã':{banda:'#1C5A3A',sombra:'#0B2E1C',num:'#1C5A3A',riscas:['#FFFFFF','#B0B0B0']},
-  'Rio Ave FC':{banda:'#1A7A45',sombra:'#0B3D26',num:'#1A7A45',riscas:['#1A7A45','#FFFFFF']},
-  'Bayern de Munique':{banda:'#DC052D',sombra:'#6E0818',num:'#0A2A6E',riscas:['#DC052D','#FFFFFF']},
-  'Universitario':{banda:'#5A1A2A',sombra:'#2E0A14',num:'#5A1A2A',riscas:['#EFE3C8','#5A1A2A']},
-  'Venezia FC':{banda:'#141414',sombra:'#000000',num:'#E8731C',riscas:['#E8731C','#2E8B4A','#141414']},
-  'FC Barcelona':{banda:'#A50044',sombra:'#520022',num:'#004D98',riscas:['#A50044','#004D98']},
-  'Cabo Verde':{banda:'#1E3F8F',sombra:'#0C1F4E',num:'#1E3F8F',riscas:['#1E3F8F','#FFFFFF','#CF2027']},
-  'Galatasaray':{banda:'#8A1538',sombra:'#450A1C',num:'#E9742A',riscas:['#8A1538','#E9742A']},
-  'VfB Stuttgart':{banda:'#E32219',sombra:'#7A0C08',num:'#141414',riscas:['#FFFFFF','#E32219']},
-  'Club Brugge':{banda:'#1A5FB4',sombra:'#0B1C3F',num:'#141414',riscas:['#1A5FB4','#141414']}
-};
+/* o cromo: as cores de cada clube (faixa, sombra do nome, cor do número e as riscas do equipamento) vêm de colecao.json, em «clubes», com o país e o
+   estádio de cada clube: os clubes estão num sítio só. Um clube que lá não esteja fica com as cores da camisola (fundo e cor) */
+var cromoDe=function(eq){var k=meta.clubes&&meta.clubes[eq];return k&&k.cromo||null};
 var BANDEIRA={Argentina:'ar',Portugal:'pt',Itália:'it',Espanha:'es',Bélgica:'be',Inglaterra:'en','Países Baixos':'nl',Brasil:'br',Canadá:'ca',Alemanha:'de','País de Gales':'wal',Peru:'pe',Turquia:'tr','Cabo Verde':'cv'};
 function riscas(cs,l){var w=l||13,n=cs.length;return 'repeating-linear-gradient(270deg,'+cs.map(function(c,i){return c+' '+(i*w)+'px '+((i+1)*w)+'px'}).join(',')+')'}
-function htmlCromo(c,mini){
-  var k=CROMO[c.equipa]||{banda:c.fundo||'#183E67',sombra:'#000',num:c.fundo||'#12305A',riscas:[c.cor||'#888','#fff']};
+function htmlCromo(c,mini,adiar){
+  var k=cromoDe(c.equipa)||{banda:c.fundo||'#183E67',sombra:'#000',num:c.fundo||'#12305A',riscas:[c.cor||'#888','#fff']};
   var e=dados.filter(function(x){return x.equipa===c.equipa&&x.emblema})[0];
-  var emb=e?'<img src="'+esc(e.emblema)+'" alt="">':'<span class="emb sem" style="background:'+esc(c.fundo||'#333')+'">'+esc(iniciais(c.equipa))+'</span>';
+  var emb=e?'<img '+(adiar?srcDe(e.emblema):'src="'+esc(e.emblema)+'"')+' alt="">':'<span class="emb sem" style="background:'+esc(c.fundo||'#333')+'">'+esc(iniciais(c.equipa))+'</span>';
   var selecao=c.equipa===c.pais,tit1=!c.jogador?'Equipamento':selecao?'Seleção':'Clube',v1=!c.jogador?c.equipamento.replace(/\s*\(.*\)/,''):clubeCurto(c.equipa);
   var m=/^Mundial (\d{4})$/.exec(c.epoca||''),tit2=m?'Mundial':/\//.test(c.epoca||'')?'Época':/–/.test(c.epoca||'')?'Anos':'Ano',v2=m?m[1]:c.epoca;
-  var etq=c.tipo==='usada'?'Usada em jogo':c.tipo==='preparada'?'Preparada':c.tipo==='reedicao'?'Reedição':(CURTO[c.tipo]||c.tipo);
+  var etq=CURTO[c.tipo]||c.tipo;
   var num=c.numero!=null?'<div class="num">'+esc(c.numero)+'</div>':c.ghost?'<div class="num ano">'+esc(c.ghost)+'</div>':'<div class="num"></div>';
   var bd=BANDEIRA[c.pais];
   return '<div class="cromo'+(mini?' mini':'')+'" style="--banda:'+k.banda+';--sombra:'+k.sombra+';--num:'+k.num+';--riscas:'+riscas(k.riscas,mini?7:13)+'" aria-hidden="true"><div class="cromo-in"><i class="banda"></i><i class="pontos"></i><i class="riscas"></i><i class="fio"></i>'+
@@ -982,21 +1009,32 @@ function ajustaNomes(raiz){
     while(sp.scrollWidth>larg&&i<14){f*=.93;sp.style.fontSize=f.toFixed(1)+'px';i++}});
 }
 if(document.fonts&&document.fonts.addEventListener)document.fonts.addEventListener('loadingdone',function(){ajustaNomes();ajustaTitulo()});
+/* Arranque mais leve: se a aplicação abre no balneário ou no mundo, as imagens da caderneta, da procura e do cartão dos clubes (que estão por trás,
+   sem se verem) só se pedem quando uma delas aparece pela primeira vez (acorda). Assim o que a entrada espera (a sala) chega mais depressa.
+   adia: ainda não apareceu nenhuma; as imagens ficam em data-src (e os emblemas do cartão em data-fundo) */
+var adia=false;
+function srcDe(u){return (adia?'data-src="':'src="')+esc(u)+'"'}
+function fundoDe(u){return adia?'data-fundo="'+esc(u)+'"':'style="background-image:url(\''+esc(u)+'\')"'}
+function acorda(){if(!adia)return;adia=false;
+  document.querySelectorAll('img[data-src]').forEach(function(i){i.src=i.getAttribute('data-src');i.removeAttribute('data-src')});
+  document.querySelectorAll('[data-fundo]').forEach(function(e){e.style.backgroundImage="url('"+e.getAttribute('data-fundo')+"')";e.removeAttribute('data-fundo')})}
 /* o emblema do clube (ficheiro enviado pelo Gabriel), num disco branco; sem ficheiro, as iniciais sobre a cor do clube */
 function htmlEmb(c){var e=dados.filter(function(x){return x.equipa===c.equipa&&x.emblema})[0];
-  if(e)return '<span class="emb" role="img" aria-label="Emblema, '+esc(c.equipa)+'" style="background-image:url(\''+esc(e.emblema)+'\')"></span>';
+  if(e)return '<span class="emb" role="img" aria-label="Emblema, '+esc(c.equipa)+'" '+fundoDe(e.emblema)+'></span>';
   return '<span class="emb sem" role="img" aria-label="'+esc(c.equipa)+'" style="background:'+esc(c.fundo||c.cor||'#333')+'">'+esc(iniciais(c.equipa))+'</span>'}
 var deJogo=function(c){return c.tipo==='usada'||c.tipo==='preparada'};
 var MES={jan:1,fev:2,mar:3,abr:4,mai:5,jun:6,jul:7,ago:8,set:9,out:10,nov:11,dez:12};
 function dataJogo(s){var m=/(\d{1,2}) (\w{3}) (\d{4})/.exec(s||'');if(!m)return '';return m[3]+'-'+('0'+MES[m[2].toLowerCase()]).slice(-2)+'-'+('0'+m[1]).slice(-2)}
+/* o filtro é um só (o cartão dos clubes e as caixas de tipo) e vale na caderneta, no balneário e no mundo */
+function passaFiltro(c){
+  if(filtro==='jogo')return deJogo(c);
+  if(filtro==='assinada')return !!c.assinada;
+  if(filtro==='oficial')return !deJogo(c);
+  if(filtro.indexOf('c:')===0)return c.equipa===filtro.slice(2);
+  return true;
+}
 function visiveis(){
-  var r=dados.filter(function(c){
-    if(filtro==='jogo'&&!deJogo(c))return false;
-    if(filtro==='assinada'&&!c.assinada)return false;
-    if(filtro==='oficial'&&deJogo(c))return false;
-    if(filtro.indexOf('c:')===0&&c.equipa!==filtro.slice(2))return false;
-    return true;
-  });
+  var r=dados.filter(passaFiltro);
   r.sort(function(a,b){
     if(ordem==='epoca')return b.epoca.replace(/\D/g,'').localeCompare(a.epoca.replace(/\D/g,''))||nomeDe(a).localeCompare(nomeDe(b));
     if(ordem==='clube')return a.equipa.localeCompare(b.equipa)||b.epoca.localeCompare(a.epoca);
@@ -1026,17 +1064,25 @@ function alvoPalco(){
 
 /* ---- a parede ---- */
 function htmlBaia(c,k){
-  var tag='<em class="'+(c.tipo==='usada'?'u':'')+'">'+esc(tagCurta(c))+'</em>';
-  return '<button class="baia" data-id="'+esc(c.id)+'" style="--k:'+Math.min(k,14)+'" aria-label="'+esc((c.jogador?c.jogador+', ':'')+c.equipa+', '+c.epoca+', '+tagDe(c))+'"><span class="im"><img src="'+img(c,'t')+'" alt="" loading="lazy" decoding="async"><canvas aria-hidden="true"></canvas></span>'+htmlCromo(c,true)+'</button>';
+  return '<button class="baia" data-id="'+esc(c.id)+'" style="--k:'+Math.min(k,14)+'" aria-label="'+esc((c.jogador?c.jogador+', ':'')+c.equipa+', '+c.epoca+', '+tagDe(c))+'"><span class="im"><img '+srcDe(img(c,'t'))+' alt="" loading="lazy" decoding="async"><canvas aria-hidden="true"></canvas>'+htmlPreco(c)+'</span>'+htmlCromo(c,true,true)+'</button>';
+}
+/* na caderneta por valor (só o dono), cada camisola leva o que custou, a estimativa de mercado ou «sem valor» */
+function htmlPreco(c){
+  if(!compras||ordem!=='valor')return '';
+  var v=compras[c.id],e=estDe(c);
+  return v&&v.preco!=null?'<span class="preco">'+esc(eur(v.preco))+'</span>':e?'<span class="preco est">est. '+esc(faixa(e))+'</span>':'<span class="preco sem">sem valor</span>';
 }
 var baias={};
-/* as prateleiras: em que grupo cai cada camisola */
-var CATS=['Usadas em jogo','Assinadas','Edições especiais','Pré-jogo e treino','Reedições e retro','Com nome de jogador','Seleções','Clubes'];
-function categoria(c){if(deJogo(c))return CATS[0];if(c.assinada)return CATS[1];if(c.especial)return CATS[2];if(/^(Pré-jogo|Treino)/.test(c.equipamento||''))return CATS[3];if(c.tipo==='reedicao')return CATS[4];if(c.jogador)return CATS[5];if(c.equipa===c.pais)return CATS[6];return CATS[7]}
+/* As secções: em que grupo cai cada camisola, pela primeira regra que lhe servir. São as prateleiras «Por categoria» da caderneta e as secções do
+   balneário (os letreiros da parede). «De jogo» é o mesmo «de jogo» do bilhete e do filtro (usadas e preparadas). Assinada não é secção: é uma
+   marca que qualquer camisola pode ter (a chapinha no cacifo, a linha na ficha, o filtro), e por isso conta sempre o mesmo em todo o lado. */
+var CATS=['De jogo','Edições especiais','Pré-jogo e treino','Reedições e retro','Com nome de jogador','Seleções','Clubes'];
+function categoria(c){if(deJogo(c))return CATS[0];if(c.especial)return CATS[1];if(/^(Pré-jogo|Treino)/.test(c.equipamento||''))return CATS[2];if(c.tipo==='reedicao')return CATS[3];if(c.jogador)return CATS[4];if(c.equipa===c.pais)return CATS[5];return CATS[6]}
 function anoDe(c){var m=/(\d{4})/.exec(c.epoca||'');return m?+m[1]:0}
 function decada(c){var a=anoDe(c);if(!a)return 'Sem data';var d=Math.floor(a/10)*10;return 'Anos '+(d<2000?String(d).slice(2):d)}
 function chaveGrupo(c){return grupo==='categoria'?categoria(c):grupo==='clube'?c.equipa:grupo==='pais'?c.pais:grupo==='decada'?decada(c):grupo==='marca'?(c.marca||'Sem marca'):''}
 function htmlPrateleiras(){
+  if(grupo==='jogo')return htmlPorJogo();
   var gs={},ord=[];lista.forEach(function(c){var k=chaveGrupo(c);if(!gs[k]){gs[k]=[];ord.push(k)}gs[k].push(c)});
   if(grupo==='categoria')ord.sort(function(a,b){return CATS.indexOf(a)-CATS.indexOf(b)});
   else if(grupo==='decada')ord.sort(function(a,b){return anoDe(gs[b][0])-anoDe(gs[a][0])});
@@ -1044,11 +1090,25 @@ function htmlPrateleiras(){
   var k=0;
   return ord.map(function(g){return '<h2 class="prateleira"><span>'+esc(g)+'</span><em>'+gs[g].length+'</em></h2>'+gs[g].map(function(c){return htmlBaia(c,k++)}).join('')}).join('');
 }
+/* a caderneta por jogo: uma prateleira por jogo, do mais recente ao mais antigo, com a data, a prova e o resultado; as camisolas sem jogo ficam no fim */
+function htmlPorJogo(){
+  var h='',k=0,visto={};
+  jogos.forEach(function(g){
+    var cs=g.cs.filter(function(c){return lista.indexOf(c)>=0});if(!cs.length)return;
+    var j=g.j,gC=j.gc>j.gf,gF=j.gf>j.gc;
+    h+='<h2 class="prateleira pj"><small>'+esc(j.data)+', '+esc(j.prova)+'</small><span class="placar"><span class="'+(gF?'menos':'')+'">'+esc(j.casa)+'</span><b class="'+(gF?'menos':'')+'">'+j.gc+'</b><span class="'+(gC?'menos':'')+'">'+esc(j.fora)+'</span><b class="'+(gC?'menos':'')+'">'+j.gf+'</b></span></h2>'+
+      cs.map(function(c){visto[c.id]=1;return htmlBaia(c,k++)}).join('');
+  });
+  var resto=lista.filter(function(c){return !visto[c.id]});
+  if(resto.length)h+='<h2 class="prateleira"><span>Sem jogo</span><em>'+resto.length+'</em></h2>'+resto.map(function(c){return htmlBaia(c,k++)}).join('');
+  return h;
+}
 function desenhaParede(anim){
   var antes={};
   if(anim&&!calma)Object.keys(baias).forEach(function(id){antes[id]=baias[id].querySelector('.im').getBoundingClientRect()});
   lista=visiveis();
-  fmSai();baiaFoco=null;
+  $('valor-faixa').hidden=!(compras&&ordem==='valor');
+  if(modo!=='ficha')fmSai();baiaFoco=null;      /* com a ficha aberta o vídeo está no palco: fica lá */
   if(!lista.length){parede.innerHTML='<div class="vazio">Nenhuma camisola com este filtro.<button id="limpa">Mostrar todas</button></div>';baias={};return}
   parede.innerHTML=grupo==='nenhum'?lista.map(htmlBaia).join(''):htmlPrateleiras();
   baias={};[].slice.call(parede.querySelectorAll('.baia')).forEach(function(b){baias[b.dataset.id]=b});
@@ -1063,9 +1123,10 @@ function desenhaParede(anim){
   setTimeout(focaBaia,anim?600:0);
 }
 function focaBaia(){
-  if(modo!=='parede'||aba!=='camisolas'||!lista.length||imerso)return;
+  if(modo!=='parede'||aba!=='camisolas'||!lista.length||imerso||naEntrada)return;
   var alvo=vh*.46,melhor=null,md=1e9;
-  for(var id in baias){var r=baias[id].querySelector('.im').getBoundingClientRect();if(r.bottom<60||r.top>vh)continue;var d=Math.abs((r.top+r.bottom)/2-alvo);if(d<md){md=d;melhor=baias[id]}}
+  /* a mais perto do meio do ecrã; a camisola em que se está ganha a uma vizinha à mesma altura (as baias vão em filas de duas ou mais) */
+  for(var id in baias){var r=baias[id].querySelector('.im').getBoundingClientRect();if(r.bottom<60||r.top>vh)continue;var d=Math.abs((r.top+r.bottom)/2-alvo)-(id===camAtual?24:0);if(d<md){md=d;melhor=baias[id]}}
   if(!melhor||melhor===baiaFoco)return;
   baiaFoco=melhor;var c=porId(melhor.dataset.id);
   fmLiga(c,melhor.querySelector('.im'));vizinhos(c);
@@ -1076,20 +1137,51 @@ if('onscrollend' in window)ecraCam.addEventListener('scrollend',function(){clear
 parede.addEventListener('click',function(e){
   if(e.target.id==='limpa'){filtra('todas');return}
   var b=e.target.closest('.baia');if(!b)return;
+  contexto=[].map.call(parede.querySelectorAll('.baia'),function(x){return x.dataset.id});
   origemFicha=b.querySelector('.im');location.hash=b.dataset.id;
 });
 var cnt=function(f){return dados.filter(f).length};
 var TIPOS=function(){return [['todas','camisolas',dados.length],['jogo','de jogo',cnt(deJogo)],['assinada','assinadas',cnt(function(c){return c.assinada})],['oficial','oficiais',cnt(function(c){return !deJogo(c)})]]};
+/* o cartão existe em dois sítios com o mesmo conteúdo: à vista na caderneta (#clubes e #chips) e na folha que abre do botão de cima no balneário
+   e no mundo (#clubes-f e #chips-f) */
+var CARTOES=[['clubes','chips'],['clubes-f','chips-f']];
 function desenhaChips(){
   var ops=TIPOS().map(function(o){return [o[0],o[1].charAt(0).toUpperCase()+o[1].slice(1),o[2]]}).filter(function(o){return o[2]>0});
   if(filtro.indexOf('c:')===0)ops.unshift([filtro,filtro.slice(2),cnt(function(c){return c.equipa===filtro.slice(2)})]);
-  $('chips').innerHTML=ops.map(function(o){return '<button class="chip" data-f="'+esc(o[0])+'" aria-pressed="'+(filtro===o[0])+'"><i class="cx" aria-hidden="true"></i>'+esc(o[1])+'<em>'+o[2]+'</em></button>'}).join('');
-  $('clubes').querySelectorAll('.clube').forEach(function(t){t.setAttribute('aria-pressed',t.dataset.f===(filtro.indexOf('c:')===0?filtro:'todas'))});
+  var h=ops.map(function(o){return '<button class="chip" data-f="'+esc(o[0])+'" aria-pressed="'+(filtro===o[0])+'"><i class="cx" aria-hidden="true"></i>'+esc(o[1])+'<em>'+o[2]+'</em></button>'}).join('');
+  CARTOES.forEach(function(k){$(k[1]).innerHTML=h;
+    $(k[0]).querySelectorAll('.clube').forEach(function(t){t.setAttribute('aria-pressed',t.dataset.f===(filtro.indexOf('c:')===0?filtro:'todas'))})});
+  desenhaFiltro();
 }
-function filtra(f){filtro=f;desenhaChips();desenhaParede(true);var ch=$('chips'),b=ch.querySelector('[aria-pressed="true"]');if(b){var x=b.offsetLeft-(ch.clientWidth-b.offsetWidth)/2;try{ch.scrollTo({left:x,behavior:calma?'auto':'smooth'})}catch(_){ch.scrollLeft=x}}}
-$('chips').addEventListener('click',function(e){var b=e.target.closest('.chip');if(b)filtra(b.dataset.f)});
-$('bilhete').addEventListener('click',function(e){if(e.target.closest('#valor-total'))mostraAba('valor',true)});
-$('clubes').addEventListener('click',function(e){var b=e.target.closest('.clube');if(b)filtra(b.dataset.f)});
+/* o botão de cima do balneário e do mundo diz o que está escolhido e quantas camisolas são */
+function rotuloFiltro(){
+  if(filtro.indexOf('c:')===0)return [clubeCurto(filtro.slice(2)),cnt(function(c){return c.equipa===filtro.slice(2)})];
+  var o=TIPOS().filter(function(x){return x[0]===filtro})[0]||TIPOS()[0];
+  return [o[0]==='todas'?'Todas':o[1].charAt(0).toUpperCase()+o[1].slice(1),o[2]];
+}
+function desenhaFiltro(){var r=rotuloFiltro(),b=$('b-filtro');$('filtro-t').textContent=r[0];$('filtro-n').textContent=r[1];b.classList.toggle('com',filtro!=='todas');
+  b.setAttribute('aria-label','Filtro: '+r[0]+', '+r[1]+(r[1]===1?' camisola':' camisolas')+'. Mudar')}
+/* a escolha na sala e no mundo: os ids das camisolas que ficam (null: todas) */
+function idsFiltro(){return filtro==='todas'?null:dados.filter(passaFiltro).map(function(c){return c.id})}
+function filtroSala(){if(salaEst===2)try{__proto.filtro(idsFiltro())}catch(e){console.error(e)}}
+function centraEscolha(el){var b=el.querySelector('[aria-pressed="true"]');if(!b)return;var x=b.offsetLeft-(el.clientWidth-b.offsetWidth)/2;try{el.scrollTo({left:x,behavior:calma?'auto':'smooth'})}catch(_){el.scrollLeft=x}}
+function filtra(f){filtro=f;desenhaChips();desenhaParede(true);filtroSala();centraEscolha($('chips'))}
+$('bilhete').addEventListener('click',function(e){if(e.target.closest('#valor-total'))porValor()});
+CARTOES.forEach(function(k,i){
+  $(k[1]).addEventListener('click',function(e){var b=e.target.closest('.chip');if(b){filtra(b.dataset.f);if(i)abreFiltro(false)}});
+  $(k[0]).addEventListener('click',function(e){var b=e.target.closest('.clube');if(b){filtra(b.dataset.f);if(i)abreFiltro(false)}})});
+/* a folha do filtro: abre por baixo do botão, com o cartão de papel; escolher fecha-a, e tocar fora também */
+var filtroAberto=false,tFiltro=0;
+function abreFiltro(ab){
+  var o=$('filtro'),v=$('veu-filtro'),b=$('b-filtro');if(ab===filtroAberto)return;filtroAberto=ab;clearTimeout(tFiltro);b.setAttribute('aria-expanded',ab);
+  if(ab){acorda();o.hidden=false;v.hidden=false;void o.offsetWidth;o.classList.add('aberto');v.classList.add('aberto');
+    CARTOES.slice(1).forEach(function(k){var c=$(k[0]),p=c.querySelector('[aria-pressed="true"]');c.scrollLeft=p?Math.max(0,p.offsetLeft-(c.clientWidth-p.offsetWidth)/2):0;$(k[1]).scrollLeft=0});
+    try{(o.querySelector('.clube[aria-pressed="true"]')||o.querySelector('.clube')).focus({preventScroll:true})}catch(_){}}
+  else{o.classList.remove('aberto');v.classList.remove('aberto');tFiltro=setTimeout(function(){o.hidden=true;v.hidden=true},calma?0:260);
+    if(o.contains(document.activeElement))try{b.focus({preventScroll:true})}catch(_){}}
+}
+$('b-filtro').addEventListener('click',function(){abreFiltro(!filtroAberto)});
+$('veu-filtro').addEventListener('click',function(){abreFiltro(false)});
 function desenhaCabeca(){
   var cl={};dados.forEach(function(c){cl[c.equipa]=(cl[c.equipa]||0)+1});
   /* as contagens impressas no bilhete */
@@ -1100,7 +1192,7 @@ function desenhaCabeca(){
     var r10=function(x){return Math.round(x/10)*10},meio=r10((emin+emax)/2),total=qe?r10(t+(emin+emax)/2):t,sem=dados.length-q-qe;
     h='<button class="canhoto-in" id="valor-total" aria-label="Ver o valor da coleção"><span class="rotulo">Valor da coleção</span><b>'+esc(eur(total))+'</b><span class="bil-so">'+ICO.cadeado+'só tu vês</span><span class="bil-cod" aria-hidden="true"></span></button>';
     $('valor-g').textContent=eur(total);$('valor-g').setAttribute('data-n',total);
-    $('valor-sub').textContent=(qe?eur(t)+' pagos por '+q+(q===1?' camisola':' camisolas')+'; as outras '+qe+' por estimativa de mercado, '+eur(meio)+' em média. No total, entre '+eur(r10(t+emin))+' e '+eur(r10(t+emax))+'.':q+' de '+dados.length+' camisolas com valor atribuído.')+(sem?' '+sem+' ainda sem valor.':'')+' Toca numa para mudar o valor.';
+    $('valor-sub').textContent=(qe?eur(t)+' pagos por '+q+(q===1?' camisola':' camisolas')+'; '+(qe===1?'a outra':'as outras '+qe)+' por estimativa de mercado, '+eur(meio)+' em média. No total, entre '+eur(r10(t+emin))+' e '+eur(r10(t+emax))+'.':q+' de '+dados.length+' camisolas com valor atribuído.')+(sem?' '+sem+' ainda sem valor.':'')+' Toca numa para mudar o valor.';
   } else h='<div class="canhoto-in">'+(leitor==='visita'?'<span class="rotulo">Convidado</span>'+(meta.atualizado?'<b class="bil-data">'+esc(fmtD(meta.atualizado))+'</b>':''):'')+'<span class="bil-cod" aria-hidden="true"></span></div>';
   $('canhoto').innerHTML=h;
   /* o campo de cor: três cores vivas da coleção, de matizes diferentes, a começar pelos clubes com mais camisolas, mais o champanhe */
@@ -1112,11 +1204,9 @@ function desenhaCabeca(){
   var ks=Object.keys(cl).sort(function(a,b){return cl[b]-cl[a]||a.localeCompare(b)});
   var nCl=ks.length+(ks.length===1?' clube':' clubes e seleções');
   $('bil-sub').textContent=nCl;$('clubes-t').textContent=nCl;
-  /* as portas: quantas camisolas há nos cacifos e por quantos países passa a volta */
-  var pz={};dados.forEach(function(c){if(c.pais)pz[c.pais]=1});var nP=Object.keys(pz).length;
-  $('porta-bal-s').textContent=dados.length+(dados.length===1?' camisola':' camisolas');$('porta-mundo-s').textContent=nP+(nP===1?' país':' países');
-  $('clubes').innerHTML='<button class="clube todos" data-f="todas" aria-pressed="'+(filtro.indexOf('c:')!==0)+'"><span class="emb">'+dados.length+'</span><small>Todas</small></button>'+ks.map(function(k){var c=dados.filter(function(x){return x.equipa===k})[0];
+  var hc='<button class="clube todos" data-f="todas" aria-pressed="'+(filtro.indexOf('c:')!==0)+'"><span class="emb">'+dados.length+'</span><small>Todas</small></button>'+ks.map(function(k){var c=dados.filter(function(x){return x.equipa===k})[0];
     return '<button class="clube" data-f="c:'+esc(k)+'" aria-pressed="'+(filtro==='c:'+k)+'" aria-label="'+esc(k)+', '+cl[k]+'">'+htmlEmb(c)+'<small>'+esc(clubeCurto(k))+'</small></button>'}).join('');
+  CARTOES.forEach(function(k){$(k[0]).innerHTML=hc});$('clubes-tf').textContent=nCl;
   ajustaTitulo();
 }
 /* o título do bilhete encolhe até caber ao lado do canhoto */
@@ -1128,20 +1218,15 @@ function conta(el,fim,dur,fmt){
   (function passo(){var u=Math.min(1,(performance.now()-t0)/dur),e=1-Math.pow(1-u,3),v=Math.round(fim*e);el.textContent=fmt?fmt(v):v;if(u<1)requestAnimationFrame(passo)})();
 }
 
-/* ---- jogos, procurar, valor ---- */
+/* ---- jogos, procurar ---- */
+/* os jogos de onde vieram camisolas, cada um com as suas, do mais recente ao mais antigo: é por eles que a caderneta se arruma «Por jogo» */
 function montaJogos(){
   var m={};
   dados.forEach(function(c){var j=c.jogo;if(!j)return;var k=j.data+'|'+j.casa+'|'+j.fora;if(!m[k])m[k]={j:j,cs:[],iso:dataJogo(j.data)};m[k].cs.push(c)});
   jogos=Object.keys(m).map(function(k){return m[k]}).sort(function(a,b){return b.iso.localeCompare(a.iso)});
-  $('jogos-sub').textContent=jogos.length+' jogos de onde vieram as camisolas, do mais recente ao mais antigo.';
-  $('lista-jogos').innerHTML=jogos.map(function(g){
-    var j=g.j,c0=g.cs[0],gC=j.gc>j.gf,gF=j.gf>j.gc;
-    var quem=g.cs.map(function(c){var p=j.papel&&c.jogo===j?j.papel:(c.jogo&&c.jogo.papel);return '<b>'+esc(apelidoCurto(c))+'</b>'+(p?', '+esc(p.charAt(0).toLowerCase()+p.slice(1)):'')}).join('<br>');
-    return '<li><a class="jogo" href="#'+esc(c0.id)+'" data-id="'+esc(c0.id)+'"><div><small>'+esc(j.data)+', '+esc(j.prova)+'</small><div class="placar"><span class="'+(gF?'menos':'')+'">'+esc(j.casa)+'</span><b class="'+(gF?'menos':'')+'">'+j.gc+'</b><span class="'+(gC?'menos':'')+'">'+esc(j.fora)+'</span><b class="'+(gC?'menos':'')+'">'+j.gf+'</b></div><p class="quem">'+quem+'</p></div><span class="mini"><img src="'+img(c0,'t')+'" alt="" loading="lazy"></span></a></li>';
-  }).join('');
 }
 function htmlFila(c,dir){
-  return '<li><a class="fila" href="#'+esc(c.id)+'" data-id="'+esc(c.id)+'"><span class="mini"><img src="'+img(c,'t')+'" alt="" loading="lazy"></span><span><b>'+esc(nomeDe(c))+'</b><small>'+esc(subDe(c))+'</small></span>'+dir+'</a></li>';
+  return '<li><a class="fila" href="#'+esc(c.id)+'" data-id="'+esc(c.id)+'"><span class="mini"><img '+srcDe(img(c,'t'))+' alt="" loading="lazy"></span><span><b>'+esc(nomeDe(c))+'</b><small>'+esc(subDe(c))+'</small></span>'+dir+'</a></li>';
 }
 function desenhaResultados(){
   var q=texto.trim().toLowerCase();
@@ -1150,37 +1235,44 @@ function desenhaResultados(){
   $('resultados').innerHTML=r.length?r.map(function(c){return htmlFila(c,c.numero==null?'<i></i>':'<i>'+esc(c.numero)+'</i>')}).join(''):'<li class="vazio">Nada com «'+esc(texto.trim())+'».</li>';
 }
 $('procura').addEventListener('input',function(e){texto=e.target.value;desenhaResultados()});
-function desenhaValor(){
-  if(!compras)return;
-  var r=dados.slice().sort(function(a,b){return valorOuEst(b)-valorOuEst(a)||nomeDe(a).localeCompare(nomeDe(b))});
-  $('lista-valor').innerHTML=r.map(function(c){var v=compras[c.id],tem=v&&v.preco!=null,e=estDe(c);return htmlFila(c,tem?'<i class="v">'+esc(eur(v.preco))+'</i>':e?'<i class="est">'+esc(faixa(e))+'<small>estimativa</small></i>':'<i class="sem">sem valor</i>')}).join('');
-}
-['lista-jogos','resultados','lista-valor'].forEach(function(id){$(id).addEventListener('click',function(e){var a=e.target.closest('a[data-id]');if(a)origemFicha=a.querySelector('.mini')})});
+$('resultados').addEventListener('click',function(e){var a=e.target.closest('a[data-id]');if(!a)return;origemFicha=a.querySelector('.mini');contexto=[].map.call($('resultados').querySelectorAll('a[data-id]'),function(x){return x.dataset.id})});
 
 /* ---- separadores ---- */
+/* a barra é a mesma nas três vistas: o balneário e o mundo são a sala (imerso), a caderneta e a procura são ecrãs da aplicação (aba) */
 function marcaTab(){
-  var b=tabs.querySelector('[data-aba="'+aba+'"]'),m=$('tab-marca');
+  var b=tabs.querySelector('[data-aba="'+(imerso?ENDERECO[imerso]:aba)+'"]'),m=$('tab-marca');
   tabs.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
-  m.style.width=b.offsetWidth+'px';m.style.transform='translate3d('+(b.offsetLeft-5)+'px,0,0)';
+  if(b){m.style.width=b.offsetWidth+'px';m.style.transform='translate3d('+(b.offsetLeft-5)+'px,0,0)'}
 }
+/* da primeira vez que a caderneta se vê, as camisolas chegam uma a uma */
+function chegaParede(anim){if(paredeVista)return;paredeVista=true;if(anim&&!calma){body.classList.add('entrada');setTimeout(function(){body.classList.remove('entrada')},1800)}}
 function mostraAba(n,anim){
-  var ant=aba;aba=n;
-  document.querySelectorAll('.ecra').forEach(function(s){var on=s.id==='e-'+n;s.classList.toggle('ativo',on);s.classList.remove('chega');if(on&&anim&&ant!==n&&!calma){void s.offsetWidth;s.classList.add('chega')}});
+  var ant=aba;aba=n;acorda();
+  document.querySelectorAll('#ecras .ecra').forEach(function(s){var on=s.id==='e-'+n;s.classList.toggle('ativo',on);s.classList.remove('chega');if(on&&anim&&ant!==n&&!calma){void s.offsetWidth;s.classList.add('chega')}});
   marcaTab();
-  if(n==='camisolas'){
-    /* da primeira vez que se abre a aba, as camisolas chegam uma a uma (antes era ao abrir a aplicação, quando a parede era o primeiro ecrã) */
-    if(!paredeVista){paredeVista=true;if(anim&&!calma){body.classList.add('entrada');setTimeout(function(){body.classList.remove('entrada')},1800)}}
-    setTimeout(focaBaia,50);
-  }else{fmSai();baiaFoco=null}
+  if(n==='camisolas'){chegaParede(anim);guardaVista();if(segueCam('cad'))paraBaia(camAtual);setTimeout(focaBaia,50)}else{fmSai();baiaFoco=null}
   if(n==='procurar')setTimeout(function(){try{$('procura').focus({preventScroll:true})}catch(_){}},anim?80:0);
 }
-tabs.addEventListener('click',function(e){var b=e.target.closest('button[data-aba]');if(!b)return;if(b.dataset.aba===aba){$('e-'+aba).scrollTo({top:0,behavior:calma?'auto':'smooth'});return}mostraAba(b.dataset.aba,true)});
+/* a vista em que se ficou fica lembrada neste telemóvel: é nela que a aplicação abre da vez seguinte (a procura não conta) */
+function guardaVista(){try{localStorage.setItem('vista',imerso?ENDERECO[imerso]:'camisolas')}catch(_){}}
+tabs.addEventListener('click',function(e){
+  var b=e.target.closest('button[data-aba]');if(!b)return;var n=b.dataset.aba;
+  if(PORTAS[n]){if(imerso!==PORTAS[n])location.hash=n;else if(salaEst===-1)entraSala(PORTAS[n]);return}      /* se a sala não abriu, tocar outra vez no separador tenta de novo */
+  if(imerso){aba=n;location.hash='';return}      /* a rota fecha a sala e mostra o ecrã pedido */
+  if(n===aba){$('e-'+aba).scrollTo({top:0,behavior:calma?'auto':'smooth'});return}
+  mostraAba(n,true)});
+/* o canhoto do bilhete (só o dono): leva à caderneta arrumada por valor */
+function porValor(){
+  ordem='valor';try{localStorage.setItem('ordem',ordem)}catch(_){}marcaOrdem();desenhaParede(false);aba='camisolas';
+  if(imerso){try{history.replaceState(null,'',location.pathname+location.search)}catch(_){}saiSala()}else mostraAba('camisolas',false);
+  $('e-camisolas').scrollTo(0,0);if(naEntrada)abreEntrada();
+}
 /* ordenar */
 var ORD={recentes:'Últimas a chegar',epoca:'Por época',clube:'Por clube',jogador:'Por jogador',valor:'Por valor'};
 function abreOrdem(ab){var o=$('ordenar'),v=$('veu-ordem');if(ab){o.hidden=false;v.hidden=false;void o.offsetWidth;o.classList.add('aberto');v.classList.add('aberto');$('b-ordem').setAttribute('aria-expanded','true')}else{o.classList.remove('aberto');v.classList.remove('aberto');$('b-ordem').setAttribute('aria-expanded','false');setTimeout(function(){if(!o.classList.contains('aberto')){o.hidden=true;v.hidden=true}},T)}}
 $('b-ordem').addEventListener('click',function(){abreOrdem(true)});
 $('veu-ordem').addEventListener('click',function(){abreOrdem(false)});
-var GRP={nenhum:'',categoria:'Por categoria',clube:'Por clube',pais:'Por país',decada:'Por década',marca:'Por marca'};
+var GRP={nenhum:'',categoria:'Por categoria',clube:'Por clube',pais:'Por país',decada:'Por década',marca:'Por marca',jogo:'Por jogo'};
 function marcaOrdem(){$('ordenar').querySelectorAll('button[data-o]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.o===ordem)});$('ordenar').querySelectorAll('button[data-g]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.g===grupo)});
   $('ordem-txt').textContent=grupo==='nenhum'?ORD[ordem]:GRP[grupo]}
 $('ordenar').addEventListener('click',function(e){var b=e.target.closest('button[data-o],button[data-g]');if(!b)return;
@@ -1355,10 +1447,15 @@ function htmlFicha(c){
   }
   var fts=(c.fontes||[]).map(function(f){return '<li><a href="'+esc(f[1])+'" target="_blank" rel="noopener">'+esc(f[0])+'</a></li>'}).join('')+(c.creditoFotos?'<li>'+esc(c.creditoFotos)+'</li>':'')+(c.video?'<li>Rotação em vídeo gerada com KlingAI a partir das fotos, recortada e posta sobre a cor do clube.</li>':'');
   if(fts)h+='<section><details><summary>Fontes, verificadas em '+esc(fmtD(meta.atualizado))+ICO.mais+'</summary><ul class="fontes">'+fts+'</ul></details></section>';
-  var r=lista.length>1?lista:dados,s=r[(r.indexOf(c)+1)%r.length];
-  if(s&&s!==c)h+='<a class="seg" href="#'+esc(s.id)+'" data-id="'+esc(s.id)+'"><span class="mini"><img src="'+img(s,'t')+'" alt="" loading="lazy"></span><span><small>Seguinte</small><b>'+esc(nomeDe(s))+'</b></span>'+(s.numero==null?'<span></span>':'<i>'+esc(s.numero)+'</i>')+'</a>';
+  var sg=vizinho(c,1),an=vizinho(c,-1);
+  var lin=function(s,rot,d){return '<a class="seg'+(d<0?' ant':'')+'" href="#'+esc(s.id)+'" data-id="'+esc(s.id)+'" data-d="'+d+'"><span class="mini"><img src="'+img(s,'t')+'" alt="" loading="lazy"></span><span><small>'+rot+'</small><b>'+esc(nomeDe(s))+'</b></span>'+(s.numero==null?'<span></span>':'<i>'+esc(s.numero)+'</i>')+'</a>'};
+  if(sg)h+=lin(sg,'Seguinte',1);
+  if(an&&an!==sg)h+=lin(an,'Anterior',-1);
   return '<div class="folha-in gut">'+h+'</div>';
 }
+/* a lista por onde se passa de ficha em ficha: a de onde se abriu (contexto), se a camisola lá estiver; senão a caderneta como está, ou a coleção toda */
+function listaCtx(c){if(contexto){var r=contexto.map(porId).filter(Boolean);if(r.length>1&&r.indexOf(c)>=0)return r}return lista.length>1&&lista.indexOf(c)>=0?lista:dados}
+function vizinho(c,d){var r=listaCtx(c),i=r.indexOf(c);if(i<0||r.length<2)return null;return r[(i+d+r.length)%r.length]}
 var tFicha=0,coberto=0,obsNums=null;
 function observaNumeros(){
   if(obsNums)obsNums.disconnect();
@@ -1382,7 +1479,7 @@ function soltaAnim(a){if(a){a.onfinish=a.oncancel=null;try{a.cancel()}catch(_){}
 function abreFicha(c,anim){
   clearTimeout(tFicha);soltaAnim(animPalco);animPalco=null;
   var origem=origemFicha;origemFicha=null;
-  modo='ficha';coberto=0;tw=null;inercia=null;pAlvo=null;fotoP=0;ladoAntes=-1;atual=c;
+  modo='ficha';coberto=0;tw=null;inercia=null;pAlvo=null;fotoP=0;ladoAntes=-1;atual=c;marcaAtual(c.id,vistaAgora());abreFiltro(false);
   folha.innerHTML=htmlFicha(c);folha.style.setProperty('--sub',larga?1:0);folha.classList.remove('troca');ajustaNomes(folha);
   ficha.hidden=false;comandos.hidden=false;comandos.classList.remove('coberto');comandos.classList.toggle('fotos',!c.video);
   ficha.scrollTop=0;
@@ -1392,10 +1489,13 @@ function abreFicha(c,anim){
   var r=origem&&origem.getBoundingClientRect();
   if(anim&&!calma&&r&&r.width>8){
     var q=quadroOrigem(r);
-    var an=animPalco=palco.animate([{transform:q.tr,clipPath:q.cp},{transform:'none',clipPath:'inset(0 0 0 0 round 0px)'}],{duration:T,easing:ease,fill:'both'});
+    /* da caderneta, a baia tem a mesma imagem e só cresce. Da sala (a camisola tirada do cacifo) e do mundo (o recorte do varão do país) a imagem
+       de partida é outra: além de crescer do sítio dela, o palco aparece a desvanecer */
+    var an=animPalco=palco.animate(imerso?[{transform:q.tr,clipPath:q.cp,opacity:0},{opacity:1,offset:.3},{transform:'none',clipPath:'inset(0 0 0 0 round 0px)',opacity:1}]:
+      [{transform:q.tr,clipPath:q.cp},{transform:'none',clipPath:'inset(0 0 0 0 round 0px)'}],{duration:T,easing:ease,fill:'both'});
     an.onfinish=function(){if(animPalco===an)animPalco=null;palco.style.clipPath='';palco.style.transform='';soltaAnim(an)};
   }else if(anim&&!calma&&imerso){
-    /* vinda da sala ou do mundo não há baia de onde crescer: o palco aparece por cima, a desvanecer */
+    /* vinda da sala ou do mundo sem sítio de onde crescer (um endereço, o histórico): o palco aparece por cima, a desvanecer */
     var an2=animPalco=palco.animate([{opacity:0},{opacity:1}],{duration:340,easing:'ease',fill:'both'});
     an2.onfinish=function(){if(animPalco===an2)animPalco=null;soltaAnim(an2)};
   }
@@ -1412,12 +1512,19 @@ function fechaFicha(){
   body.classList.remove('em-ficha');veu.style.opacity=0;
   var ecra=$('e-'+aba);ecra.style.transform='';
   document.activeElement&&document.activeElement.blur&&document.activeElement.blur();
-  var baia=!imerso&&aba==='camisolas'&&baias[c.id],r=null;      /* vinda da sala, a ficha não volta para a baia da parede: desvanece */
+  ultimaFicha=c.id;
+  var baia=!imerso&&aba==='camisolas'&&baias[c.id],r=null,some=false;      /* some: ao chegar ao sítio de onde veio, o palco desvanece (a imagem de lá é outra) */
   if(baia){r=baia.querySelector('.im').getBoundingClientRect();
+    /* passou-se de ficha em ficha e o cromo desta ficou fora do ecrã (ou quase): a parede rola até ele antes de o palco voltar para lá */
+    if(r.height&&(r.top>vh-150||r.bottom<150)){ecraCam.scrollTop+=Math.round(((r.top+r.bottom)/2-vh*.46)/.955);r=baia.querySelector('.im').getBoundingClientRect()}
     /* o ecrã ainda está encolhido a .955 à volta de (50%,42%): desfaz essa escala */
     var ox=vw*.5,oy=vh*.42,k=.955;r={left:(r.left-ox)/k+ox,top:(r.top-oy)/k+oy,width:r.width/k,height:r.height/k};
     if(r.top>vh||r.top+r.height<0)r=null;
-  }
+  }else if(imerso==='mundo'){
+    /* de volta ao varão do país: a camisola desta ficha, se lá estiver à vista (pode ter-se passado para outra do mesmo país) */
+    var el=null,cx=$('m-cam').getBoundingClientRect();[].forEach.call($('m-cam').querySelectorAll('button'),function(b){if(b.dataset.id===c.id)el=b.querySelector('img')});
+    if(el){r=el.getBoundingClientRect();if(r.width<8||r.left<cx.left-2||r.right>cx.right+2)r=null;else some=true}
+  }else if(imerso==='bal'&&salaEst===2){r=voltaAoCacifo(c.id);some=!!r}
   var fim=function(){palco.hidden=true;palco.style.clipPath='';palco.style.transform='';var bp=baias[c.id];if(bp)bp.classList.remove('escondida');      /* a baia da parede volta a ver-se, mesmo que a ficha tenha sido aberta noutro sítio */
     if(baia){if(idFm===c.id&&c.video){baiaFoco=baia;fmLiga(c,baia.querySelector('.im'))}}else fmSai();if(modo!=='ficha'){ficha.hidden=true;comandos.hidden=true;folha.innerHTML=''}};
   var fecha=function(an,dur){animPalco=an;
@@ -1425,21 +1532,47 @@ function fechaFicha(){
     an.onfinish=acaba;tFicha=setTimeout(acaba,dur+450)};
   if(!calma&&r){
     var q=quadroOrigem(r);
-    fecha(palco.animate([{transform:'none',clipPath:'inset(0 0 0 0 round 0px)'},{transform:q.tr,clipPath:q.cp}],{duration:T*.8,easing:ease,fill:'both'}),T*.8);
+    fecha(palco.animate(some?[{transform:'none',clipPath:'inset(0 0 0 0 round 0px)',opacity:1},{opacity:1,offset:.6},{transform:q.tr,clipPath:q.cp,opacity:0}]:
+      [{transform:'none',clipPath:'inset(0 0 0 0 round 0px)'},{transform:q.tr,clipPath:q.cp}],{duration:T*.8,easing:ease,fill:'both'}),T*.8);
   }else if(!calma){
     fecha(palco.animate([{transform:'none',opacity:1},{transform:'scale(.92)',opacity:0}],{duration:360,easing:ease,fill:'both'}),360);
   }else fim();
   querTocar=!calma;if(calma)fmSai();
 }
+/* Fechar uma ficha aberta de um cacifo: a sala põe-se logo como vai ficar (a camisola tirada regressa ao lugar e a sala fica diante do cacifo da ficha
+   que se fecha, que pode já ser outra) e diz onde está, no ecrã, a camisola desse cacifo: é para aí que o palco encolhe. Sem cacifo à vista para ela
+   (as categorias podem tê-la tirado da sala), o palco só desvanece. */
+function voltaAoCacifo(id){
+  var p=window.__proto,e=p.estado();if(e.ecra!=='bal')return null;
+  if(e.foco)p.desfoca();
+  var k=p.sala().vis.indexOf(id);if(k>=0)p.ir(k);
+  p.avanca(2);
+  var r=k>=0&&p.quadro?p.quadro(k):null;return r&&r.width>8&&r.left<vw&&r.left+r.width>0?r:null;
+}
 function trocaFicha(c){
-  /* a ficha cai e a camisola nova aparece por cima do palco */
+  var d=dirTroca;dirTroca=0;
+  if(d&&!calma){
+    /* pediu-se a seguinte ou a anterior (com o dedo ou nas linhas do fim): a folha sai para esse lado e a nova entra do outro */
+    var fora=-d*Math.max(vw*.6,220);
+    folha.style.transition='transform .2s ease-in,opacity .18s ease';folha.style.transform='translate3d('+fora+'px,0,0)';folha.style.opacity='0';
+    setTimeout(function(){
+      folha.style.transition='none';folha.style.transform='translate3d('+(-fora*.45).toFixed(0)+'px,0,0)';
+      if(baias[atual.id])baias[atual.id].classList.remove('escondida');
+      abreFicha(c,false);
+      try{palco.animate([{opacity:.3},{opacity:1}],{duration:280,easing:'ease-out'})}catch(_){}
+      void folha.offsetHeight;folha.style.transition='transform .36s cubic-bezier(.2,.8,.2,1),opacity .26s ease';folha.style.transform='';folha.style.opacity='';
+      setTimeout(function(){folha.style.transition=''},400);
+    },210);
+    return}
+  /* a ficha cai e a camisola nova aparece por cima do palco (com movimento reduzido troca-se logo; se a folha vinha arrastada com o dedo, larga
+     também o desvio e a transparência que o arrasto lhe tinha posto) */
   folha.classList.add('troca');
   var pt=palco.querySelector('.pt');
   setTimeout(function(){
     folha.style.transition='none';folha.style.transform='translate3d(0,100vh,0)';
     if(baias[atual.id])baias[atual.id].classList.remove('escondida');
     abreFicha(c,false);
-    void folha.offsetHeight;folha.style.transition='';folha.style.transform='';folha.classList.remove('troca');
+    void folha.offsetHeight;folha.style.transition='';folha.style.transform='';folha.style.opacity='';folha.classList.remove('troca');
   },calma?0:280);
 }
 var dedoFicha=false;
@@ -1457,13 +1590,45 @@ ficha.addEventListener('scroll',function(){
   comandos.classList.toggle('coberto',p>.5);
   if(atual&&atual.video&&querTocar){if(p>.95&&!fm.paused)fm.pause();else if(p<=.95&&fm.paused)toca()}
 },{passive:true});
-folha.addEventListener('click',function(e){var a=e.target.closest('a.seg');if(a)origemFicha=null});
+folha.addEventListener('click',function(e){var a=e.target.closest('a.seg');if(a){origemFicha=null;dirTroca=+a.dataset.d||0}});
+/* passar de ficha em ficha com o dedo: arrastar a folha para o lado leva à camisola seguinte (para a esquerda) ou à anterior (para a direita) da lista
+   de onde se veio. Só com o dedo: com o rato arrastar seleciona texto, e ficam as duas linhas do fim da ficha */
+(function(){
+  var g=null,arrastou=0;
+  folha.addEventListener('pointerdown',function(e){if(modo!=='ficha'||e.pointerType==='mouse'||e.target.closest('input'))return;g={x:e.clientX,y:e.clientY,id:e.pointerId,ok:false,dx:0,lx:e.clientX,lt:e.timeStamp,v:0}});
+  folha.addEventListener('pointermove',function(e){
+    if(!g||g.id!==e.pointerId)return;var dx=e.clientX-g.x,dy=e.clientY-g.y;
+    if(!g.ok){if(Math.abs(dx)<10&&Math.abs(dy)<10)return;if(Math.abs(dy)>=Math.abs(dx)||!vizinho(atual,dx<0?1:-1)){g=null;return}
+      g.ok=true;try{folha.setPointerCapture(e.pointerId)}catch(_){}folha.style.transition='none';escondeDica()}
+    g.dx=dx;var dt=e.timeStamp-g.lt;if(dt>0){g.v=.7*((e.clientX-g.lx)/dt)+.3*g.v;g.lx=e.clientX;g.lt=e.timeStamp}
+    folha.style.transform='translate3d('+dx.toFixed(1)+'px,0,0)';folha.style.opacity=(1-Math.min(.55,Math.abs(dx)/vw)).toFixed(2);
+  });
+  function solta(e){
+    if(!g||g.id!==e.pointerId)return;var o=g;g=null;if(!o.ok)return;arrastou=performance.now();
+    var d=o.dx<0?1:-1,alvo=vizinho(atual,d);
+    /* passa se a folha andou um bom bocado, ou menos com um gesto rápido para o mesmo lado */
+    if(alvo&&e.type==='pointerup'&&(Math.abs(o.dx)>Math.min(110,vw*.26)||(Math.abs(o.v)>.45&&Math.abs(o.dx)>24&&(o.v<0)===(o.dx<0)))){dirTroca=d;origemFicha=null;dicaDada('dica-passar');location.hash=alvo.id;return}
+    folha.style.transition='transform .32s cubic-bezier(.2,.8,.2,1),opacity .2s ease';folha.style.transform='';folha.style.opacity='';
+    setTimeout(function(){if(!g)folha.style.transition=''},340);
+  }
+  folha.addEventListener('pointerup',solta);folha.addEventListener('pointercancel',solta);
+  /* o toque que acaba um arrasto não conta como toque numa ligação da ficha */
+  folha.addEventListener('click',function(e){if(performance.now()-arrastou<350){e.preventDefault();e.stopPropagation()}},true);
+})();
 var dicaT=0;
+/* duas dicas, cada uma só uma vez por aparelho: na primeira ficha, que a camisola roda com o dedo; numa das seguintes (com ecrã de toque e havendo
+   para onde ir), que a folha arrastada para o lado passa de ficha. Fica dada por vista quando sai, ou logo que se faz o gesto. */
+var TOQUE=navigator.maxTouchPoints>0||!!(window.matchMedia&&matchMedia('(pointer:coarse)').matches);
+function dicaVista(k){try{return localStorage.getItem(k)==='1'}catch(_){return false}}
+function dicaDada(k){try{localStorage.setItem(k,'1')}catch(_){}}
 function mostraDica(c){
-  var vista=false;try{vista=localStorage.getItem('dica-rodar')==='1'}catch(_){}
-  if(vista)return;var d=$('dica');d.textContent=c.video?'Arrasta para rodar':'Arrasta para ver as costas';d.classList.add('ver');clearTimeout(dicaT);dicaT=setTimeout(escondeDica,3600);
+  var d=$('dica'),k='',txt='';
+  if(!dicaVista('dica-rodar')){k='dica-rodar';txt=c.video?'Arrasta para rodar':'Arrasta para ver as costas'}
+  else if(TOQUE&&!dicaVista('dica-passar')&&vizinho(c,1)){k='dica-passar';txt='Arrasta a folha para o lado e muda de camisola'}
+  if(!k)return;
+  d.textContent=txt;d.dataset.k=k;d.classList.add('ver');clearTimeout(dicaT);dicaT=setTimeout(escondeDica,k==='dica-passar'?4600:3600);
 }
-function escondeDica(){var d=$('dica');if(!d.classList.contains('ver'))return;d.classList.remove('ver');try{localStorage.setItem('dica-rodar','1')}catch(_){}}
+function escondeDica(){var d=$('dica');if(!d.classList.contains('ver'))return;d.classList.remove('ver');dicaDada(d.dataset.k||'dica-rodar')}
 
 /* ---- valor: só o dono consegue ler ou gravar privado/compras ---- */
 function ajustaVal(){var i=$('val-i');if(i)i.style.width=Math.max(1,(i.value||'0').length)+.3+'ch'}
@@ -1478,7 +1643,7 @@ folha.addEventListener('submit',function(e){
   if(txt!==''&&!(n>=0)){m.textContent='Escreve só um número, por exemplo 120 ou 89,90.';return}
   bt.disabled=true;m.textContent='A guardar…';
   var up={};up[id]={preco:n};
-  docCompras.update(up).then(function(){compras[id]={preco:n};m.textContent='Guardado.';bt.hidden=true;$('val-i').blur();$('val-o').innerHTML=txtValor(porId(id),n!=null);desenhaCabeca();desenhaValor()}).catch(function(err){console.warn(err);m.textContent='Não consegui guardar. Tenta outra vez.'}).then(function(){bt.disabled=false});
+  docCompras.update(up).then(function(){compras[id]={preco:n};m.textContent='Guardado.';bt.hidden=true;$('val-i').blur();$('val-o').innerHTML=txtValor(porId(id),n!=null);desenhaCabeca();if(ordem==='valor'){desenhaParede(false);if(modo==='ficha'&&atual&&baias[atual.id])baias[atual.id].classList.add('escondida')}}).catch(function(err){console.warn(err);m.textContent='Não consegui guardar. Tenta outra vez.'}).then(function(){bt.disabled=false});
 });
 new MutationObserver(ajustaVal).observe(folha,{childList:true});
 $('exportar').addEventListener('click',function(){
@@ -1491,7 +1656,7 @@ $('exportar').addEventListener('click',function(){
 /* ---- teclas e rota ---- */
 document.addEventListener('keydown',function(e){
   var t=e.target,campo=t&&(t.tagName==='INPUT'||t.tagName==='SELECT'||t.tagName==='TEXTAREA');
-  if(e.key==='Escape'){if($('ordenar').classList.contains('aberto')){abreOrdem(false);return}if(modo==='ficha'){e.preventDefault();volta()}return}
+  if(e.key==='Escape'){if(filtroAberto){abreFiltro(false);return}if($('ordenar').classList.contains('aberto')){abreOrdem(false);return}if(modo==='ficha'){e.preventDefault();volta()}return}
   if(campo)return;
   if(modo==='ficha'&&atual){
     if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();if(atual.video)largaFilme();var d=(e.key==='ArrowRight'?1:-1)*.1*(atual.video?atual.video.sentido:1);tw={de:pAgora(),para:limita(pAgora()+d,atual.video&&!atual.video.meia?-9:0,atual.video&&!atual.video.meia?9:1),t0:performance.now(),d:220}}
@@ -1507,86 +1672,187 @@ function rota(primeira){
   if(PORTAS[h])entraSala(PORTAS[h]);else saiSala();
 }
 
-/* ---- a sala e a volta ao mundo ----
-   As duas portas mudam o endereço (#balneario, #mundo) e a rota abre #sala por cima da parede. A marcação está num molde e o código
-   (three.js e o do protótipo, no fim da página) só corre na primeira vez; os dados vêm de sala/sala.json e as miniaturas num pacote. */
+/* ---- a sala: o balneário e a volta ao mundo ----
+   Os dois separadores mudam o endereço (#balneario, #mundo) e a rota abre #sala por cima dos ecrãs da aplicação; a barra de baixo fica por cima da
+   sala. A marcação está num molde e o código (three.js e o do protótipo, no fim da página) só corre na primeira vez; os dados vêm de sala/sala.json
+   e as miniaturas num pacote. */
 var PORTAS={balneario:'bal',mundo:'mundo'},ENDERECO={bal:'balneario',mundo:'mundo'};
 var imerso=null,salaEst=0;      /* imerso: 'bal', 'mundo' ou null; salaEst: 0 por abrir, 1 a carregar, 2 pronta, -1 falhou */
 function salaAntes(q){
   var s=$('sala');s.classList.add('pre');s.classList.remove('falhou');$('sala-erro').hidden=true;
   $('ui-bal').hidden=q!=='bal';$('ui-mundo').hidden=q!=='mundo';$('carga').hidden=q!=='mundo';
 }
+/* Uma fonte de dados: a sala e o mundo montam-se a partir de colecao.json (as camisolas, com os nomes e as secções desta tabela, e os clubes, com o
+   estádio). De sala.json vêm só as medidas dos recortes (a largura, a caixa, o gancho, a sombra, o varão, o sentido do vídeo e, no mundo, a
+   proporção) e a geografia de cada país (onde fica, o enquadramento, os mapas). As camisolas vão pela ordem das «últimas a chegar» e depois por
+   secção, como as prateleiras da caderneta. */
+function dadosSala(S){
+  var med=S.medidas||{};
+  var r=dados.filter(function(c){return med[c.id]}).map(function(c){var g=med[c.id],j=c.jogo;
+    return {k:chegou(c),s:CATS.indexOf(categoria(c)),d:{id:c.id,nome:(c.camisola||c.equipa).toUpperCase(),num:c.numero==null?null:c.numero,jogador:c.jogador||null,equipa:c.equipa,epoca:c.epoca,equipamento:c.equipamento,
+      tipo:TIPO[c.tipo]||'',marca:c.marca||null,assinada:!!c.assinada,emb:c.emblema?c.emblema.split('/').pop():null,sec:categoria(c),sent:g.sent,larg:g.larg,caixa:g.caixa,gancho:g.gancho,sombra:g.sombra,varao:g.varao,
+      cor:c.cor||null,tp:c.tipo,esp:!!c.especial,jogo:j?{casa:j.casa,fora:j.fora,gc:j.gc,gf:j.gf,prova:j.prova,data:j.data,estadio:j.estadio}:null}}});
+  r.sort(function(a,b){return a.k<b.k?1:a.k>b.k?-1:0});r.sort(function(a,b){return a.s-b.s});
+  return r.map(function(x){return x.d});
+}
+/* os países do mundo, pela ordem da viagem: em cada um, os clubes das camisolas desse país (os que têm mais camisolas primeiro), com o estádio e o
+   emblema, e o nome curto da aplicação */
+function paisesSala(S){
+  var med=S.medidas||{},cl=meta.clubes||{};
+  return (S.paises||[]).map(function(g){
+    var por={},ordem=[];
+    dados.forEach(function(c){if(c.pais!==g.nome||!med[c.id])return;if(!por[c.equipa]){por[c.equipa]=[];ordem.push(c.equipa)}por[c.equipa].push(c)});
+    var clubes=ordem.map(function(n){var e=(cl[n]&&cl[n].estadio)||{},meus=por[n],em=meus.filter(function(c){return c.emblema})[0];
+      return {n:n,curto:clubeCurto(n),est:e.nome||'',cid:e.cidade||'',area:e.zona||'',lat:e.lat,lon:e.lon,emb:em?em.emblema.split('/').pop():null,mapa:(g.zonas&&g.zonas[n])||null,
+        cam:meus.map(function(c){return {id:c.id,n:c.camisola||c.equipa,num:c.numero==null?null:c.numero,e:c.equipa,ep:c.epoca,eq:c.equipamento,r:med[c.id].r}})}});
+    clubes.sort(function(a,b){return b.cam.length-a.cam.length||(a.n<b.n?-1:a.n>b.n?1:0)});
+    return {cod:g.cod,nome:g.nome,lat:g.lat,lon:g.lon,caixa:g.caixa,mapa:g.mapa,clubes:clubes,cam:[].concat.apply([],clubes.map(function(x){return x.cam}))};
+  });
+}
+/* ao sair do balneário: se se andou até outro cacifo, é essa a camisola em que se está */
+function saiDoBal(){if(salaEst!==2)return;var a=null;try{a=__proto.atual()}catch(_){}if(a&&a!==balEntrada)marcaAtual(a,'bal')}
+/* ao chegar ao balneário ou ao mundo: a vista vai ter com a camisola em que se está, se for nova para ela */
+function chegaSala(q){
+  if(salaEst!==2)return;
+  if(segueCam(q))try{__proto.para(camAtual)}catch(e){console.error(e)}
+  if(q==='bal'){var ok=false;try{ok=camAtual&&__proto.sala().vis.indexOf(camAtual)>=0&&viuCam.bal===verCam&&camDe!=='bal'}catch(_){}balEntrada=ok?camAtual:__proto.atual()}
+}
 function carregaSala(){
   salaEst=1;
   var pede=function(u){return fetch(u).then(function(r){if(!r.ok)throw new Error(u+' '+r.status);return r.json()})};
-  if(!$('letra-mundo')){var l=document.createElement('link');l.id='letra-mundo';l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap';document.head.appendChild(l)}
   pede('sala/sala.json?t='+Date.now()).then(function(S){
     var pac={},pedidos={};
-    window.__salaCfg={dados:S.dados,paises:S.paises,tem:S.tem,ver:S.ver,verV:VER,pac:pac,
+    window.__salaCfg={dados:dadosSala(S),paises:paisesSala(S),tem:S.tem,ver:S.ver,verV:VER,pac:pac,barra:76,      /* barra: a altura que a barra de baixo ocupa (igual à de --ib em #sala); o mundo sobe o país essa altura */
       raiz:{t:'sala/t/',p:'sala/p/',c:'sala/c/',g:'sala/g/',e:'emblemas/',v:'videos/',vt:'videos/'},
       /* um pacote é um JSON {caminho: data:...}; pede-se uma vez e fica em pac */
       pacote:function(n){return pedidos[n]||(pedidos[n]=pede('sala/'+S.pacotes[n]+'?v='+S.ver).then(function(o){for(var k in o)pac[k]=o[k]}))},
-      ficha:function(id){origemFicha=null;location.hash=id}};
+      /* a sala e o mundo entregam a camisola tocada: de onde cresce a ficha (o sítio da camisola tirada do cacifo, ou a imagem do varão do país) e a
+         lista por onde depois se passa de ficha em ficha (os cacifos à vista, ou o varão desse país) */
+      ficha:function(id,origem,lst){origemFicha=origem||null;contexto=lst&&lst.length?lst:null;location.hash=id},
+      /* a camisola começou a sair do cacifo: a imagem da frente e o vídeo da ficha começam já a chegar */
+      prepara:function(id){var c=porId(id);if(!c)return;try{(new Image()).src=img(c,'f')}catch(_){}if(c.video&&!blobMau)viaMemoria(id).catch(function(){})}};
     return __salaCfg.pacote('minis');
   }).then(function(){
     if(!window.THREE)__salaThree();
     __salaCorpo();
     salaEst=2;$('sala').classList.remove('pre');
-    if(imerso){__proto.vai(imerso);if(modo==='ficha')__proto.dorme(true)}
+    filtroSala();
+    if(imerso){__proto.vai(imerso);chegaSala(imerso);if(modo==='ficha')__proto.dorme(true);abreBal()}
   }).catch(function(e){
     console.error(e);salaEst=-1;var s=$('sala');if(!s)return;
-    s.classList.add('falhou');$('carga').hidden=true;$('sala-erro').hidden=false;
+    s.classList.add('falhou');$('carga').hidden=true;$('sala-erro').hidden=false;abreBal();
   });
+}
+/* A barra sai enquanto a sala enche o ecrã: com uma camisola tirada do cacifo (a sala põe em-foco em #ui-bal) e com uma camisola do mundo ampliada
+   (a sala põe on em #m-luz, e tira-o logo que ela começa a voltar para o cabide: a barra volta nesse momento, sem esperar pelo fim).
+   Com o menu das categorias do balneário aberto (cat-ab em #ui-bal) a barra fica à vista mas deixa passar os toques: tocar fora do menu fecha-o,
+   também em cima da barra, como no resto do ecrã. */
+function estadoSala(){
+  var ub=$('ui-bal'),ml=$('m-luz');if(!ub||!ml)return;
+  body.classList.toggle('sala-cheia',!!imerso&&(ub.classList.contains('em-foco')||ml.classList.contains('on')));
+  body.classList.toggle('sala-menu',!!imerso&&ub.classList.contains('cat-ab'));
+}
+function vigiaSala(){
+  new MutationObserver(estadoSala).observe($('ui-bal'),{attributes:true,attributeFilter:['class']});
+  new MutationObserver(estadoSala).observe($('m-luz'),{attributes:true,attributeFilter:['class']});
+}
+/* O balneário abre sem a porta de latão da sala: quem carrega no «Entrar» dela é a aplicação, quando a entrada abre ou, vindo pela barra, logo que
+   a sala está pronta (as luzes acendem e a câmara chega-se). Enquanto não está pronta fica o aviso a meio do ecrã. */
+var tBal=0;
+function abreBal(){
+  clearTimeout(tBal);var av=$('espera');
+  if(imerso!=='bal'||salaEst===-1||naEntrada||modo==='ficha'){av.hidden=true;return}      /* a entrada tem o seu «A preparar»; com a ficha por cima a sala dorme */
+  var e=$('entrar'),ok=salaEst===2&&e&&!e.disabled;
+  if(ok){av.hidden=true;if(!__proto.estado().aberto)e.click();return}
+  av.hidden=false;tBal=setTimeout(abreBal,150);
 }
 function entraSala(q){
   var s=$('sala');
   if(!s){
     document.body.appendChild($('sala-molde').content.cloneNode(true));s=$('sala');
-    s.querySelectorAll('.voltar[data-ir="menu"]').forEach(function(b){b.addEventListener('click',function(){location.hash=''})});
+    /* os botões «Início» da sala não se usam (muda-se de vista pela barra): ficam invisíveis mas no lugar, porque o mundo mede o de lá para saber onde começa a zona livre do ecrã */
+    s.querySelectorAll('.voltar[data-ir="menu"]').forEach(function(b){b.style.visibility='hidden'});
+    $('sala-erro').textContent='Não consegui abrir esta vista. As camisolas continuam na caderneta.';
+    vigiaSala();
   }
-  var ja=imerso===q;imerso=q;
+  var ja=imerso===q;if(imerso==='bal'&&!ja)saiDoBal();imerso=q;
   if(s.hidden){
-    if(aba!=='inicio')mostraAba('inicio',false);      /* as portas são do início: é para lá que se volta ao sair, venha-se de onde vier */
-    s.hidden=false;body.classList.add('imerso');$('ecras').inert=true;tabs.inert=true;
+    s.hidden=false;body.classList.add('imerso');$('ecras').inert=true;s.inert=naEntrada;
     fmSai();baiaFoco=null;          /* a parede deixa de tocar o vídeo enquanto estiver tapada */
-    try{s.focus({preventScroll:true})}catch(_){}
+    if(!naEntrada)try{s.focus({preventScroll:true})}catch(_){}
   }
-  if(salaEst===2){__proto.dorme(false);if(!ja||__proto.estado().ecra!==q)__proto.vai(q)}
+  marcaTab();guardaVista();estadoSala();
+  if(salaEst===2&&q==='bal'&&__proto.estado().foco&&modo!=='ficha')__proto.desfoca();      /* por segurança: ao fechar a ficha (voltaAoCacifo) a camisola já regressou ao lugar */
+  if(salaEst===2){__proto.dorme(false);if(!ja||__proto.estado().ecra!==q){__proto.vai(q);chegaSala(q)}}
   else{salaAntes(q);if(salaEst<=0)carregaSala()}
+  abreBal();
 }
 function saiSala(){
-  if(!imerso)return;var q=imerso;imerso=null;
+  if(!imerso)return;if(imerso==='bal')saiDoBal();imerso=null;clearTimeout(tBal);$('espera').hidden=true;abreFiltro(false);
   if(salaEst===2)__proto.vai('menu');
-  $('sala').hidden=true;body.classList.remove('imerso');$('ecras').inert=false;tabs.inert=false;
-  var p=$(q==='bal'?'ir-bal':'ir-mundo');try{p.focus({preventScroll:true})}catch(_){}
-  if(aba==='camisolas'&&modo==='parede')setTimeout(focaBaia,50);
+  $('sala').hidden=true;body.classList.remove('imerso');estadoSala();$('ecras').inert=naEntrada;
+  mostraAba(aba,false);
 }
 addEventListener('hashchange',function(){rota(false)});
 addEventListener('resize',function(){medir();marcaTab();ajustaTitulo()});
 try{history.scrollRestoration='manual'}catch(_){}
 
+/* ---- a entrada ----
+   Ao abrir a aplicação (sem uma ficha no endereço) ficam à frente as duas folhas da porta, com o bilhete e o botão. Por trás carrega a vista em que
+   se ficou da última vez; da primeira vez, o balneário. O botão diz «A preparar» até ela estar pronta e, se demorar mais de 12 s, deixa entrar na mesma. */
+var entrada=$('entrada'),naEntrada=false,tEnt=0,entOk=0;
+/* pronta: os dados chegaram e, se a vista é a sala, ela não tem nada por carregar (e, no mundo, o globo já existe) */
+function vistaPronta(){if(!dados.length)return false;if(!imerso||salaEst===-1)return true;return salaEst===2&&__proto.estado().pend<=0&&(imerso!=='mundo'||!!__proto.mundo().mundo)}
+/* a sala pede as imagens em cadeia (acabam umas, começam outras): só conta como pronta se o estiver três vezes seguidas */
+function vigiaEntrada(){
+  if(!naEntrada)return;var b=$('ent-b');
+  entOk=vistaPronta()?entOk+1:0;
+  if(entOk>=3||performance.now()-tEnt>12000){b.disabled=false;b.textContent='Entrar'}
+  else setTimeout(vigiaEntrada,120);
+}
+function abreEntrada(){
+  if(!naEntrada)return;naEntrada=false;body.classList.remove('na-entrada');entrada.classList.add('aberta');
+  tabs.inert=false;$('ecras').inert=!!imerso;if($('sala'))$('sala').inert=false;
+  setTimeout(function(){entrada.hidden=true},calma?0:1350);
+  if(imerso){abreBal();try{$('sala').focus({preventScroll:true})}catch(_){}}
+  else if(aba==='camisolas'){chegaParede(true);setTimeout(focaBaia,calma?50:700)}
+}
+$('ent-b').addEventListener('click',abreEntrada);
+(function(){
+  var h=(location.hash||'').slice(1);
+  if(h&&!PORTAS[h])return;          /* o endereço traz uma ficha: abre-se logo nela, sem entrada */
+  naEntrada=true;tEnt=performance.now();entrada.hidden=false;body.classList.add('na-entrada');
+  $('ecras').inert=true;tabs.inert=true;          /* por trás da entrada nada recebe foco nem toques */
+  if(!h){var v='balneario';try{var g=localStorage.getItem('vista');if(g==='camisolas'||g==='mundo')v=g}catch(_){}
+    if(v!=='camisolas'){try{history.replaceState(null,'','#'+v)}catch(_){location.hash=v}}}
+})();
+
 /* ---- arranque ---- */
 medir();
 fetch('colecao.json?t='+Date.now()).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(j){
   meta=j;dados=j.camisolas||[];VER=j.versao?'?v='+encodeURIComponent(j.versao):'';
+  adia=naEntrada&&!!PORTAS[(location.hash||'').slice(1)];      /* abre no balneário ou no mundo: as imagens da caderneta esperam por ela */
   if(!podeVideo)dados.forEach(function(c){delete c.video});
   $('aviso').hidden=true;
   $('dono').textContent='do '+(j.dono||'Gabriel');
   $('rod').textContent=dados.length+' camisolas. Atualizada em '+fmtD(j.atualizado)+'.'+(podeVideo?'':' Este navegador não lê os vídeos das camisolas; ficam as fotos da frente e das costas.');
-  desenhaCabeca();desenhaChips();montaJogos();desenhaResultados();if(compras)desenhaValor();
-  var h=(location.hash||'').slice(1),abrir=h&&porId(h);
-  if(!calma&&!abrir){body.classList.add('entrada');setTimeout(function(){body.classList.remove('entrada')},1800);$('contas').querySelectorAll('b[data-n]').forEach(function(b,k){var n=+b.getAttribute('data-n');setTimeout(function(){conta(b,n,700)},k*90)})}
+  desenhaCabeca();desenhaChips();montaJogos();desenhaResultados();
+  /* no bilhete da entrada, os números sobem até ao valor */
+  if(!calma&&naEntrada)$('contas').querySelectorAll('b[data-n]').forEach(function(b,k){var n=+b.getAttribute('data-n');setTimeout(function(){conta(b,n,700)},k*90)});
   desenhaParede(false);marcaTab();rota(true);
-}).catch(function(e){$('aviso').hidden=false;$('aviso').textContent='Não consegui abrir a coleção. Recarrega a página.';console.error(e)});
+  if(naEntrada)vigiaEntrada();
+}).catch(function(e){$('aviso').hidden=false;$('aviso').textContent='Não consegui abrir a coleção. Recarrega a página.';entrada.hidden=true;naEntrada=false;body.classList.remove('na-entrada');tabs.inert=false;$('ecras').inert=!!imerso;console.error(e)});
+/* quem visita não tem valores: se a ordem por valor ficou lembrada neste aparelho (de quando era o dono a usar), volta à de sempre */
+function visita(){leitor='visita';if(ordem==='valor'){ordem='recentes';marcaOrdem()}if(dados.length)desenhaCabeca()}
 if(window.claude&&claude.use){
-  claude.use('db').then(function(db){if(!db){leitor='visita';if(dados.length)desenhaCabeca();return}docCompras=db.doc('privado/compras');return Promise.all([docCompras.get(),db.doc('privado/estimativas').get().catch(function(){return null})]).then(function(r){var s=r[0],t=r[1];
+  claude.use('db').then(function(db){if(!db){visita();return}docCompras=db.doc('privado/compras');return Promise.all([docCompras.get(),db.doc('privado/estimativas').get().catch(function(){return null})]).then(function(r){var s=r[0],t=r[1];
     compras=s.exists?JSON.parse(JSON.stringify(s.data())):{};estim=t&&t.exists?JSON.parse(JSON.stringify(t.data())):{};leitor='dono';
-    tabs.querySelector('[data-aba="valor"]').hidden=false;$('ordenar').querySelector('[data-o="valor"]').hidden=false;
+    $('ordenar').querySelector('[data-o="valor"]').hidden=false;$('mais').hidden=false;
     claude.use('downloads').then(function(d){if(d)$('exportar').hidden=false}).catch(function(){});
-    if(dados.length){desenhaCabeca();desenhaChips();desenhaValor();if(modo==='ficha'&&atual){folha.innerHTML=htmlFicha(atual);observaNumeros()}}
+    if(dados.length){desenhaCabeca();desenhaChips();if(ordem==='valor'){desenhaParede(false);if(modo==='ficha'&&atual&&baias[atual.id])baias[atual.id].classList.add('escondida')}if(modo==='ficha'&&atual){folha.innerHTML=htmlFicha(atual);observaNumeros()}}
     marcaTab();
-  })}).catch(function(e){console.warn(e);leitor='visita';if(dados.length)desenhaCabeca()});
-}else leitor='visita';
+  })}).catch(function(e){console.warn(e);visita()});
+}else visita();
 })();
 </script>
 <script>
@@ -2233,9 +2499,13 @@ function fazTextos(){
 /* cada letreiro fica por cima do primeiro cacifo da sua secção; se a secção não está à vista, sai */
 function arrumaLetreiros(){letreiros.forEach(function(m){var s=-1,n=0;for(var j=0;j<NV;j++)if(DADOS[VIS[j]].sec===m.userData.sec){if(s<0)s=j;n++}
   m.userData.malha.visible=s>=0;if(s<0)return;
-  /* o nome começa um palmo depois do início da secção; se a secção for mais curta do que o nome (uma só camisola), fica centrado nela */
-  var lg=m.userData.larg,x0=n*P<lg+.5?s*P-P/2+(n*P-lg)/2-LT_MARG:s*P-P/2+.34;
-  m.userData.malha.position.x=x0+LT_W/2;m.userData.b=baias[s+MARG];m.userData.l=-1})}
+  /* o nome começa um palmo depois do início da secção; se a secção for mais curta do que o nome (uma só camisola), fica centrado nela, e se nem
+     assim couber (um nome comprido numa secção de uma ou duas camisolas, o que o filtro de um clube faz muitas vezes) encolhe até caber, para não
+     entrar no letreiro da secção ao lado */
+  var lg=m.userData.larg,o=m.userData.malha,k=1,x;
+  if(n*P<lg+.5){var av=n*P-.04;if(lg>av)k=av/lg;x=s*P-P/2+n*P/2-(LT_MARG-LT_W/2+lg/2)*k}
+  else x=s*P-P/2+.34+LT_W/2;
+  o.scale.set(k,k,1);o.position.x=x;m.userData.b=baias[s+MARG];m.userData.l=-1})}
 pend++;      /* as placas e os letreiros também contam para a sala estar pronta */
 (document.fonts&&document.fonts.load?Promise.all([document.fonts.load('800 80px "Barlow Condensed"'),document.fonts.load('700 40px "Barlow Condensed"')]):Promise.resolve()).then(fazTextos,fazTextos);
 
@@ -2646,11 +2916,14 @@ function estadoMenu(){var m=MN;return {ab:m.ab,pp:+m.pp.toFixed(3),br:+m.br.toFi
   ints:m.ints.map(function(s){return {c:s.c,on:s.on,pos:+s.pos.toFixed(3),luz:+s.luz.toFixed(2),ap:+s.ap.x.toFixed(2),ang:Math.round(s.ang),pts:s.voo.v.length}})}}
 
 /* a troca faz-se às escuras: as camisolas apagam-se, mudam de cacifo (passoBal chama aplicaVis) e as luzes voltam a acender */
-function filtra(){var nova=[];DADOS.forEach(function(d,i){if(catOn[d.sec])nova.push(i)});desenhaCats();if(nova.join()===VIS.join()){pendFil=false;fFilA=1}else{pendFil=true;fFilA=0}suja=true}
+/* dentro da aplicação o filtro é o dela (o cartão dos clubes, igual nas três vistas): SO tem os ids das camisolas que ficam (null = todas) */
+var SO=null;
+function passa(d){return catOn[d.sec]&&(!SO||SO[d.id]===1)}
+function filtra(){var nova=[];DADOS.forEach(function(d,i){if(passa(d))nova.push(i)});desenhaCats();if(nova.join()===VIS.join()){pendFil=false;fFilA=1}else{pendFil=true;fFilA=0}suja=true}
 function poeCats(l){CATS.forEach(function(c){catOn[c]=!l||l.indexOf(c)>=0});if(!CATS.some(function(c){return catOn[c]}))CATS.forEach(function(c){catOn[c]=true});filtra()}
 function aplicaVis(){
   largaPin();zoomG=null;
-  var atual=VIS[lim(ehGeral()&&idxAntes!=null?idxAntes:idx,0,NV-1)];VIS=[];DADOS.forEach(function(d,i){if(catOn[d.sec])VIS.push(i)});NV=VIS.length;
+  var atual=VIS[lim(ehGeral()&&idxAntes!=null?idxAntes:idx,0,NV-1)];VIS=[];DADOS.forEach(function(d,i){if(passa(d))VIS.push(i)});NV=VIS.length;
   kits.forEach(function(q){q.slot=VIS.indexOf(q.i);q.g.visible=q.gm.visible=q.slot>=0;q.longe=false;if(q.slot>=0)q.g.position.x=q.gm.position.x=q.slot*P;q.luzA=-1;q.bal=q.vbal=0;q.cam.rotation.z=q.camE.rotation.z=0});
   pecas.forEach(function(p){p.slot=VIS.indexOf(p.i);p.a=p.va=p.bal=p.vbal=0;if(p.slot<0)p.o.visible=p.e.visible=p.of.visible=false});
   arrumaLetreiros();
@@ -2743,10 +3016,21 @@ function arrumaVarao(dt){
 
 /* ---------- tirar a camisola: a câmara alinha a camisola com o vídeo e o vídeo entra por cima ---------- */
 var filme=$('filme'),nVez=0;
+/* a escala a que o vídeo (1080 x 1920) aparece no ecrã: de pé enche-o (cover), deitado cabe inteiro (contain) */
+function escFilme(){return W>Hh?Math.min(W/1080,Hh/1920):Math.max(W/1080,Hh/1920)}
 function camFoco(mpp,hookX,topoY,z,d){
-  var sv=W>Hh?Math.min(W/1080,Hh/1920):Math.max(W/1080,Hh/1920),f=(Hh/2)/Math.tan(45*Math.PI/360),dist=f*mpp/sv;
+  var sv=escFilme(),f=(Hh/2)/Math.tan(45*Math.PI/360),dist=f*mpp/sv;
   var wx=hookX+(540-d.gancho[0])*mpp,wy=topoY-(960-d.caixa[1])*mpp;
   return {p:[wx,wy,z+dist],o:[wx,wy,z],f:45};
+}
+/* onde cairia no ecrã, com a câmara como está, o quadro do vídeo (1080 x 1920) alinhado com a camisola do lugar i (no cacifo ou no varão): é para aí
+   que a ficha da aplicação encolhe quando se fecha, de volta ao lugar da camisola. O alinhamento é o mesmo de camFoco */
+function quadroDe(i){
+  var d=DADOS[VIS[i]];if(!d)return null;var v=modo==='varao',q=v?pecas[VIS[i]]:kits[VIS[i]];if(!q||q.slot<0)return null;
+  var mpp=q.mpp,x=(v?q.xa:q.slot*P)+(540-d.gancho[0])*mpp,y=(v?YVAR+.02:ZV+.02)-(960-d.caixa[1])*mpp,z=v?ZVAR+.13:ZR,hw=540*mpp,hh=960*mpp,xs=[],ys=[];
+  cam.updateMatrixWorld(true);
+  [[-1,-1],[1,-1],[1,1],[-1,1]].forEach(function(c){v3a.set(x+c[0]*hw,y+c[1]*hh,z).project(cam);xs.push((v3a.x+1)/2*W);ys.push((1-v3a.y)/2*Hh)});
+  var l=Math.min.apply(null,xs),t=Math.min.apply(null,ys);return {left:l,top:t,width:Math.max.apply(null,xs)-l,height:Math.max.apply(null,ys)-t};
 }
 function foca(i){
   /* i é o lugar (cacifo ou posição no varão); a camisola é a que lá está com o filtro atual */
@@ -2758,7 +3042,15 @@ function foca(i){
   $('bal-dica').classList.add('fora');$('rolo').style.pointerEvents='none';$('f-abre').hidden=!EMB;
   $('bal-ficha').classList.add('on');$('bal-ficha').style.pointerEvents='auto';
   uiEstado();
-  var src=podeHEVC?U('v/'+d.id+'.mp4',1):TESTE?U('vt/'+d.id+'.mp4',1):'';if(src&&EMB)src+=CFG.verV;
+  if(EMB){
+    /* Dentro da aplicação a camisola tirada do cacifo não tem ecrã próprio: mal a câmara chega (os mesmos 820 ms a que aqui entraria o vídeo),
+       abre-se a ficha dela por cima, a crescer do sítio exato onde o vídeo apareceria; o vídeo é o da ficha, não se pede duas vezes.
+       A aplicação recebe também a ordem dos cacifos à vista, para se passar de ficha em ficha por essa ordem. */
+    var vz=++nVez;if(CFG.prepara)CFG.prepara(d.id);
+    setTimeout(function(){if(vz!==nVez||!foco)return;
+      CFG.ficha(d.id,{getBoundingClientRect:function(){var sv=escFilme(),w=1080*sv,h=1920*sv;return {left:(W-w)/2,top:(Hh-h)/2,width:w,height:h}}},VIS.map(function(k){return DADOS[k].id}))},calma?0:820);
+    suja=true;return}
+  var src=podeHEVC?U('v/'+d.id+'.mp4',1):TESTE?U('vt/'+d.id+'.mp4',1):'';
   if(src){
     var vez=++nVez,t0=performance.now(),pronto=false,entrou=false;
     var entra=function(){
@@ -2840,24 +3132,24 @@ var uni={tDia:{value:null},tNoite:{value:null},uSol:{value:new THREE.Vector3(1,0
 if(REAL){uni.tExtra={value:null};uni.uSolS={value:new THREE.Vector3(1,0,0)};uni.uExtra={value:0}}
 
 /* ----- camadas vetoriais ----- */
-var uv={uRes:{value:new THREE.Vector2(1,1)},uPx:{value:1},uAtivo:{value:0},uZoom:uv_uZoom,uEst:uv_uEst,uAlt:{value:.56},uPerto:{value:0},uPulso:{value:0},
+var uv={uForaC:{value:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},uRes:{value:new THREE.Vector2(1,1)},uPx:{value:1},uAtivo:{value:0},uZoom:uv_uZoom,uEst:uv_uEst,uAlt:{value:.56},uPerto:{value:0},uPulso:{value:0},
   uFora1:{value:new THREE.Vector4(0,0,1,1)},uForaM1:{value:0},uFora2:{value:new THREE.Vector4(0,0,1,1)},uForaM2:{value:0}};
 function lin(h,a){var c=new THREE.Color(h);return 'vec4('+c.r.toFixed(4)+','+c.g.toFixed(4)+','+c.b.toFixed(4)+','+a.toFixed(3)+')'}
 var FS_COMUM='uniform float uAlfa,uTem,uForaM1,uForaM2,uAtivo,uZoom,uEst,uAlt,uPerto,uPulso;uniform vec4 uJan,uFora1,uFora2;varying vec2 vLL;varying float vDot;\n'+
   'float dentro(vec2 ll,vec4 j){vec2 t=(ll-j.xy)/(j.zw-j.xy);vec2 d=min(t,1.-t);return smoothstep(0.,.1,min(d.x,d.y));}\n'+
   'float janelas(){float a=uAlfa;if(uTem>.5)a*=dentro(vLL,uJan);a*=1.-uForaM1*dentro(vLL,uFora1);a*=1.-uForaM2*dentro(vLL,uFora2);return a*smoothstep(0.,.08,(vDot-1.)/uAlt);}\n';
-var VS_ENCHE='attribute float aCls;varying float vCls;varying vec2 vLL;varying float vDot;\n'+
-  'void main(){vCls=aCls;vDot=dot(position,cameraPosition);vLL=vec2(atan(-position.z,position.x),asin(clamp(position.y,-1.,1.)))*57.29578;gl_Position=projectionMatrix*viewMatrix*vec4(position,1.);}';
-var FS_ENCHE=FS_COMUM+'varying float vCls;\nvoid main(){if(vDot<1.)discard;float a=janelas();if(a<.004)discard;\n'+
-  ' float meu=step(.5,vCls),at=meu*(1.-step(.5,abs(vCls-uAtivo)));\n'+
+var VS_ENCHE='attribute float aCls;uniform float uForaC[24];varying float vCls;varying float vFora;varying vec2 vLL;varying float vDot;\n'+
+  'void main(){vCls=aCls;vFora=uForaC[int(clamp(aCls,0.,23.)+.5)];vDot=dot(position,cameraPosition);vLL=vec2(atan(-position.z,position.x),asin(clamp(position.y,-1.,1.)))*57.29578;gl_Position=projectionMatrix*viewMatrix*vec4(position,1.);}';
+var FS_ENCHE=FS_COMUM+'varying float vCls;varying float vFora;\nvoid main(){if(vDot<1.)discard;float a=janelas();if(a<.004)discard;\n'+
+  ' float meu=step(.5,vCls)*(1.-step(.5,vFora)),at=meu*(1.-step(.5,abs(vCls-uAtivo)));\n'+
   ' float z=max(uZoom,uEst);vec4 c=mix('+lin(0x9fb2d8,.15)+','+lin(0x56627c,.46)+',z);c=mix(c,mix('+lin(0xdec692,.24)+','+lin(0xc9ae74,.38)+',z),meu);c=mix(c,mix('+lin(0xecd29a,.46)+','+lin(0xdcc086,.54)+',z),at);\n'+
   ' c.rgb*=mix(1.,.6,uPerto*meu);c.a*=(1.+at*uPulso)*mix(1.,mix(.8,1.2,at),meu*(1.-uZoom))'+(REAL?'*mix(mix(.30,.60,uZoom),1.,uEst)':'')+';gl_FragColor=vec4(c.rgb,c.a*a);\n#include <colorspace_fragment>\n}';
-var VS_LINHA='attribute vec3 iA,iB,iC;uniform vec2 uRes;uniform float uPx,uAtivo,uZoom,uEst;varying float vD,vMeia;varying vec4 vCor;varying vec2 vLL;varying float vDot;\n'+
+var VS_LINHA='attribute vec3 iA,iB,iC;uniform vec2 uRes;uniform float uPx,uAtivo,uZoom,uEst,uForaC[24];varying float vD,vMeia;varying vec4 vCor;varying vec2 vLL;varying float vDot;\n'+
   'void main(){\n'+
   ' float da=dot(iA,cameraPosition),db=dot(iB,cameraPosition);if(max(da,db)<.99){gl_Position=vec4(2.,2.,2.,1.);return;}\n'+
   ' vec4 ca=projectionMatrix*viewMatrix*vec4(iA,1.),cb=projectionMatrix*viewMatrix*vec4(iB,1.);\n'+
   ' vec2 sa=ca.xy/ca.w*uRes*.5,sb=cb.xy/cb.w*uRes*.5,d=sb-sa;float L=length(d);d=L>1e-5?d/L:vec2(1.,0.);vec2 n=vec2(-d.y,d.x);\n'+
-  ' float front=step(.5,iC.x),meu=step(.5,max(iC.y,iC.z));\n'+
+  ' float front=step(.5,iC.x),meu=max(step(.5,iC.y)*(1.-uForaC[int(clamp(iC.y,0.,23.)+.5)]),step(.5,iC.z)*(1.-uForaC[int(clamp(iC.z,0.,23.)+.5)]));\n'+
   ' float at=min(1.,step(.5,iC.y)*(1.-step(.5,abs(iC.y-uAtivo)))+step(.5,iC.z)*(1.-step(.5,abs(iC.z-uAtivo))));\n'+
   ' float lg=mix(mix(.9,1.25,uZoom),mix(.7,1.,uZoom),front);lg*=(1.+.3*meu+.3*at)*uPx;\n'+
   ' float z=max(uZoom,uEst);vec4 cor=mix(mix('+lin(0xb9cdfa,.55)+','+lin(0xc6d6fb,.8)+',z),mix('+lin(0xffffff,.30)+','+lin(0xffffff,.42)+',z),front);cor=mix(cor,'+lin(0xe6cf9a,.9)+',meu);cor=mix(cor,'+lin(0xffe9b0,1)+',at);\n'+
@@ -2886,7 +3178,7 @@ function Camada(buf,mundo){
   var gl=new THREE.InstancedBufferGeometry();gl.setAttribute('position',new THREE.BufferAttribute(new Float32Array([0,-1,0,1,-1,0,0,1,0,1,1,0]),3));gl.setIndex([0,1,2,2,1,3]);
   gl.setAttribute('iA',new THREE.InstancedBufferAttribute(A,3));gl.setAttribute('iB',new THREE.InstancedBufferAttribute(B,3));gl.setAttribute('iC',new THREE.InstancedBufferAttribute(new Float32Array(SC),3));gl.instanceCount=cab.ns;
   var z4=new THREE.Vector4(0,0,1,1);
-  var u=this.u={uAlfa:{value:mundo?1:0},uTem:{value:mundo?0:1},uJan:{value:new THREE.Vector4(cx[0],cx[1],cx[2],cx[3])},uAtivo:uv.uAtivo,uZoom:uv.uZoom,uEst:uv.uEst,uAlt:uv.uAlt,uPerto:uv.uPerto,uPulso:uv.uPulso,uRes:uv.uRes,uPx:uv.uPx,
+  var u=this.u={uAlfa:{value:mundo?1:0},uTem:{value:mundo?0:1},uJan:{value:new THREE.Vector4(cx[0],cx[1],cx[2],cx[3])},uAtivo:uv.uAtivo,uZoom:uv.uZoom,uEst:uv.uEst,uAlt:uv.uAlt,uPerto:uv.uPerto,uPulso:uv.uPulso,uRes:uv.uRes,uPx:uv.uPx,uForaC:uv.uForaC,
     uFora1:mundo?uv.uFora1:{value:z4},uForaM1:mundo?uv.uForaM1:{value:0},uFora2:mundo?uv.uFora2:{value:z4},uForaM2:mundo?uv.uForaM2:{value:0}};
   var op={uniforms:u,transparent:true,depthTest:false,depthWrite:false};
   this.enche=new THREE.Mesh(ge,new THREE.ShaderMaterial(Object.assign({vertexShader:VS_ENCHE,fragmentShader:FS_ENCHE},op)));
@@ -2902,6 +3194,15 @@ function pedeCamada(url){if(camadas[url])return;camadas[url]={ok:false};leBin(ur
 var par=0,nivel=0,sel=-1,pinosDe=-1,tIntro=1,tPulso=0,tFade=0,auto=false,tAuto=0;
 var est={n:new THREE.Vector3(1,0,0),a:.56,m:0},de={n:new THREE.Vector3(1,0,0),a:.56,m:0},para={n:new THREE.Vector3(1,0,0),a:.56,m:0},tV=1,durV=1,arcV=0;
 var CAMS={};PAISES.forEach(function(p){p.clubes.forEach(function(c){c.v=vLL(c.lat,c.lon);c.cam.forEach(function(x){CAMS[x.id]=x})})});
+/* O filtro da aplicação (o cartão dos clubes) vale também aqui: SOM tem os ids das camisolas que ficam (null = todas). Os países e os clubes sem
+   nenhuma ficam de fora: sem etiqueta na órbita, sem emblema no mapa, e as setas, o arrastar e a viagem saltam-nos. Os índices dos países e dos
+   clubes não mudam (as camadas vetoriais e os emblemas usam-nos): só muda quem conta. */
+var SOM=null,verF=0;
+function camsDe(x){return SOM?x.cam.filter(function(c){return SOM[c.id]===1}):x.cam}
+function clubesDe(p){return SOM?p.clubes.filter(function(c){return camsDe(c).length>0}):p.clubes}
+function paisOn(i){return !SOM||camsDe(PAISES[i]).length>0}
+function paisesOn(){var r=[];for(var i=0;i<PAISES.length;i++)if(paisOn(i))r.push(i);return r}
+function paisDe(id){for(var i=0;i<PAISES.length;i++)if(PAISES[i].cam.some(function(c){return c.id===id}))return i;return -1}
 
 function util(){var ct=$('m-cartao').getBoundingClientRect(),vb=document.querySelector('#ui-mundo .voltar').getBoundingClientRect().bottom;
   return retrato()?{x0:12,x1:W-12,y0:vb+16,y1:Math.max(vb+120,ct.top-12)}:{x0:Math.min(W*.6,ct.right+16),x1:W-16,y0:vb+12,y1:Hh-16}}
@@ -2910,16 +3211,28 @@ function enquadra(cx,amin,folga){
   var h=(cx[3]-cx[1])*RAD,w=(cx[2]-cx[0])*RAD*Math.cos(lat*RAD);
   var a=Math.max(h/(2*T29*fv*f),w/(2*T29*(W/Hh)*fh*f),amin||.0045);
   return {n:vLL(lat,lon),a:Math.min(a,1.6),m:1}}
-function alvoDe(){var p=PAISES[par];return nivel===0?{n:p.v,a:.56,m:0}:enquadra(p.caixa,0,.84-Math.min(.16,.022*Math.max(0,p.clubes.length-3)))}
+function alvoDe(){var p=PAISES[par];return nivel===0?{n:p.v,a:.56,m:0}:enquadra(p.caixa,0,.84-Math.min(.16,.022*Math.max(0,clubesDe(p).length-3)))}
 function vaiCam(dur){
   de.n.copy(est.n);de.a=est.a;de.m=est.m;var t=alvoDe();para.n.copy(t.n);para.a=t.a;para.m=t.m;arcV=de.n.angleTo(para.n);
   durV=calma?.01:(dur||lim(.9+arcV*1.5+Math.abs(Math.log(para.a/de.a))*.38,1.05,3.4));tV=0;tAuto=0;suja=true}
 function reenquadra(){if(mundoPronto&&tV>=1)vaiCam(.45)}
 var cN=new THREE.Vector3(),cE=new THREE.Vector3(),cS=new THREE.Vector3(),cT=new THREE.Vector3(),cO=new THREE.Vector3();
+/* Na órbita a câmara fica 13 graus a sul do país e inclinada para o horizonte: o país cai a 56 % da altura do ecrã, logo por cima do cartão.
+   Dentro da aplicação há uma barra por baixo do cartão (CFG.barra, em px), o cartão sobe essa altura e o país ficaria atrás dele. Com barra, e de
+   pé, a câmara recua para sul só o bastante para o país subir no ecrã essa mesma altura; o horizonte não se mexe. Sem barra ficam os 13 graus. */
+var BARRA=EMB&&CFG.barra?+CFG.barra:0,alOrb=13*RAD,alOrbDe='';
+function anguloOrbita(){
+  var ch=W+'x'+Hh;if(ch===alOrbDe)return alOrb;alOrbDe=ch;alOrb=13*RAD;
+  if(!BARRA||!retrato())return alOrb;
+  /* y(t): quantos px acima do meio do ecrã fica um ponto t radianos a norte do ponto por baixo da câmara, na órbita (altitude .56) */
+  var dc=1.56,incl=Math.asin(1/dc)-15*RAD,f=(Hh/2)/T29,y=function(t){return f*Math.tan(Math.atan2(Math.sin(t),dc-Math.cos(t))-incl)};
+  var alvo=y(13*RAD)+BARRA,lo=13*RAD,hi=30*RAD;for(var k=0;k<24;k++){var md=(lo+hi)/2;if(y(md)<alvo)lo=md;else hi=md}
+  return alOrb=(lo+hi)/2;
+}
 function camAplica(n,a,m){
   var dc=1+a,u=util(),oy=1-(u.y0+u.y1)/Hh,ox=(u.x0+u.x1)/W-1;
   cN.copy(YY).addScaledVector(n,-YY.dot(n)).normalize();cE.crossVectors(cN,n);
-  var alN=mistura(13*RAD,oy*a*T29,m),alE=ox*a*T29*(W/Hh)*m;
+  var alN=mistura(anguloOrbita(),oy*a*T29,m),alE=ox*a*T29*(W/Hh)*m;
   cS.copy(n).multiplyScalar(Math.cos(alN)).addScaledVector(cN,-Math.sin(alN)).addScaledVector(cE,-alE).normalize();
   cT.copy(YY).addScaledVector(cS,-YY.dot(cS)).normalize();
   var incl=mistura(Math.asin(1/dc)-(retrato()?15:9)*RAD,0,m);
@@ -2991,7 +3304,8 @@ function fazMundo(){
   PAISES.forEach(function(p){p.v=vLL(p.lat,p.lon,1)});fazChips();
   for(var k=0;k<18;k++){var e=document.createElement('p');e.className='m-nome';$('m-nomes').appendChild(e);nomes.push({el:e,t:'',on:false,quer:false,fora:-9})}
   leBin('g/mundo',function(buf){if(!buf)return;try{camadaM=new Camada(buf,true);tFade=.8;suja=true}catch(_){}});
-  est.n.copy(PAISES[0].v);para.n.copy(est.n);de.n.copy(est.n);mostra();tIntro=calma?1:0;
+  if(!paisOn(par))par=paisesOn()[0]||0;
+  est.n.copy(PAISES[par].v);para.n.copy(est.n);de.n.copy(est.n);mostra();tIntro=calma?1:0;
 }
 
 /* ----- o cartão ----- */
@@ -3001,16 +3315,16 @@ function elem(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=nu
 /* O cartão diz sempre onde se está: o país (na órbita e no mapa) ou o clube escolhido no mapa, com o emblema, o estádio e a cidade.
    O clube escolhe-se a tocar no emblema, no mapa; as setas andam entre irmãos (países, ou clubes do país) e o botão de voltar sobe um nível. */
 function mostra(){
-  var p=PAISES[par],n=PAISES.length,ui=$('ui-mundo'),um=p.clubes.length===1,c=nivel>0&&sel>=0?p.clubes[sel]:null,clube=!!c&&!um,cams=c?c.cam:p.cam,h;
+  var p=PAISES[par],on=paisesOn(),n=on.length,pos=on.indexOf(par),ui=$('ui-mundo'),cl=clubesDe(p),um=cl.length===1,c=nivel>0&&sel>=0?p.clubes[sel]:null,clube=!!c&&!um,cams=camsDe(c||p),h;
   ui.classList.toggle('mapa',nivel>0);ui.classList.toggle('clube',clube);
   $('m-conta').hidden=nivel>0;$('m-recua').hidden=nivel===0;$('m-auto').hidden=nivel>0;$('m-abre').hidden=nivel>0;
-  $('m-conta').textContent=(par<9?'0':'')+(par+1)+' / '+n;$('m-recua').lastChild.textContent=clube?p.nome:'Mundo';
+  $('m-conta').textContent=(pos<9?'0':'')+(pos+1)+' / '+(n<10?'0':'')+n;$('m-recua').lastChild.textContent=clube?p.nome:'Mundo';
   $('m-ant').setAttribute('aria-label',clube?'Clube anterior':'País anterior');$('m-seg').setAttribute('aria-label',clube?'Clube seguinte':'País seguinte');
-  var tit=clube?c.n:p.nome,forte=plural(p.cam.length,'camisola','camisolas'),resto,nota='';
-  if(nivel===0)resto=um?(p.clubes[0].n!==p.nome?p.clubes[0].n:''):p.clubes.length<=4?p.clubes.map(function(q){return q.curto}).join(', '):plural(p.clubes.length,'clube','clubes');
-  else if(clube){forte='';resto=c.est+' · '+c.cid;nota=plural(c.cam.length,'camisola','camisolas')+' · local aproximado do estádio'}
+  var tit=clube?c.n:p.nome,forte=plural(camsDe(p).length,'camisola','camisolas'),resto,nota='';
+  if(nivel===0)resto=um?(cl[0].n!==p.nome?cl[0].n:''):cl.length<=4?cl.map(function(q){return q.curto}).join(', '):plural(cl.length,'clube','clubes');
+  else if(clube){forte='';resto=c.est+' · '+c.cid;nota=plural(camsDe(c).length,'camisola','camisolas')+' · local aproximado do estádio'}
   else if(c){resto=c.n!==p.nome?c.n:'';nota=c.est+' · '+c.cid+' · local aproximado'}
-  else{resto=plural(p.clubes.length,'clube','clubes');nota='Toca num emblema para ver as camisolas desse clube.'}
+  else{resto=plural(cl.length,'clube','clubes');nota='Toca num emblema para ver as camisolas desse clube.'}
   /* o bloco de texto é feito de raiz de cada vez que muda: no iPhone, trocar só o texto deixava no ecrã pedaços do texto anterior */
   var ch=[tit,forte,resto,nota,c&&c.emb||'',c?1:0].join('|'),id=$('m-id');
   if(id.dataset.ch!==ch){
@@ -3067,9 +3381,9 @@ function fechaCam(ja){
    afastam-se, e um fio fino liga cada um ao seu sítio ----- */
 var pinos=[],nomes=[],fios=[],arranjo='';
 function fazPinos(){
-  if(pinosDe===par)return;pinosDe=par;var cont=$('m-pinos'),p=PAISES[par],sv='';cont.innerHTML='';pinos=[];arranjo='';
-  p.clubes.forEach(function(c,i){var e=document.createElement('div');e.className='pino';
-    e.innerHTML='<button data-i="'+i+'" aria-label="'+esc(c.n)+', '+plural(c.cam.length,'camisola','camisolas')+'"'+(c.emb?' style="background-image:url('+U('e/'+c.emb,1)+')"':'')+'>'+(c.emb?'':esc(inic(c.n)))+'</button>'+(c.cam.length>1?'<em>'+c.cam.length+'</em>':'')+'<b>'+esc(c.curto)+'</b>';
+  var chv=par+'|'+verF;if(pinosDe===chv)return;pinosDe=chv;var cont=$('m-pinos'),p=PAISES[par],sv='';cont.innerHTML='';pinos=[];arranjo='';
+  p.clubes.forEach(function(c,i){var nc=camsDe(c).length;if(!nc)return;var e=document.createElement('div');e.className='pino';
+    e.innerHTML='<button data-i="'+i+'" aria-label="'+esc(c.n)+', '+plural(nc,'camisola','camisolas')+'"'+(c.emb?' style="background-image:url('+U('e/'+c.emb,1)+')"':'')+'>'+(c.emb?'':esc(inic(c.n)))+'</button>'+(nc>1?'<em>'+nc+'</em>':'')+'<b>'+esc(c.curto)+'</b>';
     cont.appendChild(e);pinos.push({el:e,c:c,i:i,ax:0,ay:0,ox:0,oy:0,tx:0,ty:0,hw:Math.max(27,c.curto.length*4.2+7),on:false,s:false});sv+='<line/><circle r="3.2"/>'});
   $('m-fios').innerHTML=sv;fios=$('m-fios').children;
 }
@@ -3086,10 +3400,12 @@ function arranja(u){
     var ang=m.map(function(i,t){var dx=pinos[i].ax-cx,dy=pinos[i].ay-cy;return {i:i,a:Math.hypot(dx,dy)<2.5?t/m.length*2*Math.PI:Math.atan2(dy,dx)}}).sort(function(p,q){return p.a-q.a});
     for(k=0;k<80;k++)for(j=0;j<ang.length;j++){var A=ang[j],B=ang[(j+1)%ang.length],d=B.a-A.a+(j===ang.length-1?2*Math.PI:0);if(d<sep){var e=(sep-d)/2;A.a-=e;B.a+=e}}
     ang.forEach(function(o){var p=P[o.i];p.fixo=false;p.gx=p.x=cx+Math.cos(o.a)*R*1.1;p.gy=p.y=cy-8+Math.sin(o.a)*R})});
-  for(k=0;k<220;k++){var mexeu=false,mola=k<170?.03:0;
+  for(k=0;k<600;k++){var mexeu=false,mola=k<170?.03:0;
     for(i=0;i<n;i++)for(j=i+1;j<n;j++){var a=P[i],b=P[j],dx=b.x-a.x,dy=b.y-a.y,sx=pinos[i].hw+pinos[j].hw+4-Math.abs(dx),sy=76-Math.abs(dy);
       if(sx>0&&sy>0&&!(a.fixo&&b.fixo)){mexeu=true;var fa=a.fixo?0:b.fixo?1:.5,fb=a.fixo?1:b.fixo?0:.5;
-        if(sx<sy*.9){var mv=sx*(dx<0?-1:dx>0?1:(i%2?1:-1));a.x-=mv*fa;b.x+=mv*fb}else{var m2=sy*(dy<0?-1:dy>0?1:(i%2?1:-1));a.y-=m2*fa;b.y+=m2*fb}}}
+        /* ao fim de 300 voltas, os que ainda se tocam afastam-se para os lados: na vertical podem estar presos (um no limite de cima, o outro
+           por cima de um emblema sozinho, que não sai do sítio) */
+        if(sx<sy*.9||k>=300){var mv=sx*(dx<0?-1:dx>0?1:(i%2?1:-1));a.x-=mv*fa;b.x+=mv*fb}else{var m2=sy*(dy<0?-1:dy>0?1:(i%2?1:-1));a.y-=m2*fa;b.y+=m2*fb}}}
     for(i=0;i<n;i++){var q=pinos[i],c=P[i];if(c.fixo)continue;c.x+=(c.gx-c.x)*mola;c.y+=(c.gy-c.y)*mola;c.x=lim(c.x,u.x0+q.hw,u.x1-q.hw);c.y=lim(c.y,u.y0+26,u.y1-52)}
     if(!mexeu&&k>170)break}
   for(i=0;i<n;i++){pinos[i].tx=P[i].x-pinos[i].ax;pinos[i].ty=P[i].y+32-pinos[i].ay}
@@ -3097,7 +3413,7 @@ function arranja(u){
 function arrumaPinos(dt){
   var vis=nivel>0&&est.m>.55,n=pinos.length,k,q,u=util(),caixas=[],kk=1-Math.exp(-dt*7);
   for(k=0;k<n;k++){q=pinos[k];v3b.copy(q.c.v).project(camG);q.ax=(v3b.x+1)/2*W;q.ay=(1-v3b.y)/2*Hh}
-  if(vis&&tV>=1){var ch=par+'|'+W+'|'+Hh+'|'+Math.round(u.y1)+'|'+est.a.toFixed(4);if(ch!==arranjo){arranjo=ch;arranja(u);tFade=Math.max(tFade,1)}}
+  if(vis&&tV>=1){var ch=par+'|'+verF+'|'+W+'|'+Hh+'|'+Math.round(u.y1)+'|'+est.a.toFixed(4);if(ch!==arranjo){arranjo=ch;arranja(u);tFade=Math.max(tFade,1)}}
   for(k=0;k<n;k++){q=pinos[k];var s=q.i===sel,ln=fios[k*2],pt=fios[k*2+1];
     q.ox=mistura(q.ox,vis&&tV>=1?q.tx:0,kk);q.oy=mistura(q.oy,vis&&tV>=1?q.ty:0,kk);
     var x=q.ax+q.ox,y=q.ay+q.oy,d=Math.hypot(q.ox,q.oy),solto=d>5;
@@ -3128,16 +3444,20 @@ var porNome={};
 
 /* ----- etiquetas dos países na órbita: nome e número de camisolas; tocar leva ao país (e, se já for o atual, abre o mapa) ----- */
 var chips=[],ordemChips=[];
-function fazChips(){var c=$('m-chips');PAISES.forEach(function(p,i){var b=document.createElement('button');b.className='m-chip';b.dataset.i=i;b.innerHTML='<span>'+esc(p.nome)+'</span><i>'+p.cam.length+'</i>';
-    b.setAttribute('aria-label',p.nome+', '+plural(p.cam.length,'camisola','camisolas'));c.appendChild(b);chips.push({el:b,i:i,w:p.nome.length*8.3+46,x:0,y:0,on:false,so:false})});
-  ordemChips=PAISES.map(function(_,i){return i}).sort(function(a,b){return PAISES[b].cam.length-PAISES[a].cam.length})}
+function fazChips(){var c=$('m-chips');PAISES.forEach(function(p,i){var b=document.createElement('button');b.className='m-chip';b.dataset.i=i;b.innerHTML='<span>'+esc(p.nome)+'</span><i></i>';
+    c.appendChild(b);chips.push({el:b,i:i,w:p.nome.length*8.3+46,x:0,y:0,on:false,so:false})});
+  contaChips()}
+/* o número de cada etiqueta é o das camisolas que contam com o filtro; as etiquetas com mais camisolas arrumam-se primeiro */
+function contaChips(){for(var q=0;q<PAISES.length&&q<23;q++)uv.uForaC.value[q+1]=paisOn(q)?0:1;
+  chips.forEach(function(c){var p=PAISES[c.i],n=camsDe(p).length;c.el.lastChild.textContent=n;c.el.setAttribute('aria-label',p.nome+', '+plural(n,'camisola','camisolas'))});
+  ordemChips=PAISES.map(function(_,i){return i}).sort(function(a,b){return camsDe(PAISES[b]).length-camsDe(PAISES[a]).length})}
 function arrumaChips(caixas){
   /* o país atual não leva etiqueta (está realçado e o cartão diz o nome); os outros levam nome e número, ou só o número se não houver espaço */
   var vis=nivel===0&&est.m<.35,camP=camG.position,u=util(),fundo=retrato()?$('m-cartao').getBoundingClientRect().top-8:Hh-8,topo=u.y0+(retrato()?70:0),k;
   var bate=function(cx){if(!(cx[0]>4&&cx[2]<W-4&&cx[1]>topo&&cx[3]<fundo))return true;for(var j=0;j<caixas.length;j++){var o=caixas[j];if(cx[0]<o[2]&&cx[2]>o[0]&&cx[1]<o[3]&&cx[3]>o[1])return true}return false};
   v3b.copy(PAISES[par].v).project(camG);chips[par].x=(v3b.x+1)/2*W;chips[par].y=(1-v3b.y)/2*Hh;
   for(k=0;k<ordemChips.length;k++){var c=chips[ordemChips[k]],p=PAISES[c.i],on=false,so=false;
-    if(vis&&c.i!==par&&p.v.dot(camP)>1+uv.uAlt.value*.08){v3b.copy(p.v).project(camG);var x=(v3b.x+1)/2*W,y=(1-v3b.y)/2*Hh,cx=[x-c.w/2-3,y-17,x+c.w/2+3,y+17];
+    if(vis&&c.i!==par&&paisOn(c.i)&&p.v.dot(camP)>1+uv.uAlt.value*.08){v3b.copy(p.v).project(camG);var x=(v3b.x+1)/2*W,y=(1-v3b.y)/2*Hh,cx=[x-c.w/2-3,y-17,x+c.w/2+3,y+17];
       if(bate(cx)){cx=[x-15,y-15,x+15,y+15];so=true}
       on=!bate(cx);if(on){caixas.push(cx);c.x=x;c.y=y;c.el.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px) translate(-50%,-50%)'}}
     if(on!==c.on||so!==c.so){c.on=on;c.so=so;c.el.className='m-chip'+(on?' on':'')+(so?' so':'')}}
@@ -3145,13 +3465,27 @@ function arrumaChips(caixas){
 function ecraDeMundo(i){v3b.copy(PAISES[i].v).project(camG);return {x:(v3b.x+1)/2*W,y:(1-v3b.y)/2*Hh,on:chips[i].on}}
 
 /* ----- navegação ----- */
-function soUm(){var p=PAISES[par];sel=p.clubes.length===1?0:-1}
-function vaiPara(i){var n=PAISES.length;dirCam=i<par?-1:1;par=(i%n+n)%n;sel=-1;if(nivel>0){soUm();fazPinos()}mostra();vaiCam()}
+function soUm(){var p=PAISES[par],cl=clubesDe(p);sel=cl.length===1?p.clubes.indexOf(cl[0]):-1}
+/* se o país pedido não tem camisolas com o filtro, segue-se no mesmo sentido até ao primeiro que tenha */
+function vaiPara(i){var n=PAISES.length,d=i<par?-1:1;i=(i%n+n)%n;for(var k=0;k<n&&!paisOn(i);k++)i=((i+d)%n+n)%n;dirCam=d;par=i;sel=-1;if(nivel>0){soUm();fazPinos()}mostra();vaiCam()}
 function abreMapa(){if(nivel>0)return;if(auto)poeAuto(false);dirCam=1;nivel=1;soUm();fazPinos();mostra();vaiCam()}
-function recua(){if(nivel===0)return;dirCam=-1;if(sel>=0&&PAISES[par].clubes.length>1){sel=-1;mostra();tFade=.6;suja=true;return}nivel=0;sel=-1;mostra();vaiCam()}
+function recua(){if(nivel===0)return;dirCam=-1;if(sel>=0&&clubesDe(PAISES[par]).length>1){sel=-1;mostra();tFade=.6;suja=true;return}nivel=0;sel=-1;mostra();vaiCam()}
 /* as setas e o arrastar: entre clubes do país quando há um clube escolhido, senão entre países */
-function anda(d){var n=PAISES[par].clubes.length;if(nivel>0&&sel>=0&&n>1){dirCam=d;sel=((sel+d)%n+n)%n;mostra();tFade=.6;suja=true}else vaiPara(par+d)}
-function escolhe(i){if(nivel===0)return;dirCam=1;sel=sel===i&&PAISES[par].clubes.length>1?-1:i;mostra();tFade=.6;suja=true}
+function anda(d){var p=PAISES[par],cl=clubesDe(p),n=cl.length;if(nivel>0&&sel>=0&&n>1){dirCam=d;var k=cl.indexOf(p.clubes[sel]);sel=p.clubes.indexOf(cl[((k+d)%n+n)%n]);mostra();tFade=.6;suja=true}else vaiPara(par+d)}
+function escolhe(i){if(nivel===0)return;dirCam=1;sel=sel===i&&clubesDe(PAISES[par]).length>1?-1:i;mostra();tFade=.6;suja=true}
+/* a aplicação mudou o filtro: contam outras camisolas. Se o país em que se está ficou sem nenhuma, passa-se ao primeiro que tenha (a seguir a ele);
+   se o clube escolhido ficou sem nenhuma, larga-se. Antes de o globo existir fica só guardado: vale quando ele se montar. */
+function filtraMundo(ids){
+  var so=null,n=0;if(ids){so={};ids.forEach(function(i){if(CAMS[i]&&so[i]!==1){so[i]=1;n++}});if(!n||n===Object.keys(CAMS).length)so=null}
+  if(!so&&!SOM)return;SOM=so;verF++;
+  if(!mundoPronto)return;
+  contaChips();if(luzDe)fechaCam(true);
+  if(!paisOn(par)){vaiPara(par);return}
+  if(nivel>0){var p=PAISES[par],cl=clubesDe(p);if(cl.length===1)sel=p.clubes.indexOf(cl[0]);else if(sel>=0&&!camsDe(p.clubes[sel]).length)sel=-1;fazPinos()}
+  mostra();vaiCam(.45);tFade=Math.max(tFade,.8);suja=true;
+}
+/* a aplicação diz em que camisola se está: o mundo vai ao país dela (se contar com o filtro e não for já o atual) */
+function paraCamisola(id){var i=paisDe(id);if(i<0||i===par||!paisOn(i))return false;if(!mundoPronto){par=i;return true}if(auto)poeAuto(false);nivel=0;vaiPara(i);return true}
 /* as imagens do satélite: pedem-se uma vez; enquanto não chegam fica o estilo mapa (e o aviso «A abrir o globo», que aparece com pend>0).
    Se alguma falhar (sem rede), satPed volta a falso e o próximo toque em «Satélite» tenta outra vez */
 var satPed=false,satOk=false,satFalta=0;
@@ -3167,7 +3501,7 @@ function poeEstilo(v){if(!v&&REAL&&!satOk){pedeSat(function(){poeEstilo(0)});ret
 function passoMundo(dt){
   if(!mundoPronto)return;tPulso+=dt;var p=PAISES[par],pr=razao(),k,url;
   if(tIntro<1)tIntro=Math.min(1,tIntro+dt/2.6);
-  if(auto&&nivel===0&&tV>=1&&$('m-luz').hidden){tAuto+=dt;if(tAuto>3.4){tAuto=0;vaiPara(par+1)}}
+  if(auto&&nivel===0&&tV>=1&&$('m-luz').hidden){tAuto+=dt;if(tAuto>3.4){tAuto=0;if(paisesOn().length>1)vaiPara(par+1)}}
   if(tV<1){tV=Math.min(1,tV+dt/durV);var e=tV<.5?4*tV*tV*tV:1-Math.pow(-2*tV+2,3)/2,s=Math.sin(arcV)||1;
     if(arcV<1e-4)est.n.copy(para.n);else est.n.copy(de.n).multiplyScalar(Math.sin((1-e)*arcV)/s).add(v3a.copy(para.n).multiplyScalar(Math.sin(e*arcV)/s)).normalize();
     var a=Math.exp(mistura(Math.log(de.a),Math.log(para.a),e));if(arcV>.03)a+=Math.sin(Math.PI*tV)*Math.min(.9,arcV*.55)*lim(1.25-a,0,1);
@@ -3193,7 +3527,8 @@ function estadoMundo(){var cm={};for(var u in camadas)cm[u]=camadas[u].ok?+camad
   return {nivel:nivel,par:par,sel:sel,estilo:estilo,a:+est.a.toFixed(4),m:+est.m.toFixed(3),tV:tV,mundo:!!camadaM,camadas:cm,
     chips:chips.filter(function(c){return c.on}).map(function(c){return PAISES[c.i].nome}),
     pinos:pinos.map(function(q){return {i:q.i,n:q.c.n,x:Math.round(q.ax+q.ox),y:Math.round(q.ay+q.oy),ax:Math.round(q.ax),ay:Math.round(q.ay),hw:q.hw,on:q.on}}),
-    nomes:nomes.filter(function(e){return e.on}).map(function(e){return e.t}),cams:camsAtuais.length,luz:luzDe?luzDe.dataset.id:null}}
+    nomes:nomes.filter(function(e){return e.on}).map(function(e){return e.t}),cams:camsAtuais.length,luz:luzDe?luzDe.dataset.id:null,
+    so:SOM?Object.keys(SOM).length:null,on:paisesOn(),clubes:clubesDe(PAISES[par]).map(function(c){return c.n}),conta:$('m-conta').textContent}}
 
 /* ----- comandos ----- */
 function poeAuto(v){auto=v;tAuto=v?2.2:0;var b=$('m-auto');b.setAttribute('aria-pressed',v);b.setAttribute('aria-label',v?'Parar a viagem':'Viajar sozinho');b.firstChild.innerHTML=v?'<path d="M8 5v14M16 5v14"/>':'<path d="M8 5.5v13l11-6.5z"/>'}
@@ -3202,7 +3537,10 @@ $('m-auto').addEventListener('click',function(){poeAuto(!auto)});
 $('m-abre').addEventListener('click',abreMapa);$('m-recua').addEventListener('click',recua);
 $('m-pinos').addEventListener('click',function(e){var b=e.target.closest('button');if(b)escolhe(+b.dataset.i)});
 $('m-estilo').addEventListener('click',function(e){var b=e.target.closest('button');if(b)poeEstilo(b.dataset.e==='1')});
-$('m-cam').addEventListener('click',function(e){var b=e.target.closest('button');if(b)abreCam(b)});
+$('m-cam').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+  /* dentro da aplicação o toque abre logo a ficha (a crescer da camisola do varão), sem a fotografia do meio; vai também a ordem do varão */
+  if(EMB){var c=CAMS[b.dataset.id];if(c)CFG.ficha(c.id,b.querySelector('img'),[].map.call($('m-cam').querySelectorAll('button'),function(x){return (CAMS[x.dataset.id]||{}).id}).filter(Boolean));return}
+  abreCam(b)});
 $('m-luz').addEventListener('click',function(){fechaCam()});
 if(EMB)$('m-ficha').addEventListener('click',function(e){e.stopPropagation();if(this.dataset.id)CFG.ficha(this.dataset.id)});
 $('m-chips').addEventListener('click',function(e){var b=e.target.closest('button');if(b)vaiPara(+b.dataset.i)});
@@ -3217,7 +3555,7 @@ canvas.addEventListener('click',function(e){if(ecra!=='mundo'||!mundoPronto||niv
 /* ---------- navegação entre ecrãs ---------- */
 function vai(e){
   if(foco)desfoca();if(auto)poeAuto(false);abreCats(false);largaPin();if(e!=='bal')zoomG=null;ecra=e;if($('menu'))$('menu').hidden=e!=='menu';$('ui-bal').hidden=e!=='bal';$('ui-mundo').hidden=e!=='mundo';$('rolo').hidden=e!=='bal';canvas.style.visibility=e==='menu'?'hidden':'visible';
-  if(e==='bal'){if(!aberto)prePose();layoutRolo(idx);legenda();medeCats()}
+  if(e==='bal'){if(pendFil){pendFil=false;aplicaVis();fFil=fFilA=1}if(!aberto)prePose();layoutRolo(idx);legenda();medeCats()}
   /* na aplicação, as camisolas pequenas do varão do mundo chegam num pacote: o globo só se monta depois de ele chegar */
   if(e==='mundo'){if(pacM===true)fazMundo();else if(pacM===false){pacM=0;pend++;var segue=function(){pacM=true;pend--;if(ecra==='mundo')fazMundo();suja=true};CFG.pacote('pequenas').then(segue,segue)}}
   suja=true;acorda();
@@ -3247,7 +3585,13 @@ window.__proto={vai:vai,foca:foca,desfoca:desfoca,
   tex:function(){return {altas:nAltas,aVir:aVir,porVir:porVir,max:MAXALTAS,com:kits.filter(function(q){return q.eAlta===2}).map(function(q){return q.slot}).sort(function(a,b){return a-b}),lados:nLados,placas:plMalhas.length,desenhos:R.info.render.calls,texturas:R.info.memory.textures,
     avista:kits.filter(function(q){return q.slot>=0&&!q.longe}).length,px:kits.filter(function(q){return q.slot>=0}).sort(function(a,b){return a.slot-b.slot}).map(function(q){return Math.round(q.px)})}},
   geral:function(){var a=poseGeral();return {zoom:zoomG==null?null:+zoomG.toFixed(2),lim:limZoom().map(function(v){return +v.toFixed(2)}),px:+pxEcra().toFixed(2),pin:!!pin,perto:pertoGeral(),todas:todasVista(),idxF:+idxF.toFixed(3),dica:$('bal-dica').classList.contains('fora')?'':$('bal-dica').textContent,cabe:cabeGeral(),desl:desl,passo:+passo.toFixed(2),d:+a.d.toFixed(2),f:a.f,nev:[+cena.fog.near.toFixed(2),+cena.fog.far.toFixed(2)],dCam:+dCam.toFixed(3),cam:[+cam.position.x.toFixed(2),+cam.position.y.toFixed(2),+cam.position.z.toFixed(2)],fov:+cam.fov.toFixed(1),
-    ecra:kits.filter(function(q){return q.slot>=0}).sort(function(a,b){return a.slot-b.slot}).map(function(q){v3a.set(q.slot*P,1.2,D).project(cam);return [Math.round((v3a.x+1)/2*W),Math.round((1-v3a.y)/2*Hh)]})}},render:function(){suja=true},salta:function(){saltaMundo()},mundo:function(){return estadoMundo()},m:{vaiPara:function(i){vaiPara(i)},abreMapa:function(){abreMapa()},recua:function(){recua()},escolhe:function(i){escolhe(i)},estilo:function(v){poeEstilo(v)}},limpo:function(v){$('sala').classList.toggle('limpo',!!v)},ids:DADOS.map(function(d){return d.id}),VISTAS:VISTAS,layout:function(){layoutRolo(idx)},ecraDe:function(i){return ecraDeMundo(i)},ir:function(i){$('rolo').scrollLeft=(i-desl)*passo},cats:function(l){if(l!==undefined)poeCats(l);return CATS.filter(function(c){return catOn[c]})},sala:function(){return {nv:NV,vis:VIS.map(function(i){return DADOS[i].id}),slots:kits.map(function(q){return q.slot}),luz:baias.map(function(b){return +b.luz.toFixed(2)}),fFil:+fFil.toFixed(2),pend:pendFil,rolo:$('trilho').children.length,letreiros:letreiros.map(function(m){return {sec:m.userData.sec,on:m.userData.malha.visible,x:+m.userData.malha.position.x.toFixed(2)}}),varao:pecas.filter(function(p){return p.slot>=0&&(p.o.visible||p.of.visible)}).length}},placa:function(v){if(v!=null)plPoeEstilo(v);return plEstilo},placaEcra:function(i){return plEcra(i)},menu:function(){return estadoMenu()},menuPara:function(v){MN.parado=!!v},menuPasso:function(dt){passoMenu(dt)},
+    ecra:kits.filter(function(q){return q.slot>=0}).sort(function(a,b){return a.slot-b.slot}).map(function(q){v3a.set(q.slot*P,1.2,D).project(cam);return [Math.round((v3a.x+1)/2*W),Math.round((1-v3a.y)/2*Hh)]})}},render:function(){suja=true},salta:function(){saltaMundo()},mundo:function(){return estadoMundo()},m:{vaiPara:function(i){vaiPara(i)},abreMapa:function(){abreMapa()},recua:function(){recua()},escolhe:function(i){escolhe(i)},estilo:function(v){poeEstilo(v)}},limpo:function(v){$('sala').classList.toggle('limpo',!!v)},ids:DADOS.map(function(d){return d.id}),VISTAS:VISTAS,layout:function(){layoutRolo(idx)},ecraDe:function(i){return ecraDeMundo(i)},ir:function(i){$('rolo').scrollLeft=(i-desl)*passo},quadro:function(i){return quadroDe(i)},cats:function(l){if(l!==undefined)poeCats(l);return CATS.filter(function(c){return catOn[c]})},
+  /* o filtro da aplicação: os ids das camisolas que ficam, na sala e no mundo (null ou todas = sem filtro); devolve quantas ficam na sala */
+  filtro:function(ids){var so=null,n=0;if(ids){so={};DADOS.forEach(function(d){if(ids.indexOf(d.id)>=0){so[d.id]=1;n++}});if(!n||n===N)so=null}
+    if(so||SO){SO=so;filtra()}filtraMundo(so?ids:null);suja=true;return so?n:N},
+  /* a camisola em que se está, dita pela aplicação: a sala põe-se diante do cacifo dela (se estiver à vista com o filtro), o mundo vai ao país dela */
+  para:function(id){if(ecra==='mundo')return paraCamisola(id);var k=-1;for(var q=0;q<NV;q++)if(DADOS[VIS[q]].id===id)k=q;if(k<0)return false;if(ecra==='bal'){if(foco)desfoca();if(k!==idx){$('rolo').scrollLeft=(k-desl)*passo;idx=k;legenda()}}else{idx=idxF=k}return true},
+  atual:function(){return ecra==='bal'&&NV?DADOS[VIS[lim(idx,0,NV-1)]].id:null},sala:function(){return {nv:NV,vis:VIS.map(function(i){return DADOS[i].id}),slots:kits.map(function(q){return q.slot}),luz:baias.map(function(b){return +b.luz.toFixed(2)}),fFil:+fFil.toFixed(2),pend:pendFil,rolo:$('trilho').children.length,letreiros:letreiros.map(function(m){var o=m.userData.malha;return {sec:m.userData.sec,on:o.visible,x:+o.position.x.toFixed(2),k:+o.scale.x.toFixed(3),lg:+m.userData.larg.toFixed(3)}}),varao:pecas.filter(function(p){return p.slot>=0&&(p.o.visible||p.of.visible)}).length}},placa:function(v){if(v!=null)plPoeEstilo(v);return plEstilo},placaEcra:function(i){return plEcra(i)},menu:function(){return estadoMenu()},menuPara:function(v){MN.parado=!!v},menuPasso:function(dt){passoMenu(dt)},
   avanca:function(seg){for(var q=0;q<seg/.05;q++){if(ecra==='bal'){passoBal(.05);passoMenu(.05)}else if(ecra==='mundo')passoMundo(.05)}suja=true}};
 };
 
@@ -3258,6 +3602,9 @@ window.__proto={vai:vai,foca:foca,desfoca:desfoca,
 :root{--cima:calc(var(--it) + 12px)}
 #tampa{height:var(--it)}
 #filtros{top:calc(var(--it) + 6px)}
+/* o botão do filtro (balneário e mundo): sem os botões do Claude, encosta à esquerda, no lugar do antigo «Início»; a folha abre logo por baixo */
+#b-filtro{left:max(16px,env(safe-area-inset-left,0px));top:calc(var(--it) + 14px);max-width:calc(100% - 190px)}
+#filtro{top:calc(var(--it) + 62px)}
 </style>
 <script>
 /* o dono traz os valores para este aparelho com um ficheiro seu (que o Claude lhe envia na conversa); nada disto vai para a internet */
@@ -3283,5 +3630,9 @@ window.__proto={vai:vai,foca:foca,desfoca:desfoca,
     t.addEventListener('click',function(){if(!pronto){pronto=true;t.textContent='Confirmar: tirar os valores deste aparelho';diz('Guarda primeiro uma cópia, se ainda não tens.');return}__web.tira();location.reload()});
   }
 })();
+</script>
+<script>
+/* sem rede: o trabalhador de serviço (sw.js) guarda o essencial; ver pipeline/web.py */
+if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol))addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(e){console.warn('Sem trabalhador de serviço:',e&&e.message)})});
 </script>
 </body></html>

@@ -5808,5 +5808,697 @@
     "sentido": -1
    }
   }
- ]
+ ],
+ "clubes": {
+  "AFC Ajax": {
+   "pais": "Países Baixos",
+   "estadio": {
+    "nome": "Johan Cruijff ArenA",
+    "cidade": "Amesterdão",
+    "zona": "Amesterdão",
+    "lat": 52.3142,
+    "lon": 4.9419
+   },
+   "cromo": {
+    "banda": "#C8102E",
+    "sombra": "#6E0818",
+    "num": "#C8102E",
+    "riscas": [
+     "#FFFFFF",
+     "#C8102E"
+    ]
+   }
+  },
+  "Alemanha": {
+   "pais": "Alemanha",
+   "estadio": {
+    "nome": "Campus da federação (DFB)",
+    "cidade": "Frankfurt",
+    "zona": "Frankfurt",
+    "lat": 50.079,
+    "lon": 8.634
+   },
+   "cromo": {
+    "banda": "#141414",
+    "sombra": "#000000",
+    "num": "#DD0000",
+    "riscas": [
+     "#141414",
+     "#DD0000",
+     "#FFCE00"
+    ]
+   }
+  },
+  "Argentina": {
+   "pais": "Argentina",
+   "estadio": {
+    "nome": "Estádio Monumental",
+    "cidade": "Buenos Aires",
+    "zona": "Buenos Aires",
+    "lat": -34.5453,
+    "lon": -58.4497
+   },
+   "cromo": {
+    "banda": "#183E67",
+    "sombra": "#0C2444",
+    "num": "#12305A",
+    "riscas": [
+     "#6CB6E4",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Arsenal FC": {
+   "pais": "Inglaterra",
+   "estadio": {
+    "nome": "Emirates Stadium",
+    "cidade": "Londres",
+    "zona": "Londres",
+    "lat": 51.555,
+    "lon": -0.1086
+   },
+   "cromo": {
+    "banda": "#EF0107",
+    "sombra": "#7A0004",
+    "num": "#063672",
+    "riscas": [
+     "#EF0107",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Bayern de Munique": {
+   "pais": "Alemanha",
+   "estadio": {
+    "nome": "Allianz Arena",
+    "cidade": "Munique",
+    "zona": "Munique",
+    "lat": 48.2188,
+    "lon": 11.6247
+   },
+   "cromo": {
+    "banda": "#DC052D",
+    "sombra": "#6E0818",
+    "num": "#0A2A6E",
+    "riscas": [
+     "#DC052D",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Boavista FC": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio do Bessa",
+    "cidade": "Porto",
+    "zona": "Porto",
+    "lat": 41.1622,
+    "lon": -8.6428
+   },
+   "cromo": {
+    "banda": "#141414",
+    "sombra": "#000000",
+    "num": "#141414",
+    "riscas": [
+     "#141414",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Bologna FC 1909": {
+   "pais": "Itália",
+   "estadio": {
+    "nome": "Renato Dall'Ara",
+    "cidade": "Bolonha",
+    "zona": "Bolonha",
+    "lat": 44.4922,
+    "lon": 11.3097
+   },
+   "cromo": {
+    "banda": "#1A2340",
+    "sombra": "#080C1C",
+    "num": "#A51622",
+    "riscas": [
+     "#A51622",
+     "#1A2340"
+    ]
+   }
+  },
+  "CD Aves": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio do CD Aves",
+    "cidade": "Vila das Aves",
+    "zona": "Vila das Aves",
+    "lat": 41.3669,
+    "lon": -8.4118
+   },
+   "cromo": {
+    "banda": "#C8102E",
+    "sombra": "#6E0818",
+    "num": "#C8102E",
+    "riscas": [
+     "#C8102E",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Cabo Verde": {
+   "pais": "Cabo Verde",
+   "estadio": {
+    "nome": "Estádio Nacional de Cabo Verde",
+    "cidade": "Praia",
+    "zona": "Praia",
+    "lat": 14.9756,
+    "lon": -23.5306
+   },
+   "cromo": {
+    "banda": "#1E3F8F",
+    "sombra": "#0C1F4E",
+    "num": "#1E3F8F",
+    "riscas": [
+     "#1E3F8F",
+     "#FFFFFF",
+     "#CF2027"
+    ]
+   }
+  },
+  "Canadá": {
+   "pais": "Canadá",
+   "estadio": {
+    "nome": "BMO Field",
+    "cidade": "Toronto",
+    "zona": "Toronto",
+    "lat": 43.6328,
+    "lon": -79.4186
+   },
+   "cromo": {
+    "banda": "#C8102E",
+    "sombra": "#6E0818",
+    "num": "#C8102E",
+    "riscas": [
+     "#C8102E",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Chelsea FC": {
+   "pais": "Inglaterra",
+   "estadio": {
+    "nome": "Stamford Bridge",
+    "cidade": "Londres",
+    "zona": "Londres",
+    "lat": 51.4817,
+    "lon": -0.1911
+   },
+   "cromo": {
+    "banda": "#034694",
+    "sombra": "#01295A",
+    "num": "#034694",
+    "riscas": [
+     "#034694",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Club Brugge": {
+   "pais": "Bélgica",
+   "estadio": {
+    "nome": "Jan Breydel",
+    "cidade": "Bruges",
+    "zona": "Bruges",
+    "lat": 51.1933,
+    "lon": 3.1806
+   },
+   "cromo": {
+    "banda": "#1A5FB4",
+    "sombra": "#0B1C3F",
+    "num": "#141414",
+    "riscas": [
+     "#1A5FB4",
+     "#141414"
+    ]
+   }
+  },
+  "Estrela da Amadora": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio José Gomes",
+    "cidade": "Amadora",
+    "zona": "Lisboa",
+    "lat": 38.7519,
+    "lon": -9.2281
+   },
+   "cromo": {
+    "banda": "#8B1A2B",
+    "sombra": "#45090F",
+    "num": "#0F6B3A",
+    "riscas": [
+     "#8B1A2B",
+     "#0F6B3A"
+    ]
+   }
+  },
+  "FC Barcelona": {
+   "pais": "Espanha",
+   "estadio": {
+    "nome": "Camp Nou",
+    "cidade": "Barcelona",
+    "zona": "Barcelona",
+    "lat": 41.3809,
+    "lon": 2.1228
+   },
+   "cromo": {
+    "banda": "#A50044",
+    "sombra": "#520022",
+    "num": "#004D98",
+    "riscas": [
+     "#A50044",
+     "#004D98"
+    ]
+   }
+  },
+  "FC Porto": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio do Dragão",
+    "cidade": "Porto",
+    "zona": "Porto",
+    "lat": 41.1617,
+    "lon": -8.5839
+   },
+   "cromo": {
+    "banda": "#163C9A",
+    "sombra": "#0C2258",
+    "num": "#163C9A",
+    "riscas": [
+     "#2446B4",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Flamengo": {
+   "pais": "Brasil",
+   "estadio": {
+    "nome": "Maracanã",
+    "cidade": "Rio de Janeiro",
+    "zona": "Rio de Janeiro",
+    "lat": -22.9122,
+    "lon": -43.2303
+   },
+   "cromo": {
+    "banda": "#C3272B",
+    "sombra": "#5E0A0C",
+    "num": "#141414",
+    "riscas": [
+     "#C3272B",
+     "#141414"
+    ]
+   }
+  },
+  "Galatasaray": {
+   "pais": "Turquia",
+   "estadio": {
+    "nome": "Rams Park",
+    "cidade": "Istambul",
+    "zona": "Istambul",
+    "lat": 41.1033,
+    "lon": 28.9908
+   },
+   "cromo": {
+    "banda": "#8A1538",
+    "sombra": "#450A1C",
+    "num": "#E9742A",
+    "riscas": [
+     "#8A1538",
+     "#E9742A"
+    ]
+   }
+  },
+  "Gil Vicente FC": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio Cidade de Barcelos",
+    "cidade": "Barcelos",
+    "zona": "Barcelos",
+    "lat": 41.551,
+    "lon": -8.623
+   },
+   "cromo": {
+    "banda": "#C8102E",
+    "sombra": "#6E0818",
+    "num": "#1F3F8F",
+    "riscas": [
+     "#C8102E",
+     "#FFFFFF",
+     "#1F3F8F"
+    ]
+   }
+  },
+  "Inter": {
+   "pais": "Itália",
+   "estadio": {
+    "nome": "San Siro",
+    "cidade": "Milão",
+    "zona": "Milão",
+    "lat": 45.4781,
+    "lon": 9.1239
+   },
+   "cromo": {
+    "banda": "#0B1C3F",
+    "sombra": "#05101F",
+    "num": "#0B1C3F",
+    "riscas": [
+     "#141414",
+     "#1B4DB1"
+    ]
+   }
+  },
+  "KAA Gent": {
+   "pais": "Bélgica",
+   "estadio": {
+    "nome": "Planet Group Arena",
+    "cidade": "Gante",
+    "zona": "Gante",
+    "lat": 51.0161,
+    "lon": 3.7342
+   },
+   "cromo": {
+    "banda": "#1748B8",
+    "sombra": "#0C2A70",
+    "num": "#1748B8",
+    "riscas": [
+     "#2255C8",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Levante UD": {
+   "pais": "Espanha",
+   "estadio": {
+    "nome": "Ciutat de València",
+    "cidade": "Valência",
+    "zona": "Valência",
+    "lat": 39.4947,
+    "lon": -0.3642
+   },
+   "cromo": {
+    "banda": "#7A1630",
+    "sombra": "#3E0A18",
+    "num": "#1E3A8A",
+    "riscas": [
+     "#8E1E3A",
+     "#1C3F8C"
+    ]
+   }
+  },
+  "Manchester City": {
+   "pais": "Inglaterra",
+   "estadio": {
+    "nome": "Etihad Stadium",
+    "cidade": "Manchester",
+    "zona": "Manchester",
+    "lat": 53.4831,
+    "lon": -2.2003
+   },
+   "cromo": {
+    "banda": "#6CABDD",
+    "sombra": "#1C2C5B",
+    "num": "#1C2C5B",
+    "riscas": [
+     "#6CABDD",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Palmeiras": {
+   "pais": "Brasil",
+   "estadio": {
+    "nome": "Allianz Parque",
+    "cidade": "São Paulo",
+    "zona": "São Paulo",
+    "lat": -23.5275,
+    "lon": -46.6786
+   },
+   "cromo": {
+    "banda": "#006437",
+    "sombra": "#00331C",
+    "num": "#006437",
+    "riscas": [
+     "#006437",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "País de Gales": {
+   "pais": "País de Gales",
+   "estadio": {
+    "nome": "Cardiff City Stadium",
+    "cidade": "Cardiff",
+    "zona": "Cardiff",
+    "lat": 51.4728,
+    "lon": -3.2031
+   },
+   "cromo": {
+    "banda": "#D30731",
+    "sombra": "#6B0318",
+    "num": "#00843D",
+    "riscas": [
+     "#D30731",
+     "#FFFFFF",
+     "#00843D"
+    ]
+   }
+  },
+  "Portugal": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio Nacional (Jamor)",
+    "cidade": "Oeiras",
+    "zona": "Lisboa",
+    "lat": 38.7089,
+    "lon": -9.2608
+   },
+   "cromo": {
+    "banda": "#B5121B",
+    "sombra": "#5E090E",
+    "num": "#046A38",
+    "riscas": [
+     "#DA291C",
+     "#046A38"
+    ]
+   }
+  },
+  "Real Betis": {
+   "pais": "Espanha",
+   "estadio": {
+    "nome": "Benito Villamarín",
+    "cidade": "Sevilha",
+    "zona": "Sevilha",
+    "lat": 37.3564,
+    "lon": -5.9817
+   },
+   "cromo": {
+    "banda": "#00954C",
+    "sombra": "#004D27",
+    "num": "#00954C",
+    "riscas": [
+     "#00954C",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Real Madrid": {
+   "pais": "Espanha",
+   "estadio": {
+    "nome": "Santiago Bernabéu",
+    "cidade": "Madrid",
+    "zona": "Madrid",
+    "lat": 40.4531,
+    "lon": -3.6883
+   },
+   "cromo": {
+    "banda": "#2A1C60",
+    "sombra": "#140B34",
+    "num": "#2A1C60",
+    "riscas": [
+     "#FFFFFF",
+     "#DCD7F0"
+    ]
+   }
+  },
+  "Rio Ave FC": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio dos Arcos",
+    "cidade": "Vila do Conde",
+    "zona": "Vila do Conde",
+    "lat": 41.3628,
+    "lon": -8.74
+   },
+   "cromo": {
+    "banda": "#1A7A45",
+    "sombra": "#0B3D26",
+    "num": "#1A7A45",
+    "riscas": [
+     "#1A7A45",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "SC Braga": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio Municipal de Braga",
+    "cidade": "Braga",
+    "zona": "Braga",
+    "lat": 41.5625,
+    "lon": -8.43
+   },
+   "cromo": {
+    "banda": "#4F2E96",
+    "sombra": "#2A1554",
+    "num": "#4F2E96",
+    "riscas": [
+     "#6A4FA0",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "SC Covilhã": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio Santos Pinto",
+    "cidade": "Covilhã",
+    "zona": "Covilhã",
+    "lat": 40.283,
+    "lon": -7.5115
+   },
+   "cromo": {
+    "banda": "#1C5A3A",
+    "sombra": "#0B2E1C",
+    "num": "#1C5A3A",
+    "riscas": [
+     "#FFFFFF",
+     "#B0B0B0"
+    ]
+   }
+  },
+  "SL Benfica": {
+   "pais": "Portugal",
+   "estadio": {
+    "nome": "Estádio da Luz",
+    "cidade": "Lisboa",
+    "zona": "Lisboa",
+    "lat": 38.7528,
+    "lon": -9.1847
+   },
+   "cromo": {
+    "banda": "#B5121B",
+    "sombra": "#5E090E",
+    "num": "#A5101A",
+    "riscas": [
+     "#E41E26",
+     "#FFFFFF"
+    ]
+   }
+  },
+  "Santos FC": {
+   "pais": "Brasil",
+   "estadio": {
+    "nome": "Vila Belmiro",
+    "cidade": "Santos",
+    "zona": "Santos",
+    "lat": -23.9511,
+    "lon": -46.3389
+   },
+   "cromo": {
+    "banda": "#141414",
+    "sombra": "#000000",
+    "num": "#141414",
+    "riscas": [
+     "#FFFFFF",
+     "#141414"
+    ]
+   }
+  },
+  "São Paulo FC": {
+   "pais": "Brasil",
+   "estadio": {
+    "nome": "Morumbi",
+    "cidade": "São Paulo",
+    "zona": "São Paulo",
+    "lat": -23.6,
+    "lon": -46.72
+   },
+   "cromo": {
+    "banda": "#141414",
+    "sombra": "#000000",
+    "num": "#C8102E",
+    "riscas": [
+     "#C8102E",
+     "#FFFFFF",
+     "#141414"
+    ]
+   }
+  },
+  "Universitario": {
+   "pais": "Peru",
+   "estadio": {
+    "nome": "Estádio Monumental «U»",
+    "cidade": "Lima",
+    "zona": "Lima",
+    "lat": -12.0557,
+    "lon": -76.9359
+   },
+   "cromo": {
+    "banda": "#5A1A2A",
+    "sombra": "#2E0A14",
+    "num": "#5A1A2A",
+    "riscas": [
+     "#EFE3C8",
+     "#5A1A2A"
+    ]
+   }
+  },
+  "Venezia FC": {
+   "pais": "Itália",
+   "estadio": {
+    "nome": "Pier Luigi Penzo",
+    "cidade": "Veneza",
+    "zona": "Veneza",
+    "lat": 45.4278,
+    "lon": 12.3639
+   },
+   "cromo": {
+    "banda": "#141414",
+    "sombra": "#000000",
+    "num": "#E8731C",
+    "riscas": [
+     "#E8731C",
+     "#2E8B4A",
+     "#141414"
+    ]
+   }
+  },
+  "VfB Stuttgart": {
+   "pais": "Alemanha",
+   "estadio": {
+    "nome": "MHPArena",
+    "cidade": "Estugarda",
+    "zona": "Estugarda",
+    "lat": 48.7922,
+    "lon": 9.2319
+   },
+   "cromo": {
+    "banda": "#E32219",
+    "sombra": "#7A0C08",
+    "num": "#141414",
+    "riscas": [
+     "#FFFFFF",
+     "#E32219"
+    ]
+   }
+  }
+ }
 }
