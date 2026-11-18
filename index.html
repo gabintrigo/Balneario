@@ -3632,7 +3632,24 @@ window.__proto={vai:vai,foca:foca,desfoca:desfoca,
 })();
 </script>
 <script>
-/* sem rede: o trabalhador de serviço (sw.js) guarda o essencial; ver pipeline/web.py */
-if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol))addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(e){console.warn('Sem trabalhador de serviço:',e&&e.message)})});
+/* a versão instalada: o trabalhador de serviço (sw.js) guarda o essencial para abrir sem rede; e ao voltar ao ecrã a página vê se há versão nova
+   e recarrega-se antes de misturar a página velha com os dados novos. Ver pipeline/web.py */
+(function(){
+  var V='933f0162a7';window.__versao=V;
+  if(!/^https?:$/.test(location.protocol))return;
+  if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(e){console.warn('Sem trabalhador de serviço:',e&&e.message)})});
+  var ultima=0;
+  function ve(){
+    var agora=Date.now();if(agora-ultima<10000)return;ultima=agora;
+    fetch('versao.json?t='+agora,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(j){
+      if(!j||!j.versao||j.versao===V)return;
+      try{if(sessionStorage.getItem('balneario-recarga')===j.versao)return;sessionStorage.setItem('balneario-recarga',j.versao)}catch(_){return}
+      location.reload();
+    }).catch(function(){});
+  }
+  document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')ve()});
+  addEventListener('pageshow',function(e){if(e.persisted)ve()});
+  addEventListener('load',function(){setTimeout(ve,2000)});
+})();
 </script>
 </body></html>
