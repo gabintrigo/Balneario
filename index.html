@@ -1961,6 +1961,25 @@ function matB(map,extra){var o={map:map,side:THREE.DoubleSide};if(extra)for(var 
   for(var k=-MARG;k<N+MARG;k++){baias.push({k:k,j:k+MARG,luz:.04,luzA:-1,seq:null});
     if(k>=0&&k<N){var alvo=plano(P,hn+.5,new THREE.MeshBasicMaterial({visible:false}),k*P,ym+.1,D);alvo.userData.k=k;cima.add(alvo);alvos.push(alvo)}}
 })();
+/* ---------- as faixas da parede de cima (versão 31) ----------
+   As quatro faixas do dono (Benfica, Portugal, City e Argentina; monta.py corta-as da imagem que ele enviou), seguidas ao comprido na parede entre a
+   sanca (2,9 m) e o teto, por cima dos nomes das secções, e outra vez desde a primeira até ao fim dos 52 cacifos. Cada uma tem 1,1 m de altura e
+   6,6 m de comprido (as imagens são 6 por 1), com um palmo de parede entre elas. Ficam sempre no mesmo sítio; com o filtro, as camisolas que ficam
+   arrumam-se nos primeiros cacifos e, se forem todas de uma equipa que tem faixa, a dessa equipa passa a ser a primeira (arrumaFaixas). */
+var FX=['benfica','portugal','city','argentina'],FX_EQ={'SL Benfica':0,'Portugal':1,'Manchester City':2,'Argentina':3},faixas=[],fxIni=-1;
+(function(){
+  if(!TEM.faixas)return;
+  var h=1.1,w=h*6,y=ALT+.16+h/2,z=D+.02,k=Math.max(1,Math.round(N*P/(w+.3))),passo=N*P/k;
+  var mats=FX.map(function(n){return matB(tex('t/faixa-'+n+'.webp'))});
+  for(var i=0;i<k;i++){var x=-P/2+passo*(i+.5),o=plano(w,h,mats[i%4],x,y,z),e=plano(w,h,mats[i%4],x,y,z);cima.add(o);espelho.add(e);faixas.push({o:o,e:e,i:i})}
+  faixas.mats=mats;
+})();
+function arrumaFaixas(){
+  if(!faixas.length)return;
+  var eq=null;for(var j=0;j<NV;j++){var q=DADOS[VIS[j]].equipa;if(j===0)eq=q;else if(eq!==q){eq=null;break}}
+  var ini=eq!=null&&FX_EQ[eq]!=null?FX_EQ[eq]:0;if(ini===fxIni)return;fxIni=ini;
+  faixas.forEach(function(f){f.o.material=f.e.material=faixas.mats[(ini+f.i)%4]});suja=true;
+}
 function luzBaia(j,l){corI.setScalar(l);for(var q=0;q<insts.length;q++)insts[q].setColorAt(j,corI);luzSuja=true}
 /* Cada camisola com o que anda com ela (o reflexo no chão, a sombra e, mais abaixo, a placa) é um conjunto à parte dos cacifos:
    ao filtrar por categoria, as que ficam arrumam-se nos primeiros cacifos. "slot" é o cacifo onde está (-1 = fora da sala). */
@@ -2505,7 +2524,7 @@ function arrumaLetreiros(){letreiros.forEach(function(m){var s=-1,n=0;for(var j=
   var lg=m.userData.larg,o=m.userData.malha,k=1,x;
   if(n*P<lg+.5){var av=n*P-.04;if(lg>av)k=av/lg;x=s*P-P/2+n*P/2-(LT_MARG-LT_W/2+lg/2)*k}
   else x=s*P-P/2+.34+LT_W/2;
-  o.scale.set(k,k,1);o.position.x=x;m.userData.b=baias[s+MARG];m.userData.l=-1})}
+  o.scale.set(k,k,1);o.position.x=x;m.userData.b=baias[s+MARG];m.userData.l=-1});arrumaFaixas()}
 pend++;      /* as placas e os letreiros também contam para a sala estar pronta */
 (document.fonts&&document.fonts.load?Promise.all([document.fonts.load('800 80px "Barlow Condensed"'),document.fonts.load('700 40px "Barlow Condensed"')]):Promise.resolve()).then(fazTextos,fazTextos);
 
@@ -3585,7 +3604,8 @@ window.__proto={vai:vai,foca:foca,desfoca:desfoca,
   tex:function(){return {altas:nAltas,aVir:aVir,porVir:porVir,max:MAXALTAS,com:kits.filter(function(q){return q.eAlta===2}).map(function(q){return q.slot}).sort(function(a,b){return a-b}),lados:nLados,placas:plMalhas.length,desenhos:R.info.render.calls,texturas:R.info.memory.textures,
     avista:kits.filter(function(q){return q.slot>=0&&!q.longe}).length,px:kits.filter(function(q){return q.slot>=0}).sort(function(a,b){return a.slot-b.slot}).map(function(q){return Math.round(q.px)})}},
   geral:function(){var a=poseGeral();return {zoom:zoomG==null?null:+zoomG.toFixed(2),lim:limZoom().map(function(v){return +v.toFixed(2)}),px:+pxEcra().toFixed(2),pin:!!pin,perto:pertoGeral(),todas:todasVista(),idxF:+idxF.toFixed(3),dica:$('bal-dica').classList.contains('fora')?'':$('bal-dica').textContent,cabe:cabeGeral(),desl:desl,passo:+passo.toFixed(2),d:+a.d.toFixed(2),f:a.f,nev:[+cena.fog.near.toFixed(2),+cena.fog.far.toFixed(2)],dCam:+dCam.toFixed(3),cam:[+cam.position.x.toFixed(2),+cam.position.y.toFixed(2),+cam.position.z.toFixed(2)],fov:+cam.fov.toFixed(1),
-    ecra:kits.filter(function(q){return q.slot>=0}).sort(function(a,b){return a.slot-b.slot}).map(function(q){v3a.set(q.slot*P,1.2,D).project(cam);return [Math.round((v3a.x+1)/2*W),Math.round((1-v3a.y)/2*Hh)]})}},render:function(){suja=true},salta:function(){saltaMundo()},mundo:function(){return estadoMundo()},m:{vaiPara:function(i){vaiPara(i)},abreMapa:function(){abreMapa()},recua:function(){recua()},escolhe:function(i){escolhe(i)},estilo:function(v){poeEstilo(v)}},limpo:function(v){$('sala').classList.toggle('limpo',!!v)},ids:DADOS.map(function(d){return d.id}),VISTAS:VISTAS,layout:function(){layoutRolo(idx)},ecraDe:function(i){return ecraDeMundo(i)},ir:function(i){$('rolo').scrollLeft=(i-desl)*passo},quadro:function(i){return quadroDe(i)},cats:function(l){if(l!==undefined)poeCats(l);return CATS.filter(function(c){return catOn[c]})},
+    ecra:kits.filter(function(q){return q.slot>=0}).sort(function(a,b){return a.slot-b.slot}).map(function(q){v3a.set(q.slot*P,1.2,D).project(cam);return [Math.round((v3a.x+1)/2*W),Math.round((1-v3a.y)/2*Hh)]})}},render:function(){suja=true},
+  faixas:function(){return faixas.map(function(f){var m=f.o.material;return {n:FX[faixas.mats.indexOf(m)],x:+f.o.position.x.toFixed(2),y:+f.o.position.y.toFixed(2),w:+f.o.geometry.parameters.width.toFixed(2),ok:!!(m.map&&m.map.image&&m.map.image.width),ve:f.o.visible}})},salta:function(){saltaMundo()},mundo:function(){return estadoMundo()},m:{vaiPara:function(i){vaiPara(i)},abreMapa:function(){abreMapa()},recua:function(){recua()},escolhe:function(i){escolhe(i)},estilo:function(v){poeEstilo(v)}},limpo:function(v){$('sala').classList.toggle('limpo',!!v)},ids:DADOS.map(function(d){return d.id}),VISTAS:VISTAS,layout:function(){layoutRolo(idx)},ecraDe:function(i){return ecraDeMundo(i)},ir:function(i){$('rolo').scrollLeft=(i-desl)*passo},quadro:function(i){return quadroDe(i)},cats:function(l){if(l!==undefined)poeCats(l);return CATS.filter(function(c){return catOn[c]})},
   /* o filtro da aplicação: os ids das camisolas que ficam, na sala e no mundo (null ou todas = sem filtro); devolve quantas ficam na sala */
   filtro:function(ids){var so=null,n=0;if(ids){so={};DADOS.forEach(function(d){if(ids.indexOf(d.id)>=0){so[d.id]=1;n++}});if(!n||n===N)so=null}
     if(so||SO){SO=so;filtra()}filtraMundo(so?ids:null);suja=true;return so?n:N},
@@ -3635,7 +3655,7 @@ window.__proto={vai:vai,foca:foca,desfoca:desfoca,
 /* a versão instalada: o trabalhador de serviço (sw.js) guarda o essencial para abrir sem rede; e ao voltar ao ecrã a página vê se há versão nova
    e recarrega-se antes de misturar a página velha com os dados novos. Ver pipeline/web.py */
 (function(){
-  var V='933f0162a7';window.__versao=V;
+  var V='bf02b983e2';window.__versao=V;
   if(!/^https?:$/.test(location.protocol))return;
   if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(e){console.warn('Sem trabalhador de serviço:',e&&e.message)})});
   var ultima=0;
